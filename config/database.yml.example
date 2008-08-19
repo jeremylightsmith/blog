@@ -1,3 +1,4 @@
+adapter: mysql
 username: root
 password: password
 host: localhost

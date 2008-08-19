@@ -8,13 +8,10 @@ require 'reformatter'
 
 class ActiveRecord::Base
   def self.connect_to(db)
-    establish_connection(
-      :adapter  => "mysql",
-      :host     => "localhost",
-      :username => "root",
-      :password => "password",
-      :database => db
-    )
+    settings = YAML::load_file(File.dirname(__FILE__) + "/../../config/database.yml")
+    settings['database'] = db
+    
+    establish_connection(settings)
   end
   
   def self.wordpress
