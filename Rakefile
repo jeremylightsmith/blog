@@ -1,10 +1,10 @@
 require 'yaml'
 
 class DB
-  def self.init(environment)
-    @settings = YAML::load_file(File.dirname(__FILE__) + "/config/database.yml")[environment]
+  def self.init
+    @settings = YAML::load_file(File.dirname(__FILE__) + "/config/database.yml")
     puts @settings.inspect
-    @user, @pass, @host = @settings[:username], @settings[:password], @settings[:host]
+    @user, @pass, @host = @settings["username"], @settings["password"], @settings["host"]
   end
   
   def self.create_database(db)
@@ -30,11 +30,7 @@ end
 
 
 task :init do
-  DB.init(:development)
-end
-
-task :production => :init do
-  DB.init(:production)
+  DB.init
 end
 
 task :install => :init do
