@@ -20,7 +20,7 @@ class ActiveRecord::Base
   end
   
   def self.mephisto
-    connect_to("mephisto_dev")
+    connect_to("mephisto")
   end
 end
 
