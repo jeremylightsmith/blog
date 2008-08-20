@@ -12,13 +12,22 @@ class DB
     run "mysqladmin -u#{@user} -p#{@pass} -h#{@host} create #{db}"
   end
   
-  def self.import_sql(file, db)
+  def self.import_sql(db, file)
     run "mysql -u#{@user} -p#{@pass} -h#{@host} #{db} < #{file}"
   end
   
-  def self.import_sql_gz(file, db)
+  def self.import_sql_gz(db, file)
     run "gunzip -c #{file} | mysql -u#{@user} -p#{@pass} -h#{@host} #{db}"
   end
+  
+  def self.export_sql_gz(db, name)
+    file = Time.now.strftime "#{name}-%Y%m%d%H%M.sql"
+    run "mysqldump -u#{@user} -p#{@pass} -h#{@host} #{db} > #{file}"
+    run "gzip -f #{file}"
+    Dir.chdir(File.dirname(name)) do
+      run "ln -s -f #{File.basename(file)}.gz #{File.basename(name)}-latest.sql.gz"
+    end
+  end    
   
   def self.run(cmd, options = {})
     puts cmd
@@ -33,11 +42,6 @@ task :init do
   DB.init
 end
 
-task :install => :init do
-  `open http://localhost/work/wp-admin/install.php`
-  `open http://localhost/life/wp-admin/install.php`
-end
-
 namespace :db do
   task :setup => :init do
     DB.create_database('stellsmi_wordpress_life')
@@ -45,36 +49,33 @@ namespace :db do
   end
 
   task :load_mephisto => :init do
-    DB.create_database('mephisto_dev')
-    DB.import_sql('stellsmi_mephisto.sql', 'mephisto_dev')
+    DB.create_database('stellsmi_mephisto')
+    DB.import_sql('stellsmi_mephisto', 'stellsmi_mephisto.sql')
   end
   
-  task :backup do
-    type = ENV['TYPE'] || "nightly"
-    db, user, pass, host = load_database_settings
-    Dir.chdir("#{RAILS_ROOT}/db/backups") do
-      output = Date.today.strftime "#{type}-%Y-%m-%d.sql"
-
-      r "mysqldump -u#{user} -p#{pass} -h#{host} #{db} > #{output}"
-      r "gzip -f #{output}"
-      r "ln -s -f #{output}.gz nightly-latest.sql.gz"
-    end
+  task :backup => :init do
+    DB.export_sql_gz("stellsmi_wordpress_life", "db/backups/life")
+    DB.export_sql_gz("stellsmi_wordpress_work", "db/backups/work")
   
     Rake::Task["db:rotate_backups"].invoke
   end
 
-  task :restore_mephisto do
-    raise "you must call production or development before this tag" if DB.empty?
-    
-    db, user, pass, host = load_database_settings
-
-    Dir.chdir("#{RAILS_ROOT}/db/backups") do
-      input = "nightly-latest.sql.gz"
-      # r "gunzip -f #{input}.gz" if File.exist?("#{input}.gz") # symlinks are ignored, so we must force it
-
-      r "mysqladmin -u#{user} -p#{pass} -h#{host} -f drop #{db}", :ignore_errors => true
-      r "mysqladmin -u#{user} -p#{pass} -h#{host} create #{db}"
-      r "gunzip -c #{input} | mysql -u#{user} -p#{pass} -h#{host} #{db}"
+  task :restore => :setup do    
+    DB.import_sql_gz("stellsmi_wordpress_life", "db/backups/life-latest.sql.gz")
+    DB.import_sql_gz("stellsmi_wordpress_work", "db/backups/work-latest.sql.gz")
+  end
+  
+  task :rotate_backups do
+    backups = Dir["db/backups/*.sql.gz"].reject {|file| file =~ /latest/}.sort {|a, b| File.mtime(a) <=> File.mtime(b)}
+    backups[0..-10].each do |file| # everything but the last 10
+      puts "deleting #{file}"
+      FileUtils.rm(file)
+    end
+  end
+  
+  task :pull do
+    Dir.chdir("db/backups") do
+      DB.run "scp stellsmi@onemanswalk.com:apps/blog/db/backups/*-latest.sql.gz db/backups/"
     end
   end
 end
