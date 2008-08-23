@@ -75,7 +75,7 @@ namespace :db do
   
   task :pull do
     Dir.chdir("db/backups") do
-      DB.run "scp stellsmi@onemanswalk.com:apps/blog/db/backups/*-latest.sql.gz db/backups/"
+      DB.run "scp stellsmi@onemanswalk.com:apps/blog/db/backups/*-latest.sql.gz db/backups"
     end
   end
 end
