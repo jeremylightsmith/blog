@@ -1,0 +1,408 @@
+/*
+Theme Name: deLight
+Theme URI: http://webdemar.com/demo/?wptheme=deLight
+Description: Nice and simple WordPress Theme by <a href="http://webdemar.com">webdemar</a>.
+Author: Simon Rimkus
+Author URI: http://webdemar.com
+Tags: simple, clean, fixed width, widget-ready, widgets, right sidebar, two columns, valid XHTML, valid CSS
+Version: 1.0.2
+*/
+
+/*
+	- GENERAL
+	- BASIC LAYOUT
+	- HEADINGS
+	- HEADER
+	- CONTENT
+		+ CONTENT LEFT
+		+ CONTENT RIGHT
+		+ WORDPRESS CSS
+	- FORMS
+	- COMMENTS
+	- FOOTER
+	- USEFUL
+
+/*	##################################
+   	GENERAL
+	################################## */
+	
+body {
+	position: relative;
+	width:auto;
+	height:auto;
+	margin:0;
+	padding:0;
+	background:#fff url(img/bg-body.gif) repeat-x left top;
+	font:11px/18px Verdana, Tahoma, sans-serif;
+	color:#606060;
+}
+
+a {
+	color:#662625;
+}
+
+blockquote {
+	margin:0 0 0 20px;
+	padding: 0 0 0 20px;
+	border-left: 5px solid #f3f4f0;
+}
+
+img {
+	border: none;
+}
+
+ul, ol {
+	margin: 0 0 20px 20px;
+	padding: 0px;
+}
+
+/*	##################################
+   	BASIC LAYOUT
+	################################## */
+
+#header {
+	position:relative;
+	width:940px;
+	height:140px;
+	margin: 0 0 0 100px;
+	background:url(img/bg-header.gif) no-repeat bottom right;
+}
+
+#menu {
+	position:relative;
+	width:940px;
+	height: 30px;
+	margin: 0 0 0 100px;
+	padding: 10px 0 0 0;
+	list-style:none;
+}
+
+#content {
+	width:940px;
+	height:auto;
+	margin:0 0 0 100px;
+	padding:0 0 40px 0;
+}
+
+#content-left {
+	float:left;
+	width:560px;
+	height:auto;
+}
+
+#content-right {
+	float:right;
+	width:340px;
+	height:auto;
+}
+
+#footer {
+	height:20px;
+	padding: 20px 0;
+	background:#353535;
+}
+
+/*	##################################
+   	HEADINGS
+	################################## */
+	
+#header h1 {
+	position:absolute;
+	bottom:40px;
+	left:0px;
+	margin: 0px;
+	color: #fff;
+	font:bold 28px/28px Helvetica, Arial, sans-serif;
+}
+
+#header h1 a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#header h2 {
+	position: absolute;
+	bottom: 30px;
+	left: 5px;
+	margin: 0px;
+	color: #C4AFAC;
+	font:11px/11px Verdana, Tahoma, sans-serif;
+}
+
+h2, h3, h4 {
+	margin:0 0 20px 0;
+}
+
+h3.archive-title {
+	margin: 20px 0 0 0;
+}
+
+.box-left h2 {
+	color:#662625;
+	font:bold 24px/34px Georgia, "Times New Roman", Times, serif;
+}
+
+.box-left h2 a {
+	text-decoration:none;
+}
+
+.box-left h2 a:hover {
+	text-decoration:underline;
+}
+
+.box-left h3 {
+	margin: 0 0 20px 0;
+	color:#662625;
+	font:bold 14px/14px Georgia, "Times New Roman", Times, serif;
+}
+
+.box-left h4 {
+	color:#C4AFAC;
+	font:11px/11px Verdana, Tahoma, sans-serif;
+}
+
+.box-right h3 {
+	color:#662625;
+	font:bold 12px/12px Verdana, Tahoma, sans-serif;
+	text-transform:uppercase;
+}
+
+/*	##################################
+   	HEADER
+	################################## */
+
+#menu li {
+	float:left;
+}
+
+#menu a {
+	margin:0 40px 0 0;
+	padding:0px;
+	color:#fff;
+	text-decoration:none;
+	font:normal 12px/12px Verdana, Tahoma, sans-serif;
+}
+
+/*	##################################
+   	CONTENT
+	################################## */
+	
+/** CONTENT LEFT */
+
+.box-left {
+	margin:40px 0;
+}
+
+.box-left img {
+        float:left;
+        margin:0 10px 10px 0;
+}
+
+p.tags {
+        font:11px/11px Verdana, Tahoma, sans-serif;
+}
+
+/** CONTENT RIGHT */
+
+#box-rss {
+	height: 80px;
+	margin: 0 0 20px 0;
+	background: url(img/bg-rss.gif) no-repeat left top;
+}
+
+#box-rss a {
+	display: block;
+	height: 50px;
+	padding: 30px 0 0 80px;
+	background: url(img/rss-icon.jpg) no-repeat 20px 20px;
+	font:18px/18px Verdana, Tahoma, sans-serif;
+	text-decoration: none;
+}
+
+.box-right {
+	margin:20px 0;
+	font:11px/11px Verdana, Tahoma, sans-serif;
+	background: url(img/bg-box-right.gif) repeat-y left top;
+}
+
+.box-right h3 {
+	padding: 20px 20px 0 20px;
+	background: url(img/bg-box-right-top.gif) no-repeat left top;
+}
+
+.box-right-content {
+	margin: 0 20px;
+}
+
+.box-right-bottom {
+	height: 20px;
+	background: url(img/bg-box-right-bottom.gif) no-repeat left top;
+}
+
+.box-right ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.box-right li {
+	line-height:24px;
+}
+
+.box-right ul li ul {
+	margin:0;
+	padding:0 0 0 20px;
+	list-style:none;
+}
+
+.box-right ul li ul li ul {
+	margin:0;
+	padding:0 0 0 20px;
+	list-style:none;
+}
+
+.box-right p {
+	margin: 20px 0 0 0;
+}
+
+/** WORDPRESS CSS */
+
+.aligncenter,
+div.aligncenter {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.alignleft {
+   float: left;
+}
+
+.alignright {
+   float: right;
+}
+
+.wp-caption {
+   border: 1px solid #ccc;
+   text-align: center;
+   background-color: #f3f4f0;
+   padding-top: 4px;
+   margin: 10px;
+}
+
+.wp-caption img {
+   margin: 0;
+   padding: 0;
+   border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+   font-size: 11px;
+   line-height: 17px;
+   padding: 0 4px 5px;
+   margin: 0;
+}
+
+/*	##################################
+   	FORMS
+	################################## */
+
+label {
+    display:block;
+    margin:0 0 5px 0;
+}
+
+.text {
+    width:350px;
+    margin: 0 0 10px 0;
+    padding:5px;
+    border:1px solid #ccc;
+}
+
+.verify {
+    width:290px;
+    margin: 0 0 10px 0;
+    padding:5px;
+    border:1px solid #ccc;
+    float:left;
+}
+
+.fieldwrap img {
+    float:left;
+    margin:0 5px 10px 0;
+}
+
+textarea {
+    width:450px;
+    height:150px;
+    margin:0;
+    padding:5px;
+    border:1px solid #ccc;
+}
+
+.submit {
+    width:auto;
+    padding:5px;
+    color:#fff;
+    background:#662625;
+	border:0;
+}
+
+/** SEARCH FORM */
+
+#search {
+	width: 190px;
+	padding: 5px;
+	border: 1px solid #ccc;
+}
+
+#search-submit {
+    width:auto;
+    padding:5px;
+    color:#fff;
+    background:#662625;
+	border:0;
+}
+
+/*	##################################
+   	COMMENTS
+	################################## */
+	
+.comment {
+	margin: 0 0 20px 0;
+	padding: 20px;
+	background: #f7f7f7;
+	border: 1px solid #ccc;
+}
+
+.comment p {
+	margin: 0px;
+}
+
+.comment-details {
+
+}
+
+/*	##################################
+   	FOOTER
+	################################## */
+
+#footer p {
+	width:940px;
+	margin:0 0 0 100px;
+	padding:0;
+	color:#fff;
+	text-align:center;
+}
+
+#footer p a {
+	color: #fff;
+}
+
+/*	##################################
+   	USEFUL
+	################################## */
+
+.clear {
+	clear:both;
+}
