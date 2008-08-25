@@ -1,0 +1,444 @@
+/*  
+Theme Name: deMar
+Theme URI: http://webdemar.com/demo/?wptheme=deMar
+Description: A simple, clean blog theme by <a href="http://webdemar.com">webdemar</a>.
+Author: Simon Rimkus
+Author URI: http://webdemar.com/
+Tags: simple, clean, widgets, widget-ready, two columns, fixed width, valid CSS, valid XHTML
+Version: 0.9.1
+*/
+
+/*
+	- GENERAL
+	- BASIC LAYOUT
+	- HEADINGS
+	- HEADER
+	- CONTENT
+		+ CONTENT LEFT
+		+ CONTENT RIGHT
+		+ SEARCH FORM
+	- COMMENTS
+	- FOOTER
+	- USEFUL
+
+/*	##################################
+   	GENERAL
+	################################## */
+	
+body {
+	margin: 0px;
+	padding: 0px;
+	background: url(img/bg-body.gif) repeat-x top left;
+	font:11px/16px Verdana, Tahoma;
+	color:#363636;
+}
+
+a {
+	color:#c7532d;
+}
+
+blockquote {
+	margin:0 0 0 20px;
+	padding: 0 0 0 20px;
+	border-left: 5px solid #c7532d;
+}
+
+img {
+	border: none;
+}
+
+ul, ol {
+	margin: 0 0 20px 20px;
+	padding: 0px;
+}
+
+/*	##################################
+   	BASIC LAYOUT
+	################################## */
+	
+#page {
+	width: 950px;
+	margin: 0 auto;
+	background: url(img/bg-page.jpg) no-repeat left bottom;
+}
+	
+#header {
+	position: relative;
+	width: 780px;
+	height: 200px;
+	margin: 0 auto;
+	background: url(img/bg-header.jpg) no-repeat top right;
+}
+
+#content {
+	width: 780px;
+	margin: 0 auto;
+	padding: 40px 0 0 0;
+}
+
+#content-left {
+	float: left;
+	width: 540px;
+}
+
+#content-right {
+	float: right;
+	width: 220px;
+}
+
+#footer {
+
+}
+
+/*	##################################
+   	HEADINGS
+	################################## */
+	
+h1 {
+	position: absolute;
+	top: 80px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	font:bold italic 24px/24px Georgia, "Times New Roman", Times, serif;
+}
+
+h1 a {
+	color:#fff;
+	text-decoration: none;
+}
+
+h2#blog-description {
+	position: relative;
+	top: 105px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	font:normal 11px/11px Verdana, Tahoma;
+	color: #c7532d;
+}
+
+h2 {
+	margin:0 0 20px 0;
+	padding: 0px;
+	font:normal 14px/14px Verdana, Tahoma;
+}
+
+h3 {
+	margin: 0 0 20px 0;
+	font:bold 18px/18px Verdana, Tahoma;
+}
+
+h3 a {
+	text-decoration: none;
+}
+
+h3 a:hover {
+	text-decoration: underline;
+}
+
+h4 {
+	margin: 0 0 10px 0;
+}
+
+/*	##################################
+   	HEADER
+	################################## */
+	
+#header ul {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+#header li {
+	float: left;
+	margin: 0 2px 0 0;
+	padding: 0px;
+}
+
+.page_item a {
+	display: block;
+	width: 100px;
+	height: 22px;
+	margin: 0px;
+	padding: 8px 0 0 0;
+	background: url(img/bg-menu.gif) no-repeat left top;
+	font:normal 11px/11px Verdana, Tahoma;
+	color:#fff;
+	text-decoration: none;
+	text-align: center;
+}
+
+.page_item a:hover {
+	background: url(img/bg-menu-hover.gif) no-repeat left top;
+}
+
+.current_page_item a, .current_page_item a:hover {
+	background: url(img/bg-menu-active.gif) no-repeat left top;
+	font:bold 11px/11px Verdana, Tahoma;
+	color:#363636;
+}
+
+/*	##################################
+   	CONTENT
+	################################## */
+	
+/** box left */
+
+.box-left {
+	margin: 0 0 40px 0;
+	clear: both;
+}
+	
+.meta {
+	font:italic 10px/10px Verdana, Tahoma;
+}
+
+.meta-date {
+	padding: 0 0 0 15px;
+	background: url(img/bg-date.gif) no-repeat 0px 1px;
+}
+
+.meta-categories {
+	padding: 0 0 0 15px;
+	background: url(img/bg-cats.gif) no-repeat 0px 1px;
+}
+
+.meta-comments {
+	padding: 0 0 0 15px;
+	background: url(img/bg-comments.gif) no-repeat 0px 1px;
+}
+
+.box-left img {
+	float: left;
+	margin: 5px 10px 5px 0;
+}
+
+/** wordpress css */
+
+.wp-caption {
+   border: 1px solid #ddd;
+   text-align: center;
+   background-color: #f3f3f3;
+   padding-top: 4px;
+   margin: 10px;
+}
+
+.wp-caption img {
+   margin: 0;
+   padding: 0;
+   border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+   font-size: 11px;
+   line-height: 17px;
+   padding: 0 4px 5px;
+   margin: 0;
+}
+
+/** box right */
+
+.box-right {
+	margin: 0 0 40px 0;
+	clear: both;
+}
+
+.box-right ul {
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+
+.box-right li {
+	display: inline; /* white space bug IE6 */
+}
+
+li.cat-item ul.children {
+	margin: 0px;
+	padding: 0px;
+}
+
+li.cat-item ul.children li {
+	margin: 0px;
+	padding: 0px;
+}
+
+.box-right li a {
+	display: block;
+	margin: 0px;
+	padding: 5px;
+	border-bottom: 1px dotted #ddd;
+	text-decoration: none;
+}
+
+li.cat-item ul.children li a {
+	padding: 5px 5px 5px 20px;
+}
+
+li.cat-item ul.children li ul.children li a {
+	padding: 5px 5px 5px 40px;
+}
+
+.box-right li a:hover {
+	background: #f7f7f7;
+}
+
+.box-right .page_item a, .box-right .current_page_item a {
+	background: transparent;
+	width: auto;
+	height: auto;
+	color:#c7532d;
+	font-weight: normal;
+	text-align: inherit;
+}
+
+/** search form */
+
+#search {
+	width: 150px;
+	padding: 5px;
+	color: #ccc;
+	border: 1px solid #f2f2f2;
+}
+
+#search-submit {
+	width: auto;
+	margin: 0;
+	padding: 5px;
+	background: #363636;
+	color: #fff;
+	border: 0;
+}
+
+/** wp-calendar */
+
+#calendar_wrap {
+	margin: 0px;
+}
+
+#wp-calendar {
+	width: 100%;
+}
+
+#wp-calendar th {
+	text-align: left;
+}
+
+/*	##################################
+   	COMMENTS
+	################################## */
+	
+h4#comments, h4#respond {
+	margin:0 0 20px 0;
+}	
+	
+.comment {
+	margin:0 0 20px 0;
+	padding: 10px;
+	background: #f7f7f7;
+	border-top: 1px solid #ccc;
+}
+
+.avatar {
+	float: left;
+	margin:0 10px 0 0!important;
+}
+
+.comment-details {
+	margin: 0 0 10px 0;
+}
+
+.comment-text p {
+	margin: 0px;
+	padding: 0px;
+}
+
+/** comment form */
+
+#commentform label {
+	display: block;
+	margin: 0 0 5px 0;
+}
+
+input.text {
+	width: 390px;
+	margin: 0 0 10px 0;
+	padding: 5px;
+	border: 1px solid #f2f2f2;
+}
+
+textarea {
+	width: 410px;
+	height: 100px;
+	margin: 0;
+	padding: 5px;
+	border: 1px solid #f2f2f2;
+}
+
+input.submit {
+	width: auto;
+	margin: 0;
+	padding: 5px;
+	background: #363636;
+	color: #fff;
+	border: 0;
+}
+
+
+/*	##################################
+   	FOOTER
+	################################## */
+	
+#footer-wrap {
+	background: #363636;
+}
+
+#footer {
+	width: 780px;
+	margin: 0 auto;
+	padding: 20px 0;
+	font:normal 10px/10px Verdana, Tahoma;
+	color: #fff;
+}
+
+#footer a {
+	color:#fff;
+}
+
+#legal {
+	float: left;
+	width: 540px;
+}
+
+#webdemar {
+	float: right;
+	width: 220px;
+	text-align: right;
+}
+
+/*	##################################
+   	USEFUL
+	################################## */
+	
+.aligncenter, div.aligncenter {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.alignleft {
+  	float: left;
+}
+
+.alignright {
+   float: right;
+}
+
+.clear {
+	clear:both;
+}
