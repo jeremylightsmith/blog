@@ -37,6 +37,7 @@
 </div><!-- end header -->
 
 <ul id="menu">
-	<li class="page_item <?php if ( is_home() ) { ?>current_page_item<?php } ?>"><a href="<?php bloginfo('url'); ?>">home</a></li>
-	<?php wp_list_pages('title_li=&depth=-1&sort_column=ID'); ?>
+	<li class="page_item"><a href="/">home</a></li>
+	<li class="page_item current_page_item"><a href="/work">work</a></li>
+	<li class="page_item"><a href="/life">life</a></li>
 </ul><div class="clear"></div>
