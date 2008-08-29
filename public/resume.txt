@@ -1,0 +1,128 @@
+EXPERIENCE
+Apr 2007 - present
+Pivotal Labs
+Consultant / Agile Coach
+
+My responsibilities at Pivotal include Client Management, Agile Enablement and Coaching of development
+teams, and Ruby on Rails development.  I also help kick off projects by facilitating intensive 
+requirements gathering sessions.  
+
+Client: Construction Services Company
+I managed the client relationship and led development of their flagship product.  I collaborated with 
+my client's clients to sell, design and develop new products.  My team of 2-6 completed a ruby on rails
+rewrite and data migration of a multiyear legacy Java system in 6 months.  I was also 
+responsible for systems architecture and further development against the rewrite.
+
+Client: Major Construction Company
+I was responsible for a systems implementation of a punchlist product from inception to launch.  
+I facilitated requirements gathering, led development, and collaborated closely with its customers to 
+see it through to a successful 1.0 release.  Replacing a previous system, the new system is up to 10 times more 
+responsive, scales to millions of records, handles concurrent users and offline access, and was delivered
+on time and on budget.
+
+Product: Pivotal Tracker
+As a senior developer, I was responsible for much of a UI overhaul as we pushed it toward full public release.
+
+Oct 2006 - Mar 2007
+Independent Consulting
+Ruby on Rails Developer
+
+Client: iCrew.com
+I introduced project lifecycle best practices while working remotely on its development and delivery. I was also responsible for many ajax features and some integration work with external services.
+
+Aug 2000 - Aug 2006 (full-time)
+Aug 2006 - Mar 2007 (part-time)
+ThoughtWorks, Inc.
+Consultant / Facilitator / Agile Coach / Senior Developer
+Serving ThoughtWorks, I have seen and been a part of real change. As an Extreme Programming Coach, I concentrated on gelling teams and introducing Agile Best Practices. As a developer, I was responsible for evolving much of the architecture on each of my projects at ThoughtWorks. During my time here, I taught unit testing workshops,hosted the Bay XP User Group, presented at various conferences, co-started the first GeekNight, and even got a chance to pair with people like Ward Cunningham, Martin Fowler, Robert Martin, and Brian Marick.
+
+QuickStart Engagements
+I served as lead facilitator on several QuickStarts and developed and taught internal classes to train other facilitators.  In this type of engagement, a small ThoughtWorks team facilitates intense working meetings with stakeholders, BAs and developers to drive out clear business goals and objectives, and eventually flesh out enough requirements to kickoff an agile project.  The projects that I started this  way ranged from small 4 person projects to multimillion dollar projects lasting multiple years.
+
+Product: CruiseControl.rb
+Alexey Verkhovsky and I led a small development team to design and implement a ruby version of cruise control. We drove the product to a successful 1.0 release and beyond. It is now the de facto standard for ruby continuous integration, in use in hundreds of projects around the world. Because it is open source, I am able to remain active as a lead developer today.
+
+Client: Cutting Edge Software Product Company
+I served as a developer & architect and was called upon to share industry knowledge and best practices, influencing the direction of the project. This client is using and hoping to introduce many revolutionary technologies around Domain Specific Languages, and has the potential to change software development forever.
+
+Client: Major Financial Company
+As a coach, I brought best practices to the team which allowed it to grow from 5 developers in a room to 30 developers on 3 sites including an offshore component. As an architect, I was responsible for much of the architecture, especially an MVC framework that allowed the same presenters and agents/web services to be used on SmartClient and ASP.NET views.
+
+Client: Major Petroleum Company
+As a team lead and senior developer on this 100+ person project, I helped define their methodology and architecture. I helped write a persistence layer for the project and wrote the data migration framework that has now been used for several releases. Developed a bespoke oil trading application to capture and process deals involving physical and derivative instruments.
+
+Client: Container Shipping Web Service
+I helped bring many best practices to the team, as well as to the client through mentoring. I also pioneered n-stage XSL transforms, developed a powerful framework for writing web applications, and rewrote and optimized an entity bean code generator.
+
+June 1999 - July 2000
+IBM Corp.
+Software Developer / Team Lead
+I was team lead of the Windows GUI team on a large-scale cross-platform C++/Java environment. I led development of Testing Frameworks, User Wizards, and Dynamic Control Resizing for Internationalization.
+
+Jan 1998 - Aug 1998
+Intel Corp.
+Software Developer (intern)
+I developed a feature-rich IDE for non-programmer chip testers to write test scripts. I also co-developed a commercial Failure Analysis Tool with an outside company.
+
+May 1997 - Aug 1997
+Microsoft Corp.
+Software Developer in Test (intern)
+I did an internship as part of the Expedia team and was responsible for development of a database stress-testing tool. It had an MFC interface, and limited "Smart Monkey"/ AI functionality.
+
+Aug 1995 - May 1999
+University of Southern California
+Research Assistant / Consultant
+As a research assistant in the USC Robotics Lab, I worked on an AI and real-time 3D physical simulation projects. As a consultant for the university, I provided end-user support for all of our software and services.
+
+
+EXPERTISE
+Agile Development Coaching
+Facilitation
+Agile Methodologies
+Systems Implementation
+Rapid Scoping
+Training
+Design/Development
+Analysis and Design
+Software Architecture
+Product Management
+Product Launch
+Systems Integration
+Open Source Software
+Ruby on Rails
+Web 2.0
+Paper-based Modeling
+
+INDUSTRIES
+Web Based Applications
+Consumer Software
+Financial Services
+Construction
+Shipping
+Insurance
+
+COMPUTER LANGUAGES
+Ruby, JavaScript, CSS, Java, .NET(C#), Python, C++/C, PHP, Perl, Pascal, Lisp
+
+EDUCATION
+University of
+Southern California
+BS in Computer Science
+
+OPEN SOURCE PROJECTS
+http://marathonman.sourceforge.net/ Marathon
+I founded this project with Charles Lowell and I ran it as an XP project with a team of up to 6 developers for over a year. It is still one of the most widely used open source testing tools for java swing. 
+
+http://rubyforge.org/projects/cardwallgen/ Card Wall Generator
+I wrote this tool to automate card wall generation in QuickStarts. 
+
+http://rubyforge.org/projects/chizzle/ Chizzle - A Cocoa Based Ruby IDE
+I started this IDE as a replacement for TextMate and a testbed for experimental parsers. 
+
+http://sourceforge.net/projects/transparent/ ClearCasePlugin
+I wrote one of the first plugins for IntelliJ to support our client's source control system. 
+
+http://selfesteem.sourceforge.net/ SelfEsteem
+I wrote SelfEsteem to automate publishing/displaying acceptance test results to a team and its sponsors. 
+
+References available upon request
