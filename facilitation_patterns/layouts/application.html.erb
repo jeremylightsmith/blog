@@ -1,0 +1,42 @@
+<html>
+<head>
+  <link rel="stylesheet" href="delight.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+</head>
+<body>
+<div id="header">
+	<h1><a href="http://facilitationpatterns.org/">Facilitation Patterns</a></h1>
+	<h2>jeremy lightsmith on facilitation</h2>
+</div>
+
+<ul id="menu">
+	<li class="page_item"><a href="/">home</a></li>
+	<li class="page_item"><a href="/work">work</a></li>
+	<li class="page_item"><a href="/life">life</a></li>
+	<li class="page_item"><a href="http://flickr.com/photos/onemanswalk/collections">pictures</a></li>
+	<li class="page_item current_page_item"><a href="/work">facilitation patterns</a></li>
+</ul>
+<div class="clear"></div>
+
+<div id="content">
+  <div id="content-left">
+    <%= content%>
+  </div>
+  <div id="content-right">
+    <div class="box-right catalog">
+      <h3>Catalog</h3>
+%     patterns_by_category.each do |category, patterns|
+        <h4><%= category.titleize %></h4>
+%       patterns.each do |pattern|
+          <p><a href="<%= pattern.symbol %>.html"><%= pattern.name %></a>
+%       end
+%     end
+      <div class="box-right-bottom"/>
+    </div>
+  </div>
+</div>
+
+<div class="clear"></div>
+<p>back to <a href="/facilitation_patterns/index.html">home</a></p>
+</body>
+</html>
