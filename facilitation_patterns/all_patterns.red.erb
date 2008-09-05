@@ -1,0 +1,16 @@
+% patterns_by_category.each do |category, patterns|
+%   patterns.each do |pattern|
+h3. PATTERN: <%= pattern.name %> <span style="color: #666; font-size: 80%;">(<%= pattern.category %>)</font>
+
+%     unless pattern.summary.blank?
+_summary:_ <%= pattern.summary %>
+%     end
+
+%     unless pattern.details.blank?
+_details:_ <%= pattern.details %>
+%     end
+
+----
+
+%   end
+% end
