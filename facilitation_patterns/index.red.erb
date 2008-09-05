@@ -2,7 +2,11 @@
 h3. <%= category.titleize %>
 
 % patterns.each do |pattern|
+%   if pattern.summary.blank?
 * "<%= pattern.name %>":<%= pattern.symbol %>.html
+%   else
+* "<%= pattern.name %>":<%= pattern.symbol %>.html - <%= pattern.summary[0..40] %>...
+%   end
 % end  
 
 % end
