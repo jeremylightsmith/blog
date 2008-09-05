@@ -20,5 +20,5 @@ end
 
 desc "pull code from github"
 task :pull do
-  run "cd #{deploy_to} && git pull"
+  run "cd #{deploy_to} && git pull && rake generate"
 end 
