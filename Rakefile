@@ -10,7 +10,7 @@ task :generate do
   
   in_dir = File.dirname(__FILE__) + '/facilitation_patterns'
   out_dir = File.dirname(__FILE__) + '/public/facilitation_patterns'
-  rm_rf out_dir + "/*.html"
+  rm_rf FileList[out_dir + "/*.html"]
   
   Dir[in_dir + "/*.*"].each do |in_file|
     out_file = in_file.gsub(in_dir, out_dir).gsub(/\..+$/, '.html')
