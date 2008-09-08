@@ -11,3 +11,8 @@
 .box-right.catalog h3 {
   margin: 0;
 }
+
+.feedback {
+  float: right;
+  margin-top: -1em;
+}
