@@ -1,7 +1,14 @@
+SUMMARY
+My 10 years as a project manager, coach, facilitator, team lead, and software developer have been about aligning people, building teams, and creating value.
+
+I have extensive experience coaching software development teams across many industries, introducing agile best practices and values, and leading my teams to deliver working software.
+
+I believe that leadership is about service and two-way trust.  I believe that integrity and passion are contagious, and I try to model my beliefs.
+
 EXPERIENCE
 Apr 2007 - present
 Pivotal Labs
-Consultant / Agile Coach
+Agile Coach / Project Manager
 
 My responsibilities at Pivotal include Client / Project Management, Agile Enablement and Coaching of development
 teams, Ruby on Rails development and responding to RFPs.  I also help kick off projects by facilitating intensive 
@@ -23,15 +30,7 @@ on time and on budget.
 Product: Pivotal Tracker
 As a senior developer, I was responsible for much of a UI overhaul as we pushed it toward full public release.
 
-Oct 2006 - Mar 2007
-Independent Consulting
-Ruby on Rails Developer
-
-Client: iCrew.com
-I introduced project lifecycle best practices while working remotely on its development and delivery. I was also responsible for many ajax features and some integration work with external services.
-
-Aug 2000 - Aug 2006 (full-time)
-Aug 2006 - Mar 2007 (part-time)
+Aug 2000 - Mar 2007
 ThoughtWorks, Inc.
 Consultant / Facilitator / Agile Coach / Senior Developer
 Serving ThoughtWorks, I have seen and been a part of real change. As an Extreme Programming Coach, I concentrated on gelling teams and introducing Agile Best Practices. As a developer, I was responsible for evolving much of the architecture on each of my projects at ThoughtWorks. During my time here, I taught unit testing workshops,hosted the Bay XP User Group, presented at various conferences, co-started the first GeekNight, and even got a chance to pair with people like Ward Cunningham, Martin Fowler, Robert Martin, and Brian Marick.
