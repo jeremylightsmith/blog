@@ -32,8 +32,9 @@ As a senior developer, I was responsible for much of a UI overhaul as we pushed 
 
 Aug 2000 - Mar 2007
 ThoughtWorks, Inc.
-Consultant / Facilitator / Agile Coach / Senior Developer
-Serving ThoughtWorks, I have seen and been a part of real change. As an Extreme Programming Coach, I concentrated on gelling teams and introducing Agile Best Practices. As a developer, I was responsible for evolving much of the architecture on each of my projects at ThoughtWorks. During my time here, I taught unit testing workshops,hosted the Bay XP User Group, presented at various conferences, co-started the first GeekNight, and even got a chance to pair with people like Ward Cunningham, Martin Fowler, Robert Martin, and Brian Marick.
+Consultant / Facilitator / Agile Coach / Senior Developer / Sr. Business Analyst
+Serving ThoughtWorks, I have seen and been a part of real change. As an Extreme Programming Coach, I concentrated on gelling teams and introducing Agile Best Practices as well as mentoring developers and business analysts. As a developer, I was responsible for evolving much
+of the architecture on each of my projects at ThoughtWorks. During my time here, I taught unit testing workshops, hosted the Bay XP User Group, presented at various conferences, co-started the first GeekNight, and even got a chance to pair with people like Ward Cunningham, Martin Fowler, Robert Martin, and Brian Marick.
 
 QuickStart Engagements
 I served as lead facilitator on several QuickStarts and developed and taught internal classes to train other facilitators.  In this type of engagement, a small ThoughtWorks team facilitates intense working meetings with stakeholders, BAs and developers to drive out clear business goals and objectives, and eventually flesh out enough requirements to kickoff an agile project.  The projects that I started this  way ranged from small 4 person projects to multimillion dollar projects lasting multiple years.
