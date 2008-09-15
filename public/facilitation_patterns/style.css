@@ -12,13 +12,7 @@
   margin: 0;
 }
 
-.feedback {
-  float: right;
-  margin-top: -1em;
+body, td, th {
+  font:11px/18px Verdana, Tahoma, sans-serif;
+  color:#606060;
 }
-
-.feedback img {
-  float: right;
-  margin-top: -2.5em;
-}
-

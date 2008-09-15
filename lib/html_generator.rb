@@ -18,25 +18,33 @@ class HtmlGenerator
       content = ERB.new(content, 0, "%<>").result(@context.get_binding)
       
     when 'red'
-      content = RedCloth.new(content).to_html
+      redcloth = RedCloth.new(content)
+      redcloth.patterns = @context.patterns
+      content = redcloth.to_html(:html, :textile, :refs_patterns)
       
     when 'yml'
       content = YAML::load(content) rescue raise("error reading #{file_name}: #{$!.message}")
-      
+            
     when 'pattern'
       @context.pattern = Pattern.new(file_name.to_sym, content)
-      content = process_file(File.dirname(__FILE__) + "/../facilitation_patterns/layouts/pattern.red.erb", false)
+      content = use_layout("pattern")
 
     when nil
       if apply_layout
         @context.content = content
-        return process_file(File.dirname(__FILE__) + "/../facilitation_patterns/layouts/application.html.erb", false)
+        return use_layout("application")
       else
         return content
       end
     end
 
     return process(file_name, content, apply_layout)
+  end
+  
+  def use_layout(name)
+    files = Dir[File.dirname(__FILE__) + "/../facilitation_patterns/layouts/" + name + ".*"]
+    raise "couldn't find layout #{name}" if files.empty?
+    process_file(files.first, false)
   end
       
   def process_file(file, apply_layout = true)

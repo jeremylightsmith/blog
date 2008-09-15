@@ -1,0 +1,44 @@
+<style type="text/css" media="screen">
+  #content-right {
+    display: none;
+  }
+  #content-left {
+    width: 900px;
+  }
+  .pass { background-color: #dfd;}
+  .fail { background-color: #fdd;}
+  .attention { background-color: #ee6;}
+</style>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Story</th>
+    <th>Summary</th>
+    <th>Problem</th>
+    <th>Answer</th>
+    <th>Details</th>
+    <th>Credits</th>
+    <th>Todo</th>
+  </tr>
+% patterns_by_category.each do |category, patterns|
+% patterns.each do |pattern|
+  <tr>
+    <td><a href="<%= pattern.symbol %>.html"><%= pattern.name %></a></td>
+    <td><%= pattern.category %></td>
+%   %w(story summary problem answer details credits).each do |field|
+%     if pattern.send((field + "?").to_sym)
+        <td class="pass"><%= pattern.send(field.to_sym).split.size%></td>
+%     else
+        <td class="fail">-</td>
+%     end
+%   end
+%   if pattern.todo?
+      <td class="attention">*</td>
+%   else
+      <td>-</td>
+%   end
+  </tr>
+% end
+% end
+</table>

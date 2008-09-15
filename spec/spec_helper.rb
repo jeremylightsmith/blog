@@ -1,5 +1,4 @@
-$LOAD_PATH << File.expand_path(File.dirname(__FILE__) + "/../lib")
-require 'dependencies'
+require File.dirname(__FILE__) + "/../lib/blog"
 
 gem 'rspec'
 require 'spec'

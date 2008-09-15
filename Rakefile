@@ -1,9 +1,12 @@
-$LOAD_PATH << File.expand_path(File.dirname(__FILE__) + "/lib")
-require 'dependencies'
-require 'html_generator'
+require File.dirname(__FILE__) + "/lib/blog"
+require 'spec/rake/spectask'
 load 'tasks/db.rake'
 
-task :default => :generate
+task :default => [:spec, :generate]
+
+Spec::Rake::SpecTask.new(:spec) do |t|
+  t.spec_files = FileList['spec/**/*_spec.rb']
+end
 
 task :generate do
   generator = HtmlGenerator.new
