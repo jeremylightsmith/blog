@@ -1,17 +1,15 @@
 require 'pattern'
 
 class HtmlGenerator
-  def initialize
+  def initialize(template_directory)
+    @template_directory = template_directory
     @context = Context.new
-    @context.patterns = Patterns.load
-    @context.patterns_by_category = {}
-    @context.patterns.each do |pattern|
-      (@context.patterns_by_category[pattern.category] ||= []) << pattern
-    end
+    @layout_directory = File.join(template_directory, "layouts")
+    load_patterns
   end
   
   def process(file_name, content, apply_layout = true)
-    file_name, extension = separate(file_name)
+    file_name, extension = file_name.split_filename
 
     case extension
     when 'erb'
@@ -42,9 +40,19 @@ class HtmlGenerator
   end
   
   def use_layout(name)
-    files = Dir[File.dirname(__FILE__) + "/../facilitation_patterns/layouts/" + name + ".*"]
+    files = Dir["#{@layout_directory}/#{name}.*"]
     raise "couldn't find layout #{name}" if files.empty?
     process_file(files.first, false)
+  end
+  
+  def load_patterns
+    unless @context.patterns
+      @context.patterns = Patterns.load(@template_directory)
+      @context.patterns_by_category = {}
+      @context.patterns.each do |pattern|
+        (@context.patterns_by_category[pattern.category] ||= []) << pattern
+      end
+    end
   end
       
   def process_file(file, apply_layout = true)
@@ -56,15 +64,7 @@ class HtmlGenerator
       f << process_file(in_file)
     end
   end
-  
-  def separate(file_name)
-    if file_name =~ /^(.+)\.([^\.]+)$/
-      [$1, $2]
-    else
-      [file_name, nil]
-    end
-  end
-  
+    
   class Context
     attr_accessor :pattern, :patterns, :patterns_by_category, :content
     

@@ -39,9 +39,9 @@ class Patterns < Array
     end
   end
       
-  def self.load
+  def self.load(dir)
     patterns = Patterns.new
-    Dir[File.dirname(__FILE__) + '/../facilitation_patterns/*.pattern.yml'].each do |file|
+    Dir[dir + '/*.pattern.yml'].each do |file|
       yml = YAML::load_file(file) rescue raise("error reading #{File.basename(file)}: #{$!.message}")
       patterns << Pattern.new(File.basename(file.sub(/.pattern.yml$/, '')).to_sym, yml)
     end

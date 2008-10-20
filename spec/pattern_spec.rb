@@ -1,8 +1,14 @@
 require File.dirname(__FILE__) + '/spec_helper'
 
 describe Pattern do
+  it "should load all" do
+    patterns = Patterns.load(File.dirname(__FILE__) + "/../web/facilitation_patterns")
+    patterns.size.should > 5
+    patterns[:fishbowl].name.should == "Fishbowl"    
+  end
+  
   it "should load all including fishbowl" do
-    fishbowl = Patterns.load[:fishbowl]
+    fishbowl = Patterns.load(File.dirname(__FILE__) + "/fixtures/patterns")[:fishbowl]
     fishbowl.should_not be_nil
     fishbowl.name.should == "Fishbowl"
     fishbowl.summary.should include("people sitting")

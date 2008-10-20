@@ -9,15 +9,8 @@ Spec::Rake::SpecTask.new(:spec) do |t|
 end
 
 task :generate do
-  generator = HtmlGenerator.new
-  
-  in_dir = File.dirname(__FILE__) + '/facilitation_patterns'
-  out_dir = File.dirname(__FILE__) + '/public/facilitation_patterns'
-  rm_rf FileList[out_dir + "/*.html"]
-  
-  Dir[in_dir + "/*.*"].each do |in_file|
-    out_file = in_file.gsub(in_dir, out_dir).gsub(/\..+$/, '.html')
-    generator.write_page(in_file, out_file)
-    puts "generated #{File.basename(out_file)}"
+  Dir.chdir(File.dirname(__FILE__)) do
+    SiteGenerator.new("web/facilitation_patterns", "public/facilitation_patterns").generate
+    SiteGenerator.new("web/challenge", "public/challenge").generate
   end
 end
