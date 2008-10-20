@@ -71,5 +71,10 @@ class HtmlGenerator
     def get_binding
       binding
     end
+    
+    def link_to(name, url = nil)
+      url ||= name + ".html"
+      "<a href='#{url}'>#{name}</a>"
+    end
   end
 end

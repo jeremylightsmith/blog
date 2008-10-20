@@ -3,6 +3,8 @@ class SiteGenerator
     @generator = HtmlGenerator.new(in_dir)
     @in_dir, @out_dir = in_dir, out_dir
     puts "\nGENERATING #{File.basename(in_dir).upcase}\n\n"
+    rm_rf out_dir
+    mkdir_p out_dir
   end
   
   def generate(in_dir = @in_dir, out_dir = @out_dir)
@@ -16,12 +18,11 @@ class SiteGenerator
         cp in_file, out_file rescue nil # maybe the links don't exist here
 
       elsif File.directory?(in_file)
-        rm_rf out_file
         mkdir_p out_file
         generate in_file, out_file
       
       elsif resource?(in_file)
-        cp in_file, out_file
+        ln_s File.expand_path(in_file), File.expand_path(out_file)
 
       else 
         out_file = out_file.gsub(/\..+$/, '.html')

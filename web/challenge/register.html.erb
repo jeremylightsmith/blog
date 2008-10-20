@@ -1,0 +1,65 @@
+<!-- saturday_spaces = BluesHeroRegistration.how_many_left_on(:saturday)
+sunday_spaces = BluesHeroRegistration.how_many_left_on(:sunday) -->
+
+<h1>Register</h1>
+
+<!-- if saturday_spaces <= 0 && sunday_spaces <= 0
+  em "Sorry, the workshop is full"
+else -->
+<form>
+  <fieldset>
+    <legend>About you</legend>
+    <dl>
+      <dt>* Name</dt>
+      <dd><input type="text" name="registration[name]"></dd>
+      <!-- require -->
+      
+      <dt>* Phone</dt>
+      <dd><input type="text" name="registration[phone]"></dd>
+      <!-- require -->
+      
+      <dt>* Email</dt>
+      <dd><input type="text" name="registration[email]"></dd>
+      <!-- require -->
+      
+      <dt>* Follow/Lead</dt>
+      <dd>
+        radio buttons : follow, lead
+        <!-- require -->
+      </dd>
+      
+      <dt>City</dt>
+      <dd><input type="text" name="registration[city]"></dd>
+    </dl>
+  </fieldset>
+  
+  <fieldset>
+    <legend>Packages</legend>
+    
+    <dl>
+      <dt>* Sign me up for</dt>
+      <dd>
+        radio saturday workshop - $65, sunday workshop - $65, full weekend $80
+        <!-- require -->
+        <!-- show spaces left -->
+      </dd>
+    </dl>
+  </fieldset>
+
+  <fieldset>
+    <legend>Other stuff</legend>
+    
+    <dl>
+      <dt>Anything else?</dt>
+      <dd>
+        <textarea name="registration[notes]" rows="5" cols="40"></textarea>
+      </dd>
+    </dl>
+  </fieldset>
+  
+  <br/>
+  <h3>Your total is 65</h3>
+  <br/>
+  <!-- show price -->
+  <input type="submit" value="Register &amp; Pay">
+</form>
