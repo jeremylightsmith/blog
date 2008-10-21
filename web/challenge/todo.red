@@ -1,5 +1,3 @@
-* deploy to jeremyandkarissa.com/challenge
-* email karissa about it
 * build registration
   * submitting registration
   * saving registration
@@ -24,10 +22,9 @@
     * additional classes
     * schedule - which classes at what time on which days
   * teachers page
-    * bio for andrew
     * pick for andrew
-    * bio for karissa
     * pick for karissa
+    * karissa's bio should be tailored for seattle, where they do know her
     * bio should say that karissa is only teaching sunday
   * register
     * what packages can people register for?

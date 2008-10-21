@@ -1,15 +1,29 @@
+@import "reset.css";
+@import "core.css";
+
+@import "cmxformTemplate.css";
+@import "cmxform.css";
+
+@import "registration.css";
+
+html {
+  background: url(../img/striped_background.png) #bebdbd repeat-x;
+}
+
 body {
   font-family: verdana, arial;
-  background-color: black;
-  color: yellow;
 }
 
 .header, .content {
-  width: 50em;
+  width: 60em;
   margin: 0 auto;
 }
 
 .header {
+  color: yellow;
+  height: 60px;
+  border-bottom: yellow solid 5px;
+  margin-bottom: 5px;
 } 
 
 .header .title {
@@ -24,33 +38,60 @@ body {
   text-align: right;
 }
 
-.header .links {
-  clear: both;
-  text-align: right;
-  border-top: yellow solid 3px;
+.right_side {
+  width: 11em;
+  float: right;
 }
 
-.header .links a {
-  background: yellow;
-  color: black;
+.right_side a {
+  color: yellow;
+  display: block;
+  font-size: 140%;
+  margin: 0.5em 0;
   text-decoration: none;
-  padding: 0 0.5em 0.5em;
+  padding-left: 1em;
 }
 
-.schedule h2 {
-  border-bottom: solid 2px yellow;
+.right_side a:hover {
+  text-decoration: underline;
+}
+
+.left_side {
+  width: 47em;
+  padding: 1em;
+  background: url(../img/background_gradient_light.png) #9a9a9a repeat-x;
+}
+
+h1 {
+  padding-top: 0;
+  padding-left: 0;
+}
+
+h2 {
+  border-bottom: solid 2px gray;
+  padding-left: 0;
 }
 
 fieldset {
-  border-color: yellow;
+  border-color: gray;
 }
 
 form dt {
   float: left;
-  width: 15em;
+  width: 10em;
   text-align: right;
 }
 
 form dd {
-  padding-left: 13em;
+  padding-left: 8em;
 }
+
+.clear {
+  clear: both;
+}
+
+html {
+  background: url(../img/background_gradient.png) #bebdbd repeat-x;
+  background-position: 0 -40px;
+}
+

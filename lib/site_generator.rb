@@ -37,6 +37,6 @@ class SiteGenerator
   end
   
   def resource?(file)
-    %w(css ico gif jpg png).include?(file.extension)
+    %w(css ico gif jpg png js).include?(file.extension)
   end
 end

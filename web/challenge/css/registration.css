@@ -1,0 +1,46 @@
+.registration { 
+  width: 47em;
+}
+
+.registration table {
+  width: 100%;
+}
+
+.registration th {
+  text-align: left;
+  border-bottom: 1px solid gray;
+}
+
+.registration td {
+  font-size: 90%;
+  vertical-align: top;
+}
+
+
+.registration td.label {
+  text-align: right;
+  width: 9em;
+}
+
+.registration label {
+  display: block;
+  width: 10em;
+}
+
+.registration td.field label,
+.registration td.field>input {
+  width: 100%;
+}
+
+.registration td.status {
+  width: 14em;
+}
+
+.registration td.status .error {
+  padding-left: 15px;
+  background: url(../img/unchecked.gif) no-repeat;
+}
+
+.registration td.status .checked.error {
+  background: url(../img/checked.gif) no-repeat;
+}
