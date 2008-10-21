@@ -22,18 +22,14 @@
   width: 9em;
 }
 
-.registration label {
-  display: block;
-  width: 10em;
-}
-
-.registration td.field label,
+.registration label,
 .registration td.field>input {
+  display: block;
   width: 100%;
 }
 
 .registration td.status {
-  width: 14em;
+  width: 15em;
 }
 
 .registration td.status .error {

@@ -1,36 +1,6 @@
 <script src="js/jquery-1.2.6.pack.js" type="text/javascript"></script>
 <script src="js/jquery.validate.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-$(document).ready(function() {
-	var validator = $(".registration").validate({
-		rules: {
-			name: "required",
-			phone: "required",
-			email: {required: true, email:true},
-			role: "required",
-			"package": "required",
-		},
-		messages: {
-		  role: "Please select lead or follow",
-		  "package": "Please choose a package"
-		},
-    // // the errorPlacement has to take the table layout into account
-    errorPlacement: function(error, element) {
-      if ( element.is(":radio") )
-        error.appendTo(element.parent().parent().next());
-      else
-        error.appendTo(element.parent().next());
-    },
-    // // set this class to error-labels to indicate valid fields
-    success: function(label) {
-      // set &nbsp; as text for IE
-      label.html("&nbsp;").addClass("checked");
-    }
-	});
-});
-</script>
-
 <!-- saturday_spaces = BluesHeroRegistration.how_many_left_on(:saturday)
 sunday_spaces = BluesHeroRegistration.how_many_left_on(:sunday) -->
 
@@ -85,17 +55,17 @@ else -->
       <td class="label"><label for="role">* Sign me up for</label></td>
 			<td class="field">
   		  <label for="package_saturday">
-          <input type="radio" id="package_saturday" value="saturday" name="package" validate="required:true" />
+          <input type="radio" id="package_saturday" value="saturday" name="package" onclick="set_cost(65)"/>
         	Saturday Workshop - $65 
   			</label>
         <!-- <div class="note">only 11 available</div> -->
   		  <label for="package_sunday">
-          <input  type="radio" id="package_sunday" value="sunday" name="package" validate="required:true" />
+          <input  type="radio" id="package_sunday" value="sunday" name="package" onclick="set_cost(65)"/>
         	Sunday Workshop - $65
   			</label>
         <!-- <div class="note">only 11 available</div> -->
   		  <label for="package_weekend">
-          <input  type="radio" id="package_weekend" value="weekend" name="package" validate="required:true" />
+          <input  type="radio" id="package_weekend" value="weekend" name="package" onclick="set_cost(125)"/>
         	Full Weekend - $125
   			</label>
         <!-- show spaces left -->
@@ -113,9 +83,47 @@ else -->
   </table>
   
   <br/>
-  <h3>Your total is 65</h3>
+  <h3>Your total is <span class="cost">?</span></h3>
+  <input type="hidden" name="cost" class="cost"></input>
   <br/>
 
   <!-- show price -->
   <input class="submit" type="submit" value="Register &amp; Pay">
 </form>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	var validator = $(".registration").validate({
+		rules: {
+			name: "required",
+			phone: "required",
+			email: {required: true, email:true},
+			role: "required",
+			"package": "required",
+		},
+		messages: {
+		  role: "Please select lead or follow",
+		  "package": "Please choose a package"
+		},
+    // // the errorPlacement has to take the table layout into account
+    errorPlacement: function(error, element) {
+      if ( element.is(":radio") )
+        error.appendTo(element.parent().parent().next());
+      else
+        error.appendTo(element.parent().next());
+    },
+    // // set this class to error-labels to indicate valid fields
+    success: function(label) {
+      // set &nbsp; as text for IE
+      label.html("&nbsp;").addClass("checked");
+    }
+	});
+	
+	$('input:radio[checked]').click();
+});
+
+function set_cost(value) {
+  $('input.cost').val(value);
+  $('span.cost').text("$" + value);
+}
+</script>
