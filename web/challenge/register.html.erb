@@ -9,7 +9,8 @@ sunday_spaces = BluesHeroRegistration.how_many_left_on(:sunday) -->
 <!-- if saturday_spaces <= 0 && sunday_spaces <= 0
   em "Sorry, the workshop is full"
 else -->
-<form class="registration" method="post" action="http://registrar.onemanswalk.com/event/challenge/registrations">
+<form class="registration" method="post" action="http://localhost:3000/events/challenge/registrations">
+<!-- <form class="registration" method="post" action="http://registrar.onemanswalk.com/events/challenge/registrations"> -->
   <table>
     <tr>
       <th colspan="3">About you</th>
@@ -55,17 +56,17 @@ else -->
       <td class="label"><label for="role">* Sign me up for</label></td>
 			<td class="field">
   		  <label for="package_saturday">
-          <input type="radio" id="package_saturday" value="saturday" name="package" onclick="set_cost(65)"/>
+          <input type="radio" id="package_saturday" value="saturday" name="package" onclick="set_amount(65)"/>
         	Saturday Workshop - $65 
   			</label>
         <!-- <div class="note">only 11 available</div> -->
   		  <label for="package_sunday">
-          <input  type="radio" id="package_sunday" value="sunday" name="package" onclick="set_cost(65)"/>
+          <input  type="radio" id="package_sunday" value="sunday" name="package" onclick="set_amount(65)"/>
         	Sunday Workshop - $65
   			</label>
         <!-- <div class="note">only 11 available</div> -->
   		  <label for="package_weekend">
-          <input  type="radio" id="package_weekend" value="weekend" name="package" onclick="set_cost(125)"/>
+          <input  type="radio" id="package_weekend" value="weekend" name="package" onclick="set_amount(125)"/>
         	Full Weekend - $125
   			</label>
         <!-- show spaces left -->
@@ -83,8 +84,8 @@ else -->
   </table>
   
   <br/>
-  <h3>Your total is <span class="cost">?</span></h3>
-  <input type="hidden" name="cost" class="cost"></input>
+  <h3>Your total is <span class="amount">?</span></h3>
+  <input type="hidden" name="amount" class="amount"></input>
   <br/>
 
   <!-- show price -->
@@ -122,8 +123,8 @@ $(document).ready(function() {
 	$('input:radio[checked]').click();
 });
 
-function set_cost(value) {
-  $('input.cost').val(value);
-  $('span.cost').text("$" + value);
+function set_amount(value) {
+  $('input.amount').val(value);
+  $('span.amount').text("$" + value);
 }
 </script>
