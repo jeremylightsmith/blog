@@ -6,11 +6,15 @@ sunday_spaces = BluesHeroRegistration.how_many_left_on(:sunday) -->
 
 <h1>Register</h1>
 
+<i>
+  Be one of the first 25 people to register and save up to $40 on a weekend package.<br/>
+  Register today!
+</i>
+
 <!-- if saturday_spaces <= 0 && sunday_spaces <= 0
   em "Sorry, the workshop is full"
 else -->
-<form class="registration" method="post" action="http://localhost:3000/events/challenge/registrations">
-<!-- <form class="registration" method="post" action="http://registrar.onemanswalk.com/events/challenge/registrations"> -->
+<form class="registration" method="post" action="http://registrar.heroku.com/events/challenge/registrations">
   <table>
     <tr>
       <th colspan="3">About you</th>
@@ -56,18 +60,18 @@ else -->
       <td class="label"><label for="role">* Sign me up for</label></td>
 			<td class="field">
   		  <label for="package_saturday">
-          <input type="radio" id="package_saturday" value="saturday" name="package" onclick="set_amount(65)"/>
-        	Saturday Workshop - $65 
+          <input type="radio" id="package_saturday" value="saturday" name="package" onclick="set_amount(50)"/>
+        	Saturday Workshop - <strike>$65</strike> $50 
   			</label>
         <!-- <div class="note">only 11 available</div> -->
   		  <label for="package_sunday">
-          <input  type="radio" id="package_sunday" value="sunday" name="package" onclick="set_amount(65)"/>
-        	Sunday Workshop - $65
+          <input  type="radio" id="package_sunday" value="sunday" name="package" onclick="set_amount(50)"/>
+        	Sunday Workshop - <strike>$65</strike> $50
   			</label>
         <!-- <div class="note">only 11 available</div> -->
   		  <label for="package_weekend">
-          <input  type="radio" id="package_weekend" value="weekend" name="package" onclick="set_amount(125)"/>
-        	Full Weekend - $125
+          <input  type="radio" id="package_weekend" value="weekend" name="package" onclick="set_amount(80)"/>
+        	Full Weekend - <strike>$120</strike> $80
   			</label>
         <!-- show spaces left -->
 			</td>

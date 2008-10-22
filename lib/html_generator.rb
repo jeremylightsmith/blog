@@ -27,6 +27,9 @@ class HtmlGenerator
       @context.pattern = Pattern.new(file_name.to_sym, content)
       content = use_layout("pattern")
 
+    when 'bald'
+      return content
+      
     when nil
       if apply_layout
         @context.content = content
