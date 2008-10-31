@@ -7,8 +7,10 @@ sunday_spaces = BluesHeroRegistration.how_many_left_on(:sunday) -->
 <h1>Register</h1>
 
 <i>
-  Be one of the first 25 people to register and save up to $40 on a weekend package.<br/>
-  Register today!
+  <p>Going to <a href="http://www.portlandfusionexchange.com/">Portland Fusion</a>?</p>
+  <p>We know it's hard to go to two events back to back, so we're giving you a 50% DISCOUNT!</p>
+  <p>Go to fusion.  It's gonna be a blast.  Then, come CHALLENGE and get even more Andrew Sutton and Karissa Lightsmith.</p>
+  <p>Register today!</p>
 </i>
 
 <!-- if saturday_spaces <= 0 && sunday_spaces <= 0
@@ -72,6 +74,11 @@ else -->
         <label for="package_weekend">
           <input  type="radio" id="package_weekend" value="weekend" name="package" onclick="set_amount(80)"/>
           Full Weekend - <strike>$120</strike> $80
+        </label>
+        <!-- show spaces left -->
+        <label for="package_weekend_fusion">
+          <input  type="radio" id="package_weekend_fusion" value="weekend_fusion" name="package" onclick="set_amount(60)"/>
+          Full Weekend (fusion discount) - <strike>$120</strike> $60
         </label>
         <!-- show spaces left -->
       </td>
