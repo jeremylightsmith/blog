@@ -70,6 +70,21 @@ h1 {
 h2 {
   border-bottom: solid 2px gray;
   padding-left: 0;
+  font-size: 150%;
+}
+
+.schedule h2.lunch {
+  border: none;
+  padding: 1em;
+  font-size: 120%;
+}
+
+.schedule h2.day {
+  border: none;
+  background-color: black;
+  color: white;
+  margin-left: -0.4em;
+  padding: 0.2em 0.4em;
 }
 
 fieldset {
@@ -106,3 +121,16 @@ html {
   font-weight: bold;
   text-decoration: none;
 }
+
+.testimonial {
+  color: #666;
+  font-style: italic;
+}
+
+.from {
+  color: black;
+  font-weight: bold;
+  text-align: right;
+}
+
+.schedule 

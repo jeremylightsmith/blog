@@ -12,6 +12,8 @@ Andrew stands out as a teacher that teaches for both the leads AND the follows. 
 
 Throughout his classes, you might notice Andrew using physics, philosophy, specially-trained teaching techniques, Socratic methods, group activities, special rotations, and/or any other variety of teaching techniques he has found to help develop your dancing. From his instant musicality technique of how to be ONE with the music, to his multi-layered concept of the layers of a lead, you can be sure his classes will be a unique experience for you to enjoy.
 
+To find out more about Andrew's thoughts on how to improve your dancing, watch him dance, or win a free dance trip, visit "www.smoothsavoy.com":http://www.smoothsavoy.com/
+
 <img src="img/karissa_dancing.gif" style="float:right"></img>
 
 h2. Karissa Lightsmith

@@ -8,6 +8,7 @@ Spec::Rake::SpecTask.new(:spec) do |t|
   t.spec_files = FileList['spec/**/*_spec.rb']
 end
 
+desc "generate the site"
 task :generate do
   Dir.chdir(File.dirname(__FILE__)) do
     SiteGenerator.new("web/facilitation_patterns", "public/facilitation_patterns").generate
