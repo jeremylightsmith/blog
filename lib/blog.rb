@@ -12,6 +12,7 @@ require 'yaml'
 $LOAD_PATH << File.expand_path(File.dirname(__FILE__))
 
 require 'extensions/string'
+require 'url_helper'
 require 'site_generator'
 require 'html_generator'
 require 'pattern'

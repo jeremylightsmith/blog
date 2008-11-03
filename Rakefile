@@ -11,7 +11,11 @@ end
 desc "generate the site"
 task :generate do
   Dir.chdir(File.dirname(__FILE__)) do
-    SiteGenerator.new("web/facilitation_patterns", "public/facilitation_patterns").generate
-    SiteGenerator.new("web/challenge", "public/challenge").generate
+    sites = %w(blues_hero challenge facilitation_patterns)
+    sites = [ENV["SITE"]] if ENV["SITE"]
+      
+    sites.each do |site|
+      SiteGenerator.new("web/#{site}", "public/#{site}").generate
+    end
   end
 end

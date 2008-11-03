@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>Blues Hero Workshop</title>
+  <meta content="A different kind of Blues Dancing Workshop" name="description">
+  <meta content="seattle,blues,dance,lindy,dj,teaching" name="keywords">
+  <meta content="Jeremy Stell-Smith" name="author">
+  <link href="css/application.css" media="all" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="content <%= content_for_current_tab %>">
+%   if content_for_current_tab == "home"
+      <%= image_tag "images/black_header_with_slogan.png" %>
+%   else
+      <%= image_tag "images/black_header.png" %>
+%   end
+    
+    <div class="navigation">
+      <%= link_to "home", "index.html", :class => "home_tab" %>
+      <%= link_to "register", "register.html", :class => "register_tab" %>
+      <%= link_to "teachers", "teachers.html", :class => "teachers_tab" %>
+      <%= link_to "schedule", "schedule.html", :class => "schedule_tab" %>
+    </div>
+    
+    <div class="prepage">
+      <%= content_for_prepage if content_for_prepage? %>
+    </div>
+    
+    <div class="page">
+%     if content_for_superhero?
+        <%= image_tag "images/#{content_for_superhero}", :style => "float: left; padding-top: 1em;" %>
+        
+        <div class="right_panel">
+          <%= content %>
+        </div>
+%     else
+        <%= content %>
+%     end
+      
+      <div style="clear: both;"></div>
+    </div>
+    
+    <div class="credits">
+      this workshop brought to you by <%= link_to "Jeremy &amp; Karissa", "http://jeremyandkarissa.com/" %>
+    </div>
+  </div>
+</body>  
+</html>

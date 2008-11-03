@@ -33,7 +33,7 @@ class SiteGenerator
   end
   
   def excluded?(file)
-    File.basename(file) == "layouts"
+    File.directory?(file) && %w(layouts helpers).include?(File.basename(file))
   end
   
   def resource?(file)

@@ -1,0 +1,54 @@
+% helper :blues_hero
+% content_for(:current_tab) { "teachers" }
+
+<h1>TEACHERS</h1>
+
+<%= image_tag "images/teacher_contact_sheet.jpg", :size => "1024x483", :usemap => "#teacher_map", :id => 'contact_sheet' %>
+
+<map name="teacher_map">
+  <area shape="rect" alt="Hawk Karissa" coords="863,274,968,430" href="#karissa"/>
+  <area shape="rect" alt="Karen" coords="863,64,1023,238" href="#karen"/>
+  <area shape="rect" alt="Cat Lucy" coords="746,0,838,199" href="#lucy"/>
+  <area shape="rect" alt="The Solomon" coords="759,206,852,430" href="#solomon"/>
+  <area shape="rect" alt="Bat Jeremy" coords="637,123,731,430" href="#jeremy"/>
+  <area shape="rect" alt="Super Topher" coords="376,0,600,430" href="#topher"/>
+  <area shape="rect" alt="Wonder Lessa" coords="265,139,355,430" href="#lessa"/>
+  <area shape="rect" alt="The Green Jocelyn" coords="148,221,232,430" href="#jocelyn"/>
+  <area shape="rect" alt="Kevin Buster" coords="44,251,132,431" href="#kevin"/>
+  <area shape="rect" alt="Chris Chapman" coords="22,0,231,186" href="#chris"/>
+</map>
+
+<br/>
+<hr/>
+<br/>
+
+<%= teacher :chris, "Chris Chapman" %>
+
+<%= teacher :jeremy, "Jeremy Stell-Smith", "Momentum in blues, oh...and I can kill you with my mind", "Jeremy has lived swing and blues dancing across the country and the world for the last 10 years.  He brings different points of view, different dances, and above all, passion into the mix." %>
+
+<%= teacher :jocelyn, "Jocelyn Miller", "", "Jocelyn was introduced to Blues dancing in 1999.  After hours of dancing primarily on her right leg and developing a very sore right thigh (definitely not the best technique in town), she knew she was hooked.  She's been reluctant to miss a Blues dance ever since.  When it comes to dancing to Blues or any other music, her biggest influences and inspiration are through the music and her partner.  She loves playfulness and fun, especially with a touch of sass, so make her day and bring it on!
+Jocelyn currently lives in Vancouver, BC and occasionally teaches classes and workshops there." %>
+
+<%= teacher :karen, "Karen Smith" %>
+
+<%= teacher :karissa, "Karissa", "Solo Blues & Not Eating Meat", "Karissa is known around the country for her energy and creativity in blues dancing. She has been dancing for 6 crazy years, during which, she's travelled and danced extensively around the world.
+
+She brings vitality, drive, and pure joy to her students." %>
+
+<%= teacher :kevin, "Kevin Buster", "Musicality, being in this moment, solo blues, blues air movement, building a dance, and being myself. And I have a big #*%&?ng X on my chest (see above)", 
+"<b>Long History:</b> Check <a href='http://kevinbuster.com'>Kevin Buster.com</a> for that.<br/><br/>
+<b>Recent History:</b> Kevin threw \"The First Zurich Blues Party\" when he was in Switzerland in Feb. 2008.<br/><br/>
+<b>The Future:</b> Kevin will be going to New York and Hungary to teach blues and will be going to Guinea, Africa to work on African dancing to bring it to his facility and mix it with Blues movement all in the next year. Oh and of course seeing you at this event=)." %>
+
+<%= teacher :lessa, "Lessa Jay" %>
+
+<%= teacher :lucy, "Lucy Falkner" %>
+
+<%= teacher :solomon, "Solomon Douglas", "Solomon Douglas is the Caffeine Spider!", "Solomon Douglas has been studying blues dancing and practising it
+socially for as long as he has been lindy hopping (that is, since
+1998), and has been teaching it since 1999.  He learned 40% of his
+blues dancing from such luminaries as Steven Mitchell, Chachi, and
+Bill Borgida, and the other 60% from thousands of hours of social
+blues dancing." %>
+
+<%= teacher :topher, "topher", "Flying, seriously" %>
