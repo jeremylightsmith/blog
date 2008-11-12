@@ -1,1 +1,0 @@
-/Users/jeremy/src/blog/web/jklbx/javascripts/jquery-1.2.6.pack.js

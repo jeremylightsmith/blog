@@ -1,1 +1,0 @@
-/Users/jeremy/src/blog/web/jklbx/javascripts/jquery.flickr-1.0.js
