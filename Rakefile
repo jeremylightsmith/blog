@@ -11,11 +11,19 @@ end
 desc "generate the site"
 task :generate do
   Dir.chdir(File.dirname(__FILE__)) do
-    sites = %w(blues_hero challenge facilitation_patterns)
-    sites = [ENV["SITE"]] if ENV["SITE"]
+    sites = {
+      "blues_hero" => "public/blues_hero",
+      "challenge" => "public/jeremy_and_karissa/challenge",
+      "facilitation_patterns" => "public/facilitation_patterns",
+      "jeremy_and_karissa" => "public/jeremy_and_karissa/",
+      "jklbx" => "public/jeremy_and_karissa/exchange",
+      "wedding" => "public/jeremy_and_karissa/wedding",
+    }
+    sites = sites.find_all {|name, target| name == ENV["SITE"]} if ENV["SITE"]
+    raise "don't know about site : #{ENV["SITE"]}" if sites.empty?
       
-    sites.each do |site|
-      SiteGenerator.new("web/#{site}", "public/#{site}").generate
+    sites.each do |name, target|
+      SiteGenerator.new("web/#{name}", "#{target}").generate
     end
   end
 end

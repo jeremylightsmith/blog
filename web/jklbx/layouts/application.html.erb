@@ -1,0 +1,39 @@
+% helper :jeremy_and_karissa
+
+<html>
+<head>
+  <title>Jeremy and Karissa Lindy Blues Exchange</title>
+  <link href="stylesheets/application.css" media="all" rel="stylesheet" type="text/css">
+  <link href="stylesheets/exchange.css" media="all" rel="stylesheet" type="text/css">
+  <link href="stylesheets/form.css" media="all" rel="stylesheet" type="text/css">
+  <link href="stylesheets/schedule.css" media="all" rel="stylesheet" type="text/css">
+  <link href="stylesheets/faq.css" media="all" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div id="main">
+    <div id="header">
+      <div>
+        <div class="top_menu">
+          <%= link_to "Exchange", ".", :class => "selected" %>
+          <%= link_to "Wedding", "../wedding/" %>
+        </div>
+      </div>
+      <div class="sub_menu">
+        <%= link_to "Discussion", "http://groups.google.com/group/jklbx/topics" %>
+        <%= link_to "FAQ", "faq.html" %>
+        <%= link_to "Bands", "bands.html" %>
+        <%= link_to "DJs", "djs.html" %>
+        <%= link_to "Venues", "venues.html" %>
+        <%= link_to "Register", "registration_closed.html" %>
+        <%= link_to "Schedule", "schedule.html" %>
+      </div>
+    </div>
+    <div id="content">
+      <%= content %>
+    </div>
+    <div class="footer">
+      <%= link_to "Contact Us", "../wedding/contact_us" %>
+    </div>
+  </div>
+</body>
+</html>

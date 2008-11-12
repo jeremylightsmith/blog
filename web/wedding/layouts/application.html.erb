@@ -1,0 +1,43 @@
+% helper :jeremy_and_karissa
+
+<html>
+<head>
+  <title>Jeremy &amp; Karissa's Wedding</title>
+  <link href="stylesheets/application.css" media="all" rel="stylesheet" type="text/css">
+  <link href="stylesheets/wedding.css" media="all" rel="stylesheet" type="text/css">
+  <link href="stylesheets/form.css" media="all" rel="stylesheet" type="text/css">
+  <link href="stylesheets/schedule.css" media="all" rel="stylesheet" type="text/css">
+  <link href="stylesheets/faq.css" media="all" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div id="main">
+    <div id="header">
+      <div style="height:140px">
+        <div class="jeremy_and_karissa">
+          <%= link_to image_tag("logo.png"), "../" %>
+        </div>
+        <div class="top_menu">
+          <%= link_to "Exchange", "../exchange/" %>
+          <%= link_to "Wedding", ".", :class => "selected" %>
+        </div>
+      </div>
+      <div class="sub_menu">
+        <%= link_to "Discussion", "http://groups.google.com/group/jeremyandkarissa/topics" %>
+        <%= link_to "Questions", "questions.html" %>
+        <%= link_to "Gifts", "gifts.html" %>
+        <%= link_to "Hotels", "hotels.html" %>
+        <%= link_to "Getting There", "getting_there.html" %>
+        <%= link_to "Schedule", "schedule.html" %>
+        <%= link_to "Proposal", "proposal.html" %>
+        <%= link_to "Pictures", "pictures.html" %>
+      </div>
+    </div>
+    <div id="content">
+      <%= content %>
+    </div>
+    <div class="footer">
+      <%= link_to "Contact Us", "../wedding/contact_us" %>
+    </div>
+  </div>
+</body>
+</html>

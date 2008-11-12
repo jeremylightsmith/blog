@@ -1,0 +1,24 @@
+body {
+  background-color: #ded8d0;
+}
+
+a img {
+  border: none;
+}
+
+.content {
+  background-color: #700;
+  background-image: url(/jeremy_and_karissa/images/intro.jpg);
+  margin: 20px auto 0 auto;
+  width: 600px;
+  height: 500px;
+}
+
+#wedding_button {
+  padding-top: 350px;
+}
+
+#exchange_button {
+  margin-top: -150px;
+  margin-left: 300px;
+}

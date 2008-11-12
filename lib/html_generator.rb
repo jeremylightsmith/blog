@@ -27,6 +27,12 @@ class HtmlGenerator
     when 'erb'
       content = ERB.new(content, 0, "%<>").result(context.get_binding)
       
+    when 'mab'
+      builder = Markaby::Builder.new({}, context)
+      builder.instance_eval content, file_name
+      content = builder.to_s
+      
+      
     when 'red'
       redcloth = RedCloth.new(content)
       redcloth.patterns = context.patterns
@@ -70,7 +76,9 @@ class HtmlGenerator
   end
   
   class PageContext
-    include UrlHelper
+    include Helpers::FormHelper
+    include Helpers::UrlHelper
+    include Helpers::MarkabyHelper
     attr_accessor :global_context, :layout_template, :pattern, :content
     
     def initialize(template_directory, global_context)

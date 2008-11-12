@@ -1,0 +1,78 @@
+
+<html>
+<head>
+  <title>Jeremy &amp; Karissa's Wedding</title>
+  <link href="stylesheets/application.css" media="all" rel="stylesheet" type="text/css">
+  <link href="stylesheets/wedding.css" media="all" rel="stylesheet" type="text/css">
+  <link href="stylesheets/form.css" media="all" rel="stylesheet" type="text/css">
+  <link href="stylesheets/schedule.css" media="all" rel="stylesheet" type="text/css">
+  <link href="stylesheets/faq.css" media="all" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div id="main">
+    <div id="header">
+      <div style="height:140px">
+        <div class="jeremy_and_karissa">
+          <a href="../"><img src="images/logo.png"/></a>
+        </div>
+        <div class="top_menu">
+          <a href="../exchange/">Exchange</a>
+          <a href="." class="selected">Wedding</a>
+        </div>
+      </div>
+      <div class="sub_menu">
+        <a href="http://groups.google.com/group/jeremyandkarissa/topics">Discussion</a>
+        <a href="questions.html">Questions</a>
+        <a href="gifts.html">Gifts</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="getting_there.html">Getting There</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="proposal.html">Proposal</a>
+        <a href="pictures.html">Pictures</a>
+      </div>
+    </div>
+    <div id="content">
+      <script src="javascripts/jquery-1.2.6.pack.js" type="text/javascript"></script>
+<script src="javascripts/jquery.lightbox-0.5.pack.js" type="text/javascript"></script>
+<script src="javascripts/jquery.flickr-1.0.js" type="text/javascript"></script>
+
+<link href="stylesheets/jquery.lightbox-0.5.css" media="all" rel="stylesheet" type="text/css">
+<link href="stylesheets/pictures.css" media="all" rel="stylesheet" type="text/css">
+
+<p>
+<a href="http://werebphotography.com/">Lora Wereb</a> was our official photographer, and she took some AMAZING pictures.  Here they are :
+</p>
+
+<a href="#" onclick="show_photoset('Meditation', '72157608922841124');return false;">Meditation</a> | 
+<a href="#" onclick="show_photoset('Getting Ready', '72157608929611679');return false;">Getting Ready</a> | 
+<a href="#" onclick="show_photoset('Wedding Party', '72157608931540623');return false;">Wedding Party</a> | 
+<a href="#" onclick="show_photoset('Ceremony', '');return false;">Ceremony</a> | 
+<a href="#" onclick="show_photoset('Bride &amp; Groom', '72157608922841124');return false;">Bride &amp; Groom</a> | 
+<a href="#" onclick="show_photoset('Reception', '');return false;">Reception</a>
+<script type="text/javascript" charset="utf-8">
+  jQuery(function(){   
+    show_photoset('Meditation', '72157608922841124');
+	}); 
+	
+	function show_photoset(label, photoset_id) {
+	  jQuery("#label").text(label);
+		jQuery("#gallery").html("").flickr({     
+			api_key: "1df4861d8818ad25429e8302d6561f07",
+			type: "photoset",
+			photoset_id: photoset_id,
+			per_page: 500,
+			callback: function() {$('#gallery a').lightBox({fixedNavigation:true});}
+		}); 
+	}
+</script>
+
+<hr/>
+<h1 id="label"></h1>
+<div id="gallery"></div>
+    </div>
+    <div class="footer">
+      <a href="../wedding/contact_us">Contact Us</a>
+    </div>
+  </div>
+</body>
+</html>

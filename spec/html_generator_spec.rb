@@ -76,6 +76,30 @@ describe HtmlGenerator do
     end
   end
   
+  describe "markaby" do
+    it "should generate html from markaby" do
+      process("*.mab", <<-MAB).should == %{<div class="foo">8</div>}
+div.foo do
+  text 5 + 3
+end
+      MAB
+    end
+    
+    it "should be able to have markaby w/in markaby" do
+      process("*.mab", <<-MAB).should == %{<div class="foo"><i>photo</i></div>}
+def bob
+  markaby do
+    i { "photo" }
+  end
+end
+
+div.foo do
+  bob
+end
+      MAB
+    end
+  end
+
   def process(extensions, content)
     generator.process(extensions, content)
   end

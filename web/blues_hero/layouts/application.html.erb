@@ -4,14 +4,14 @@
   <meta content="A different kind of Blues Dancing Workshop" name="description">
   <meta content="seattle,blues,dance,lindy,dj,teaching" name="keywords">
   <meta content="Jeremy Stell-Smith" name="author">
-  <link href="css/application.css" media="all" rel="stylesheet" type="text/css">
+  <link href="stylesheets/application.css" media="all" rel="stylesheet" type="text/css">
 </head>
 <body>
   <div class="content <%= content_for_current_tab %>">
 %   if content_for_current_tab == "home"
-      <%= image_tag "images/black_header_with_slogan.png" %>
+      <%= image_tag "black_header_with_slogan.png" %>
 %   else
-      <%= image_tag "images/black_header.png" %>
+      <%= image_tag "black_header.png" %>
 %   end
     
     <div class="navigation">
@@ -27,7 +27,7 @@
     
     <div class="page">
 %     if content_for_superhero?
-        <%= image_tag "images/#{content_for_superhero}", :style => "float: left; padding-top: 1em;" %>
+        <%= image_tag "#{content_for_superhero}", :style => "float: left; padding-top: 1em;" %>
         
         <div class="right_panel">
           <%= content %>

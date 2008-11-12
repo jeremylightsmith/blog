@@ -1,0 +1,212 @@
+p.schedule_date "June 13 - 15, 2008"
+
+h1 "Schedule"
+
+style "
+.schedule table {
+  width: 750px;
+}
+.schedule table td {
+  vertical-align: top;
+}
+.schedule i {
+  color: #555;
+  display: block;
+  margin-top: 0.6em;
+}
+.schedule .names a {
+  display: block;
+}
+.schedule h3 {
+  margin-top: 2em;
+}
+.schedule h4 {
+  margin-bottom: 0;
+}
+.schedule ul {
+  margin-top: 0.5em;
+}
+#content .schedule ul a {
+  font-weight: normal;
+}
+"
+
+def headers
+  markaby do
+    col :width => '200px'
+    col :width => '75px'
+    col :width => '75px'
+    col :width => '400px'
+
+    tr do
+      th "Where"
+      th "Time"
+      th "Price"
+      th "What"
+    end
+  end
+end
+
+def dj(link, hint = nil, name = link.to_s.titleize)
+  text = name
+  text += " <i>(#{hint})</i>" if hint
+  markaby do
+    li {link_to text, "djs##{link}"}
+  end
+end
+
+div.schedule do
+  h3 "Friday, June 13"
+
+  table do
+    headers
+
+    tr do
+      td { link_to "Neah Bay", "/wedding/getting_there"}
+      td "6p-5a"
+      td "free!"
+      td do
+        div "Jeremy and Karissa are getting married!"
+        i {"see wedding #{link_to "schedule", "/wedding/schedule"} for more info"}
+        h4 "Reception DJs"
+        ul do
+          dj :laura_curtis
+          dj :cid_galicia
+          dj :tina_davis
+        end
+      end
+    end
+    tr do
+      td {link_to "Dance Underground", "venues#dance_underground" }
+      td "8:30p-2a"
+      td "$15"
+      td do 
+        div "Lindy/Blues Dance in Seattle"
+        i "If you can't make our wedding in Neah Bay, then you'd better come here.  We're kicking off the night with some hot lindy, Seattle style from our own Matt & Mark.  Then Miranda & David are going to take us back to the blues we used to hear at legendary blues parties back in the day.  They only come out of retirement once a year, so don't miss 'em!"
+        
+        h4 "Lindy DJs"
+        ul do
+          dj :matt_menzer
+          dj :mark_kihara
+        end
+        h4 "Blues DJs"
+        ul do
+          dj :miranda_metcalf
+          dj :david_mortensen
+        end
+      end
+    end
+  end
+  
+  h3 "Saturday, June 14"
+
+  table do
+    headers
+    
+    tr do
+      td {link_to "Dante's", "venues#dantes"}
+      td "2p-6p"
+      td "free"
+      td do
+        div "Karaoke, Dancing, Drinkin', and Billiards"
+        i "don't worry, it's all ages till 8"
+
+        h4 "Blues DJs"
+        ul do
+          dj :steven_watkins
+          dj :cid_galicia
+        end
+      end
+    end
+    tr do
+      td {link_to "Mt Baker Community Club", "venues#mt_baker"}
+      td "8p-12a"
+      td "$15"
+      td do
+        div {"Swing dance w/ #{link_to "The Solomon Douglas Swingtet", "bands#solomon_douglas"}"}
+        i "Solomon's AWESOME 10-piece band in a beautiful ballroom with a great floor.  Check it out, it's going to be great dancing and great music."
+
+        h4 "Band Breaks"
+        ul do
+          dj :matt_menzer
+        end
+      end
+    end
+    tr do
+      td {link_to "Washington Dance Club", "venues#washington_dance_club"}
+      td {"1a-5a"}
+      td "$10"
+      td do
+        div {"Late night Blues w/ #{link_to "Kevin Buster's Lunch Money", "bands#kevin_buster"} followed by 2 rooms of blues. Food theme will be kids breakfast, so come straight here and help us eat bagels, cereal, and pop-tarts!"}
+        
+        h4 "Soultry Blues"
+        ul do
+          dj :tina_davis
+          dj :steven_watkins
+        end
+        
+        h4 "Upbeat Blues"
+        ul do
+          dj :tina_davis
+          dj :carolyn_palma
+        end
+      end
+    end
+  end
+
+  h3 "Sunday, June 15"
+  
+  table do
+    headers
+
+    tr do
+      td {link_to "Newman Center at U of W", "http://uwnewman.org"}
+      td "10a-11a"
+      td "free"
+      td "Catholic Mass for family and anyone that wants to join us"
+    end
+    tr do
+      td {link_to "Greenlake", "venues#greenlake"}
+      td "2p-6p"
+      td "free"
+      td do
+        div "Paddleboats and BBQ at the park"
+        i "we're renting a flotilla and supplying BBQ food (even for vegetarians) & the waterguns..."
+      end
+    end
+    tr do
+      td {link_to "Century Ballroom", "venues#century"}
+      td "9:30p-12:30a"
+      td "$15"
+      td do
+        div {"Swing dance w/ #{link_to "Mighty Aphrodite", "bands#mighty_aphrodite"} featuring #{link_to "Rebecca Kilgore", "bands#rebecca_kilgore"}"}
+        i "that's right, a PHENOMENAL hot jazz & swing band featuring a WORLD FAMOUS guitarist and vocalist.  Don't miss them!"
+        
+        h4 "Band Breaks"
+        ul do
+          dj :freddie_dickinson
+        end        
+      end
+    end
+    tr do
+      td {link_to "Washington Dance Club", "venues#washington_dance_club"}
+      td "1a-5a"
+      td "$10"
+      td do
+        div {"Late night Blues w/ #{link_to "Sean Hunting Morse", "bands#sean_hunting_morse"} followed by 2 more rooms of blues. The food theme for tonight will be picnic with fresh veggies, hummus, and sandwiches!"}
+
+        h4 "Soultry Blues"
+        ul do
+          dj :tina_davis
+          dj :emily_smith
+        end
+        
+        h4 "Upbeat Blues"
+        ul do
+          dj :cid_galicia
+          dj :martin_beally
+        end
+      end
+    end
+  end
+end

@@ -1,0 +1,37 @@
+body {
+  background-color: black;
+}
+
+.top_menu .selected, .top_menu .selected a, .sub_menu, .sub_menu a {
+  background-color: black;
+}
+
+#main {
+  width: 800px;
+}
+
+#header {
+  background: url(/jeremy_and_karissa/images/jklbx_header.jpg) no-repeat;  
+}
+
+.jeremy_and_karissa {
+  float: left;
+}
+
+
+.jeremy_and_karissa a, .jeremy_and_karissa img {
+  width: 100%;
+}
+
+.jeremy_and_karissa img, .jeremy_and_karissa a {
+  z-index: -1;
+}
+
+.top_menu {
+  padding-top: 160px;
+  margin-top: 0;
+}
+
+.flags {
+  padding-left: 220px;
+}

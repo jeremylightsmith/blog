@@ -3,7 +3,7 @@ module BluesHeroHelper
     %{
       <div class="teacher">
         <a name="#{sym}"/>
-        #{image_tag "images/#{sym}.jpg"}
+        #{image_tag "#{sym}.jpg"}
         
         <table border="2" cellspacing="0">
           <tr>

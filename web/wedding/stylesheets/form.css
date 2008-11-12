@@ -1,0 +1,37 @@
+form dt {
+  float: left;
+  clear: both;
+  width: 15em;
+  text-align: right;
+  padding-right: 0.5em;
+  padding-top: 0.3em;
+}
+
+form dd {
+  margin-bottom: 0.7em;
+  margin-left: 15.5em;
+}
+
+.fieldWithErrors input {
+  background-color: #fdd;
+}
+
+.formError {
+  color: red;
+}
+
+/*form fieldset {
+}
+
+form fieldset div {
+  clear: both;
+  padding-bottom: 0.7em;
+}
+
+form fieldset label {
+  text-align: right;
+  float: left;
+  width: 10em;
+  padding-right: 0.5em;
+  padding-top: 0.3em;
+}*/

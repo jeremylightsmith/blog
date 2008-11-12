@@ -1,0 +1,45 @@
+#schedule p {
+  margin-left: 9em;
+}
+
+#schedule strong {
+  margin-left:-10em;
+  margin-right: 1em;
+  width: 9em;
+  text-align: right;
+  float:left;
+}
+
+.schedule_date {
+  float:right;
+  margin-top: 2em;
+}
+
+.schedule 
+
+.schedule table {
+  border-width: 1px 1px 1px 1px;
+  border-spacing: 0px;
+  border-style: outset outset outset outset;
+  border-color: gray gray gray gray;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.schedule th {
+  border-width: 1px 1px 1px 1px;
+  padding: 3px 3px 3px 3px;
+  border-style: inset inset inset inset;
+  border-color: gray gray gray gray;
+  background-color: white;
+  -moz-border-radius: 0px 0px 0px 0px;
+}
+
+.schedule td {
+  border-width: 1px 1px 1px 1px;
+  padding: 3px 3px 3px 3px;
+  border-style: inset inset inset inset;
+  border-color: gray gray gray gray;
+  background-color: white;
+  -moz-border-radius: 0px 0px 0px 0px;
+}

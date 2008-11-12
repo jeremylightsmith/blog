@@ -1,0 +1,19 @@
+body {
+  background-color: #700;
+}
+
+.top_menu .selected, .top_menu .selected a, .sub_menu a {
+  background-color: #700;
+}
+
+.jeremy_and_karissa {
+  background: url(../images/jeremy_karissa_150.jpg) no-repeat;
+  background-color: white;
+  color: #400;
+  height: 140px;
+}
+
+.jeremy_and_karissa a {
+  float: right;
+  margin-right: 10px;
+}
