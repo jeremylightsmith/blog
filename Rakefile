@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + "/lib/blog"
 require 'spec/rake/spectask'
 load 'tasks/db.rake'
 
-task :default => [:spec, :generate]
+task :default => [:spec, :generate, :patterns]
 
 Spec::Rake::SpecTask.new(:spec) do |t|
   t.spec_files = FileList['spec/**/*_spec.rb']
@@ -14,7 +14,6 @@ task :generate do
     sites = {
       "blues_hero" => "public/blues_hero",
       "challenge" => "public/jeremy_and_karissa/challenge",
-      "facilitation_patterns" => "public/facilitation_patterns",
       "jeremy_and_karissa" => "public/jeremy_and_karissa/",
       "jklbx" => "public/jeremy_and_karissa/exchange",
       "wedding" => "public/jeremy_and_karissa/wedding",
@@ -23,7 +22,25 @@ task :generate do
     raise "don't know about site : #{ENV["SITE"]}" if sites.empty?
       
     sites.each do |name, target|
-      SiteGenerator.new("web/#{name}", "#{target}").generate
+      ActionSite::Site.new("web/#{name}", "#{target}").generate
     end
+  end
+end
+
+desc "generate the facilitation_patterns site"
+task :patterns do
+  Dir.chdir(File.dirname(__FILE__)) do
+    site = ActionSite::Site.new("web/facilitation_patterns", "public/facilitation_patterns")
+    
+    site.generators["pattern"] = Generators::PatternGenerator.new
+    site.generators["red"] = Generators::RedclothWithPatternsGenerator.new
+    
+    site.context.patterns = Patterns.load("web/facilitation_patterns")
+    site.context.patterns_by_category = {}
+    site.context.patterns.each do |pattern|
+      (site.context.patterns_by_category[pattern.category] ||= []) << pattern
+    end
+    
+    site.generate
   end
 end
