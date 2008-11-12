@@ -1,0 +1,27 @@
+<script src="javascripts/jquery-1.2.6.pack.js" type="text/javascript"></script>
+<script src="javascripts/jquery.lightbox-0.5.pack.js" type="text/javascript"></script>
+<script src="javascripts/jquery.flickr-1.0.js" type="text/javascript"></script>
+
+<link href="stylesheets/jquery.lightbox-0.5.css" media="all" rel="stylesheet" type="text/css">
+<link href="stylesheets/pictures.css" media="all" rel="stylesheet" type="text/css">
+
+<h1>Pictures</h1>
+
+<p>
+<%= link_to "Dave Poole", "http://www.flickr.com/photos/stainedpollock/" %> took pictures for our exchange.  There are some really GREAT ones!
+</p>
+
+<script type="text/javascript" charset="utf-8">
+  $(function() {
+		jQuery("#gallery").flickr({     
+			api_key: "1df4861d8818ad25429e8302d6561f07",
+			type: "photoset",
+			photoset_id: "72157606455773499",
+			per_page: 500,
+			page: 2,
+			callback: function() {$('#gallery a').lightBox({fixedNavigation:true});}
+		}); 
+  });
+</script>
+
+<div id="gallery"></div>

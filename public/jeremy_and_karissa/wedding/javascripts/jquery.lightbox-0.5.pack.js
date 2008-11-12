@@ -1,1 +1,0 @@
-/Users/jeremy/src/blog/web/wedding/javascripts/jquery.lightbox-0.5.pack.js
