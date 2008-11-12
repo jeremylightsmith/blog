@@ -8,7 +8,7 @@ a img {
 
 .content {
   background-color: #700;
-  background-image: url(/jeremy_and_karissa/images/intro.jpg);
+  background-image: url(../images/intro.jpg);
   margin: 20px auto 0 auto;
   width: 600px;
   height: 500px;
