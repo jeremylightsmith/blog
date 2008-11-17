@@ -1,0 +1,65 @@
+html {
+  background-color: #5a4a42;
+}
+
+body {
+  margin: 0;
+}
+
+.header {
+  background: url(../images/top_border.png) repeat-x bottom left;
+  padding-bottom: 20px;
+}
+
+.header .knot,
+.middle .knot {
+  width: 54em;
+  margin: 0 auto;
+}
+
+.header .knot img {
+  float: left;
+}
+
+.middle .knot img {
+  float: right;
+}
+
+.footer {
+  background: url(../images/bottom_border.png) repeat-x top left;
+  padding-top: 11px;
+}
+
+.header .logo {
+  margin: 0 auto;
+  width: 56em;
+}
+
+.header .menu {
+  margin: 0 auto;
+  width: 50em;
+  text-align: right;
+}
+
+.header .menu a {
+  color: #7c6c64;
+  text-decoration: none;
+  padding-left: 1.5em;
+  font-weight: bold;
+  font-size: 95%;
+}
+
+.header .menu a:hover {
+  text-decoration: underline;
+}
+
+.middle {
+  background-color: #5e6e65;
+  padding: 0.5em;
+}
+
+.middle .content {
+  margin: 0 auto;
+  width: 50em;
+  color: white;
+}

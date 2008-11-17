@@ -1,0 +1,29 @@
+body {
+  font-family: verdana, arial;
+}
+
+.header, .content {
+  width: 50em;
+  margin: 0 auto;
+}
+
+a {
+  color: #666;
+}
+
+a img {
+  border: 0;
+}
+
+.menu {
+  float: right;
+  padding: 0.5em 2em;
+}
+
+.menu a {
+  padding-left: 0.5em;
+}
+
+.content {
+  clear: both;
+}

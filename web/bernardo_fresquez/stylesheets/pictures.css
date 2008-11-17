@@ -1,0 +1,12 @@
+h1#label {
+  border: none;
+}
+
+#gallery ul {
+  padding: 0;
+}
+
+#gallery li {
+  display: inline;
+  padding: 1px;
+}

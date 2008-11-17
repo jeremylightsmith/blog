@@ -1,0 +1,33 @@
+reference sites
+- ryanandjenny.com
+- 2plyswing.com
+
+menu
+- home
+  - links to schedule a private
+  - book me for an event
+  - book me for a workshop
+- bios
+  - several different ones
+- what I do
+  - ... 
+- rates
+  - privates
+  - events
+  - workshops
+- calendar
+  - events, workshops, and privates
+  - use google calendar
+- video / pics
+- contacts
+
+
+audience
+- want book
+  - privates
+  - events
+  - workshop
+- learn about brenda
+- could be separate
+  - brenda's dances
+  - brenda's events

@@ -10,13 +10,17 @@ end
 
 desc "generate the site"
 task :generate do
+  ActionSite::RESOURCE_EXTENSIONS << "pdf"
+  
   Dir.chdir(File.dirname(__FILE__)) do
     sites = {
       "blues_hero" => "public/blues_hero",
+      "brenda" => "public/jeremy_and_karissa/brenda",
       "challenge" => "public/jeremy_and_karissa/challenge",
       "jeremy_and_karissa" => "public/jeremy_and_karissa/",
       "jklbx" => "public/jeremy_and_karissa/exchange",
       "wedding" => "public/jeremy_and_karissa/wedding",
+      "bernardo_fresquez" => "public/jeremy_and_karissa/bernardo_fresquez",
     }
     sites = sites.find_all {|name, target| name == ENV["SITE"]} if ENV["SITE"]
     raise "don't know about site : #{ENV["SITE"]}" if sites.empty?
