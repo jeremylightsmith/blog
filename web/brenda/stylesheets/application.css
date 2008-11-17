@@ -3,6 +3,8 @@ html {
 }
 
 body {
+  font-family: verdana, arial;
+  font-size: 95%;
   margin: 0;
 }
 
@@ -36,6 +38,7 @@ body {
 }
 
 .header .menu {
+  padding-top: 0.5em;
   margin: 0 auto;
   width: 50em;
   text-align: right;
@@ -61,5 +64,9 @@ body {
 .middle .content {
   margin: 0 auto;
   width: 50em;
+  color: white;
+}
+
+.middle .content a {
   color: white;
 }

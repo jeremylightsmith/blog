@@ -20,7 +20,7 @@ task :generate do
       "jeremy_and_karissa" => "public/jeremy_and_karissa/",
       "jklbx" => "public/jeremy_and_karissa/exchange",
       "wedding" => "public/jeremy_and_karissa/wedding",
-      "bernardo_fresquez" => "public/jeremy_and_karissa/bernardo_fresquez",
+      "bernardo_fresquez" => "public/onemanswalk/bernardo_fresquez",
     }
     sites = sites.find_all {|name, target| name == ENV["SITE"]} if ENV["SITE"]
     raise "don't know about site : #{ENV["SITE"]}" if sites.empty?
