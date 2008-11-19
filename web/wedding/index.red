@@ -5,11 +5,11 @@ Our wedding will blend the traditional and the original, the sacred and the joyo
 
 Our wedding will be in Neah Bay, a 6 hour drive from the Seattle-Tacoma Airport. We have lodging options available for the wedding in Neah Bay, and for afterwards in Seattle.  
 
-Saturday and Sunday following the wedding, we are holding several dances and activities in Seattle. It is a beautiful city and is worth staying around to see. Many family members are planning on attending the "dances":/exchange or sightseeing.
+Saturday and Sunday following the wedding, we are holding several dances and activities in Seattle. It is a beautiful city and is worth staying around to see. Many family members are planning on attending the "dances":../exchange or sightseeing.
 
-Your presence at our wedding is more than enough of a present to us. (If you want to give us something more anyway, we will accept "donations":/wedding/gifts for our honeymoon to Italy.) 
+Your presence at our wedding is more than enough of a present to us. (If you want to give us something more anyway, we will accept "donations":gifts.html for our honeymoon to Italy.) 
 
-June is tourist season in Neah Bay, so reserving a room in town might be impossible as the date approaches. We will be reserving cabins, but we need to know you are coming for you to have space in them. As soon as you have an inkling of your attendance, "let us know":/wedding/rsvp!
+June is tourist season in Neah Bay, so reserving a room in town might be impossible as the date approaches. We will be reserving cabins, but we need to know you are coming for you to have space in them. As soon as you have an inkling of your attendance, let us know!
 <br/>
 
 - Jeremy & Karissa

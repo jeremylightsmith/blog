@@ -51,7 +51,7 @@ def dj(link, hint = nil, name = link.to_s.titleize)
   text = name
   text += " <i>(#{hint})</i>" if hint
   markaby do
-    li {link_to text, "djs##{link}"}
+    li {link_to text, "djs.html##{link}"}
   end
 end
 
@@ -62,12 +62,12 @@ div.schedule do
     headers
 
     tr do
-      td { link_to "Neah Bay", "/wedding/getting_there"}
+      td { link_to "Neah Bay", "../wedding/getting_there.html"}
       td "6p-5a"
       td "free!"
       td do
         div "Jeremy and Karissa are getting married!"
-        i {"see wedding #{link_to "schedule", "/wedding/schedule"} for more info"}
+        i {"see wedding #{link_to "schedule", "../wedding/schedule.html"} for more info"}
         h4 "Reception DJs"
         ul do
           dj :laura_curtis
@@ -77,7 +77,7 @@ div.schedule do
       end
     end
     tr do
-      td {link_to "Dance Underground", "venues#dance_underground" }
+      td {link_to "Dance Underground", "venues.html#dance_underground" }
       td "8:30p-2a"
       td "$15"
       td do 
@@ -104,7 +104,7 @@ div.schedule do
     headers
     
     tr do
-      td {link_to "Dante's", "venues#dantes"}
+      td {link_to "Dante's", "venues.html#dantes"}
       td "2p-6p"
       td "free"
       td do
@@ -119,11 +119,11 @@ div.schedule do
       end
     end
     tr do
-      td {link_to "Mt Baker Community Club", "venues#mt_baker"}
+      td {link_to "Mt Baker Community Club", "venues.html#mt_baker"}
       td "8p-12a"
       td "$15"
       td do
-        div {"Swing dance w/ #{link_to "The Solomon Douglas Swingtet", "bands#solomon_douglas"}"}
+        div {"Swing dance w/ #{link_to "The Solomon Douglas Swingtet", "bands.html#solomon_douglas"}"}
         i "Solomon's AWESOME 10-piece band in a beautiful ballroom with a great floor.  Check it out, it's going to be great dancing and great music."
 
         h4 "Band Breaks"
@@ -133,11 +133,11 @@ div.schedule do
       end
     end
     tr do
-      td {link_to "Washington Dance Club", "venues#washington_dance_club"}
+      td {link_to "Washington Dance Club", "venues.html#washington_dance_club"}
       td {"1a-5a"}
       td "$10"
       td do
-        div {"Late night Blues w/ #{link_to "Kevin Buster's Lunch Money", "bands#kevin_buster"} followed by 2 rooms of blues. Food theme will be kids breakfast, so come straight here and help us eat bagels, cereal, and pop-tarts!"}
+        div {"Late night Blues w/ #{link_to "Kevin Buster's Lunch Money", "bands.html#kevin_buster"} followed by 2 rooms of blues. Food theme will be kids breakfast, so come straight here and help us eat bagels, cereal, and pop-tarts!"}
         
         h4 "Soultry Blues"
         ul do
@@ -166,7 +166,7 @@ div.schedule do
       td "Catholic Mass for family and anyone that wants to join us"
     end
     tr do
-      td {link_to "Greenlake", "venues#greenlake"}
+      td {link_to "Greenlake", "venues.html#greenlake"}
       td "2p-6p"
       td "free"
       td do
@@ -175,11 +175,11 @@ div.schedule do
       end
     end
     tr do
-      td {link_to "Century Ballroom", "venues#century"}
+      td {link_to "Century Ballroom", "venues.html#century"}
       td "9:30p-12:30a"
       td "$15"
       td do
-        div {"Swing dance w/ #{link_to "Mighty Aphrodite", "bands#mighty_aphrodite"} featuring #{link_to "Rebecca Kilgore", "bands#rebecca_kilgore"}"}
+        div {"Swing dance w/ #{link_to "Mighty Aphrodite", "bands.html#mighty_aphrodite"} featuring #{link_to "Rebecca Kilgore", "bands.html#rebecca_kilgore"}"}
         i "that's right, a PHENOMENAL hot jazz & swing band featuring a WORLD FAMOUS guitarist and vocalist.  Don't miss them!"
         
         h4 "Band Breaks"
@@ -189,11 +189,11 @@ div.schedule do
       end
     end
     tr do
-      td {link_to "Washington Dance Club", "venues#washington_dance_club"}
+      td {link_to "Washington Dance Club", "venues.html#washington_dance_club"}
       td "1a-5a"
       td "$10"
       td do
-        div {"Late night Blues w/ #{link_to "Sean Hunting Morse", "bands#sean_hunting_morse"} followed by 2 more rooms of blues. The food theme for tonight will be picnic with fresh veggies, hummus, and sandwiches!"}
+        div {"Late night Blues w/ #{link_to "Sean Hunting Morse", "bands.html#sean_hunting_morse"} followed by 2 more rooms of blues. The food theme for tonight will be picnic with fresh veggies, hummus, and sandwiches!"}
 
         h4 "Soultry Blues"
         ul do

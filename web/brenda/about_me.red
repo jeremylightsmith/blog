@@ -10,7 +10,7 @@ Or "see more photos":photos.html
 
 h2. Video
 
-"Dance Videos":videos
+"Dance Videos":videos.html
 
 h2. Past Events & Workshops
 

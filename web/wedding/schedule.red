@@ -16,7 +16,7 @@ in Seattle
 
 </div>
 
-We will be throwing a huge weekend long "Lindy Exchange":questions#lindy_exchange in Seattle to celebrate.  You're all invited, for more details, see the "exchange schedule":/exchange/schedule.
+We will be throwing a huge weekend long "Lindy Exchange":questions.html#lindy_exchange in Seattle to celebrate.  You're all invited, for more details, see the "exchange schedule":../exchange/schedule.html.
 
 This party over Saturday and Sunday will be complimentary to family members, so please come and celebrate with us.
 

@@ -8,7 +8,7 @@ you have questions, we have answers, if you need any more information, just "ask
 
 *Q:* What do you guys want?
 
-*A:* We want you to come out.  If you want to give us something besides that, you can contribute to our "Send Jeremy & Karissa to Italy fund!":gifts
+*A:* We want you to come out.  If you want to give us something besides that, you can contribute to our "Send Jeremy & Karissa to Italy fund!":gifts.html
 
 ----
 

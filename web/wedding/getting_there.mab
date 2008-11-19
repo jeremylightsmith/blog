@@ -15,9 +15,9 @@ h2 "Carpooling"
 
 p {"Take a look at #{link_to "who's coming", "http://spreadsheets.google.com/pub?key=pfc9Tou2f_2yjtjmkGsl-Og"} from Seattle."}
 
-p {"If <b>you're</b> coming, please #{link_to "let us know", "/wedding/carpool"} if you have space for anyone else or you need a ride."}
+p {"If <b>you're</b> coming, please #{link_to "let us know", "../wedding/carpool.html"} if you have space for anyone else or you need a ride."}
 
-p {"#{link_to "Fred", "contact_us"} & Lessa will be coordinating carpool rides from Seattle, once you've left your info, they'll match you up with a ride or ridee's.  You can also just give one of them a call."}
+p {"#{link_to "Fred", "contact_us.html"} & Lessa will be coordinating carpool rides from Seattle, once you've left your info, they'll match you up with a ride or ridee's.  You can also just give one of them a call."}
 
 h2 "Directions"
 
@@ -27,4 +27,4 @@ div { link_to "From the wedding to the reception", "http://maps.google.com/maps?
 
 h2 "Once you're here"
 
-p {"You'll need a " + link_to("hotel", "hotels")}
+p {"You'll need a " + link_to("hotel", "hotels.html")}

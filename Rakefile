@@ -2,7 +2,7 @@ require File.dirname(__FILE__) + "/lib/blog"
 require 'spec/rake/spectask'
 load 'tasks/db.rake'
 
-task :default => [:spec, :generate, :patterns]
+task :default => [:spec, :generate, :patterns, "test:links"]
 
 Spec::Rake::SpecTask.new(:spec) do |t|
   t.spec_files = FileList['spec/**/*_spec.rb']
@@ -46,5 +46,30 @@ task :patterns do
     end
     
     site.generate
+  end
+end
+
+SITES = %w(blues_hero 
+   jeremy_and_karissa 
+   jeremy_and_karissa/brenda 
+   jeremy_and_karissa/challenge 
+   jeremy_and_karissa/exchange 
+   jeremy_and_karissa/wedding 
+   onemanswalk/bernardo_fresquez 
+   facilitation_patterns)
+
+desc "test links"
+task "test:links" do
+  links = ActionSite::LinkChecker.new
+  SITES.each do |path|
+    links.check("http://localhost/#{path}/")
+  end
+end
+
+desc "test links"
+task "test:local_links" do
+  links = ActionSite::LinkChecker.new(:local => true)
+  SITES.each do |path|
+    links.check("http://localhost/#{path}/")
   end
 end

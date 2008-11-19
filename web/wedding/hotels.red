@@ -6,11 +6,11 @@ h2. Hobuck Beach Resort
 
 <img src="/jeremy_and_karissa/images/hobuck.jpg" class="left"/>
 
-We've rented all of "Hobuck Beach Resort's":http://hobuckbeachresort.com/ cabins in Neah Bay for the Friday night of our wedding.  At the incredible rate of $90 / cabin.  If you plan to stay in the cabins, please split this cost with your cabinmates and reimburse us once you're here.  If you need to have cabinspace on Thursday, please "contact us":contact_us immediately, and we'll make sure we have enough cabins.  They are new units and very nice, complete w/ kitchenette.
+We've rented all of "Hobuck Beach Resort's":http://hobuckbeachresort.com/ cabins in Neah Bay for the Friday night of our wedding.  At the incredible rate of $90 / cabin.  If you plan to stay in the cabins, please split this cost with your cabinmates and reimburse us once you're here.  If you need to have cabinspace on Thursday, please "contact us":contact_us.html immediately, and we'll make sure we have enough cabins.  They are new units and very nice, complete w/ kitchenette.
 
 There are 21 cabins, 18 of which have bed space for 4 people, the other 3 have bed space for 6.  We are expecting a lot of people, so we may be asking you to share cabins with other family, and if you're willing, to bring and/or sleep on air mattresses or sleeping bags.
 
-If you need space in a cabin, you should be on this list : "Cabin Sleeping Arrangements":http://tinyurl.com/2jgjrw.  If you're not, then talk to "us":contact_us
+If you need space in a cabin, you should be on this list : "Cabin Sleeping Arrangements":http://tinyurl.com/2jgjrw.  If you're not, then talk to "us":contact_us.html
 
 In addition to the cabins, Hobuck Beach Resort also offers camping spaces for $15 and RV spaces for $25.
 
@@ -36,7 +36,7 @@ June is the beginning of the tourist season in Seattle.  On one hand that means 
 
 If you'd like to know more about what Seattle has to offer, go check out the excellent "http://visitseattle.org/":http://visitseattle.org/visitors/
 
-If you plan on visiting around Seattle and not actually staying _in_ Seattle, feel free to leave any stuff you don't need at our house.  Just talk to "Jeremy":/wedding/contact_us
+If you plan on visiting around Seattle and not actually staying _in_ Seattle, feel free to leave any stuff you don't need at our house.  Just talk to "Jeremy":contact_us.html
 
 h2. Holiday Inn Express
 
@@ -48,13 +48,11 @@ To make a reservation, call the Holiday Inn Express in Seattle at 206-674-6261, 
 
 This hotel is 4 blocks away from Seattle's "Space Needle":http://www.spaceneedle.com/ and "Science Center":http://www.pacsci.org/.  And within Seattle's "Ride Free" zone.  This means you can catch buses within downtown for free to all the tourist attractions there.  Parking is $10 a day if you have a car.
 
-Fred set this up, so direct any questions to "him":/wedding/contact_us
+Fred set this up, so direct any questions to "him":contact_us.html
 
 h2. Seafair Inn
 
-<img src = "http://www.seafairinnseattle.com/templates/110/img/user/masked/SEAFAIRINNSEATTLE.COM.jpg" class="left"/>
-
-The "Seafair Inn":http://seafairinnseattle.com/ is a budget alternative to the Holiday Inn.  Through "hotels.com":http://hotels.com you can get rooms there around $81 / night.
+The Seafair Inn is a budget alternative to the Holiday Inn.  Through "hotels.com":http://hotels.com you can get rooms there around $81 / night.
 
 It's a motel, and is 7 miles north of downtown.  Rooms aren't as nice, but if you have a car and plan on driving around, it's within 15 minutes of downtown and all the action.  It's also right by our wonderful zoo, and pretty close to a couple of our favorite beaches in Seattle.
 
