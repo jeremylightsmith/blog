@@ -6,7 +6,7 @@ h2. Photos
 
 brenda: list of 5 or 6 of the best photos
 
-Or "see more photos":photos
+Or "see more photos":photos.html
 
 h2. Video
 
