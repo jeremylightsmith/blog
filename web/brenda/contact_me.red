@@ -1,5 +1,9 @@
 h1. Contact Me
 
+brenda: what is the best way to reach you, alternative ways, etc.
+
+brenda: should we keep some, all, or none of this?
+
 h4. Phone Number
 
 971-570-1421

@@ -44,12 +44,18 @@ body {
   text-align: right;
 }
 
-.header .menu a {
+.header .menu a,
+.footer .links a {
   color: #7c6c64;
   text-decoration: none;
-  padding-left: 1.5em;
+  margin-left: 1.5em;
   font-weight: bold;
   font-size: 90%;
+}
+
+.footer .links {
+  text-align: center;
+  margin-top: 1em;
 }
 
 .header .menu a:hover {
@@ -69,4 +75,35 @@ body {
 
 .middle .content a {
   color: white;
+}
+
+.middle .content .buttons {
+  padding: 1em;
+  text-align: center;
+}
+
+.middle .content a.button {
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border: solid 3px;
+  color: #5a4a42;
+  background-color: #f8e19b;
+  border-top-color: #f8f6ee;
+  border-right-color: #f8cb45;
+  border-bottom-color: #f8cb45;
+  border-left-color: #f8f6ee;
+}
+
+h1 {
+  font-family: serif;
+  font-weight: normal;
+  font-size: 36pt;
+  margin: 10px 0 0 0;
+}
+
+h2 {
+  border-bottom: solid 2px white;
+  border-right: solid 2px white;
+  width: 80%;
+  font-weight: normal;
 }

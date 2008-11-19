@@ -24,3 +24,7 @@ h2 "Directions"
 div { link_to "From the airport to the wedding", "http://maps.google.com/maps?daddr=The+Wedding+Ceremony+%4048.33955,-124.667562&geocode=&dirflg=&saddr=sea&f=d&hl=en&sll=49.246293,-124.112549&sspn=2.510259,4.669189&ie=UTF8&z=9&om=1" }
 
 div { link_to "From the wedding to the reception", "http://maps.google.com/maps?f=d&hl=en&geocode=1009688589213302577,48.336748,-124.662364%3B14525396977609895369,48.368399,-124.627431&time=&date=&ttype=&saddr=48.338794,-124.664698&daddr=Wedding+Reception+%4048.368399,-124.627431&mra=dme&mrcr=0&mrsp=0&sz=15&sll=48.339592,-124.667101&sspn=0.017972,0.026908&ie=UTF8&ll=48.349462,-124.645472&spn=0.071873,0.107632&z=13&om=1" }
+
+h2 "Once you're here"
+
+p {"You'll need a " + link_to("hotel", "hotels")}
