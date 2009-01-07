@@ -4,14 +4,9 @@ Workshop classes will be at HaLo - "500 E Pike St, Seattle, WA":http://maps.goog
 
 It is close to downtown, five blocks west of Century Ballroom above Brocklind's Formal Wear and Costume Shop, right next door to 8 Limbs Yogo.
 
-There will be 4 classes on "Saturday":#saturday and then again on "Sunday":#sunday, starting at 10:30am and ending at 4:30pm.
+There will be 4 classes on Saturday and then again on Sunday, starting at 10:30am and ending at 4:30pm.
 
-There will also be local "dances":#dances that will be going on this weekend. We would love to go out to them and dance with all of you!
-
-<hr/>
 <div class="schedule">
-h1. Classes
-
 <a name="saturday"></a>
 
 h2(day). SATURDAY - Jan 17
@@ -91,29 +86,6 @@ div(time). 3:15p
 h2. Stealing Games (All Levels)
 
 Normal dancing consists of you and a partner and the music. Imagine a dance where you are no longer connecting with just one other person but you are connecting with the entire room. In this class, you will learn several techniques to start you on your way to dancing with 2, 3, 4 or 50+ people. On a simplified level, these techniques can also be used to steal the lead or follow, whether it be during a Birthday Jam, a Stealing Jam, or just between you and some friends on the social dance floor. More importantly though, this class is a simple way to create a group connection in your dance scene and help everyone to feel like a closer community.
-
-<hr/>
-<a name="dances"></a>
-
-h1. Dances
-
-h2(day). FRIDAY - Blues Underground
-
-where: 340 15th Ave. East, Seattle<br/>
-when: Beginning Lesson at 9pm, Dance until 1am<br/>
-cover: $5
-
-h2(day). SATURDAY - HaLo Swing Dance
-
-where: at HaLo where the workshop is :)<br/>
-when: Beginning Lesson at 9pm, Dance until 12:30am<br/>
-cover: $7
-
-h2(day). SUNDAY - Century Ballroom Swing Dance
-
-where: 915 E. Pine, Seattle<br/>
-when: Beginning Lesson at 9pm, Dance until 12:30am<br/>
-cover: $7
 
 </div>
 
