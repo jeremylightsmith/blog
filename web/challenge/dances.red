@@ -1,4 +1,4 @@
-h1. Dances
+h1. Local Dances
 
 These are the local dances that will be going on this weekend. We would love to go out to them and dance with all of you!
 
