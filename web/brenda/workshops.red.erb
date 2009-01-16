@@ -1,3 +1,6 @@
+<script src="javascripts/jquery.flickr-1.0.js" type="text/javascript"></script>
+% helper :bios
+
 h1. Book a Workshop
 
 brenda: what is a workshop?
@@ -20,11 +23,13 @@ h2. Promotion Material
 
 h3. Bios
 
-brenda: all bios appropriate for workshops
+<%= all_bios %>
 
 h3. Photos
 
-brenda: which photos are specific to workshops
+<%= gallery ".photos", :type => "search", :tags => "brenda_events" %>
+
+<div class="some photos"></div>
 
 Or "see more photos":photos.html
 

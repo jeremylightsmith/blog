@@ -107,3 +107,44 @@ h2 {
   width: 80%;
   font-weight: normal;
 }
+
+/* bios */
+
+.bio {
+  font-style: italic;
+  padding: 0 3em;
+}
+
+.bio .full_text {
+  display:none;
+}
+
+.bio.full_text .excerpt {
+  display:none;
+}
+
+.bio.full_text .full_text {
+  display:block;
+}
+
+/* photos */
+
+a img {
+  border: 0;
+}
+
+.photos.some {
+  padding: 0 3em;
+}
+
+.photos ul {
+  padding: 0;
+}
+
+.photos li {
+  display: inline;
+}
+
+.photos img {
+  padding: 10px;
+}
