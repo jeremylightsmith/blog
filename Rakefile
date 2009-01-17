@@ -15,7 +15,7 @@ task :generate do
   Dir.chdir(File.dirname(__FILE__)) do
     sites = {
       "blues_hero" => "public/blues_hero",
-      "brenda" => "public/jeremy_and_karissa/brenda",
+      "brenda" => "public/brenda",
       "challenge" => "public/jeremy_and_karissa/challenge",
       "jeremy_and_karissa" => "public/jeremy_and_karissa/",
       "jklbx" => "public/jeremy_and_karissa/exchange",
@@ -49,19 +49,24 @@ task :patterns do
   end
 end
 
-SITES = %w(blues_hero 
-   jeremy_and_karissa 
-   jeremy_and_karissa/brenda 
-   jeremy_and_karissa/challenge 
-   jeremy_and_karissa/exchange 
-   jeremy_and_karissa/wedding 
-   onemanswalk/bernardo_fresquez 
-   facilitation_patterns)
+def sites_to_check
+  return [ENV["SITE"]] if ENV["SITE"]
+  
+  return %w(
+    blues_hero 
+    brenda 
+    jeremy_and_karissa/challenge 
+    jeremy_and_karissa/exchange 
+    jeremy_and_karissa/wedding 
+    onemanswalk/bernardo_fresquez 
+    facilitation_patterns
+  )
+end
 
 desc "test links"
 task "test:links" do
   links = ActionSite::LinkChecker.new
-  SITES.each do |path|
+  sites_to_check.each do |path|
     links.check("http://localhost/#{path}/")
   end
 end
@@ -69,7 +74,7 @@ end
 desc "test links"
 task "test:local_links" do
   links = ActionSite::LinkChecker.new(:local => true)
-  SITES.each do |path|
+  sites_to_check.each do |path|
     links.check("http://localhost/#{path}/")
   end
 end
