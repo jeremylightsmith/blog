@@ -4,7 +4,7 @@ html {
 
 body {
   font-family: verdana, arial;
-  font-size: 95%;
+  font-size: 85%;
   margin: 0;
 }
 
@@ -15,7 +15,7 @@ body {
 
 .header .knot,
 .middle .knot {
-  width: 54em;
+  width: 64em;
   margin: 0 auto;
 }
 
@@ -34,13 +34,13 @@ body {
 
 .header .logo {
   margin: 0 auto;
-  width: 56em;
+  width: 66em;
 }
 
 .header .menu {
   padding-top: 0.5em;
   margin: 0 auto;
-  width: 50em;
+  width: 60em;
   text-align: right;
 }
 
@@ -69,8 +69,16 @@ body {
 
 .middle .content {
   margin: 0 auto;
-  width: 50em;
+  width: 54em;
   color: white;
+}
+
+img.heading {
+  margin: 0 -3em 1em;
+}
+
+img.signature {
+  float: right;
 }
 
 .middle .content a {

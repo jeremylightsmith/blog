@@ -3,15 +3,8 @@ module ApplicationHelper
     %{<a href="#{url}" class="button">#{name.upcase}</a>}
   end
   
-  # size can be :small or :medium
-  def photo_link(name, size = :small)
-    link_to image_tag("photos/#{name}", :class => size), ""
-  end
-
-  def photo_links(names, size = :small)
-    "<div class='photos'>" + 
-    names.map {|name| photo_link(name, size)}.join(" ") +
-    "</div>"
+  def heading(name)
+    image_tag "text/#{name}.gif", :class => 'heading'
   end
   
   def gallery(selector, options = {})

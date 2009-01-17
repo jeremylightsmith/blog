@@ -3,11 +3,28 @@
     display: block;
     width: 12em;
     text-align: center;
-    margin-bottom: 0.5em;
+    margin: 1em auto;
+  }
+  
+  img.brenda {
+     float: left; 
+     height: 30em; 
+     margin-left: -16em;
+  }
+  
+  .middle .content {
+    padding-left: 16em;
+    width: 35em;
+  }
+  
+  img.heading {
+    margin-left: -5em;
   }
 </style>
 
-<h1>Welcome</h1>
+<%= image_tag "photos/blue_dress_transparent.gif", :class => "brenda" %>
+
+<%= heading :welcome %>
 
 <p>brenda: quick welcome to my site</p>
 
@@ -17,6 +34,6 @@
 <%= button_to "Book an Event", "events.html" %>
 <%= button_to "Book a Workshop", "workshops.html" %>
 
+<%= image_tag "text/brenda.gif", :class => "signature" %>  
 
-
-- Brenda
+<div style="clear:both;"></div>
