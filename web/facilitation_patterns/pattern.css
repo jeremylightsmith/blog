@@ -19,6 +19,11 @@ span.unknown_pattern_link {
   margin: -2.5em;
 }
 
+.pattern .category {
+  font-size: 120%;
+  color: #aaa;
+}
+
 .pattern .story {
   font-style: italic;
   padding-bottom: 1em;
