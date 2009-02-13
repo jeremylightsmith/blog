@@ -1,12 +1,15 @@
-require File.dirname(__FILE__) + "/lib/blog"
+begin
+  require 'rubygems'
+  gem 'jeremylightsmith-actionsite', '>= 0.3'
+rescue Exception
+  $: << File.dirname(__FILE__) + "/../actionsite/lib"
+end
+require 'action_site'
+
 require 'spec/rake/spectask'
 load 'tasks/db.rake'
 
-task :default => [:spec, :generate, :patterns, "test:links"]
-
-Spec::Rake::SpecTask.new(:spec) do |t|
-  t.spec_files = FileList['spec/**/*_spec.rb']
-end
+task :default => [:generate, "test:links"]
 
 desc "generate the site"
 task :generate do
@@ -31,24 +34,6 @@ task :generate do
   end
 end
 
-desc "generate the facilitation_patterns site"
-task :patterns do
-  Dir.chdir(File.dirname(__FILE__)) do
-    site = ActionSite::Site.new("web/facilitation_patterns", "public/facilitation_patterns")
-    
-    site.generators["pattern"] = Generators::PatternGenerator.new
-    site.generators["red"] = Generators::RedclothWithPatternsGenerator.new
-    
-    site.context.patterns = Patterns.load("web/facilitation_patterns")
-    site.context.patterns_by_category = {}
-    site.context.patterns.each do |pattern|
-      (site.context.patterns_by_category[pattern.category] ||= []) << pattern
-    end
-    
-    site.generate
-  end
-end
-
 def sites_to_check
   return [ENV["SITE"]] if ENV["SITE"]
   
@@ -59,13 +44,12 @@ def sites_to_check
     jeremy_and_karissa/exchange 
     jeremy_and_karissa/wedding 
     onemanswalk/bernardo_fresquez 
-    facilitation_patterns
   )
 end
 
 desc "test links"
 task "test:links" do
-  links = ActionSite::LinkChecker.new
+  links = ActionSite::AsyncLinkChecker.new
   sites_to_check.each do |path|
     links.check("http://localhost/#{path}/")
   end
@@ -73,7 +57,7 @@ end
 
 desc "test links"
 task "test:local_links" do
-  links = ActionSite::LinkChecker.new(:local => true)
+  links = ActionSite::AsyncLinkChecker.new(:local => true)
   sites_to_check.each do |path|
     links.check("http://localhost/#{path}/")
   end

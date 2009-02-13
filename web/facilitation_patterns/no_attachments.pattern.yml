@@ -1,7 +1,0 @@
-category: organizational
-story: 
-  We were trying to generate stories for a Medical website using standard [business_process_modeling] techniques, but it wasn't working.  It was an informational website and there really wasn't a whole lot of workflow for any of the users...
-
-  Sally, suggested that maybe it would be easier to talk about features.  So we tried it.  We started a [mind_map] of features, and eventually generated stories from them.
-summary: 
-  Every situation is different, keep no foolish consistencies, if it doesn't work, throw it out!
