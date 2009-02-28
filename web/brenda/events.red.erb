@@ -1,13 +1,19 @@
 <script src="javascripts/jquery.flickr-1.0.js" type="text/javascript"></script>
 % helper :bios
+% helper :classes
 
 <%= heading :book_an_event %>
 
-brenda: what is an event?
 
-brenda: how do I work with events?
+h2. What is an event?
 
-Once you're ready to book me for an event, go ahead an e-mail me by clicking this link :
+An event is a weekend of social dancing, classes and sometimes competitions, that features several instructors. Events sometimes have live bands, or are DJ'd.
+
+h2. How do events work with Brenda?
+
+Brenda is available to DJ, perform, judge, instruct, and facilitate teacher training. She requires a minimum of $600 for the weekend, in addition to travel and food expenses.
+
+Once you're ready to book me for an event, go ahead and e-mail me by clicking this link :
 
 p(buttons). <%= button_to "Book an Event", "mailto:brenda@dancemode.com?subject=[BOOK+EVENT]" %>
 
@@ -17,7 +23,12 @@ First, check my "calendar":calendar.html to see if I'm available for your event.
 
 h2. Rates
 
-brenda: event rates?
+* Instructing
+** $150 per class (rate may be discounted if teaching with a partner)
+* DJing
+** $25-$30/hr
+
+p(hint). Hiring Brenda to judge can be worked into her weekend rate. 
 
 h2. Promotion Material
 
@@ -28,12 +39,12 @@ h3. Bios
 h3. Photos
 
 <%= gallery ".photos", :type => "search", :tags => "brenda_events" %>
-
 <div class="some photos"></div>
 
 Or "see more photos":photos.html
 
 h2. Classes for Events
 
-brenda: all classes appropriate for events
+Brenda primarily teaches Blues, Balboa, Lindy, WCS and Salsa.
 
+<%= all_classes %>

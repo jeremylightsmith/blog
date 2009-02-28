@@ -3,20 +3,60 @@ html {
 }
 
 body {
+  margin: 0;
+}
+
+body, td {
   font-family: verdana, arial;
   font-size: 85%;
-  margin: 0;
+}
+
+p {
+  margin: 1em 0;
+}
+
+h1 {
+  font-family: serif;
+  font-weight: normal;
+  font-size: 36pt;
+  margin: 10px 0 0 0;
+}
+
+h2 {
+  font-size: 150%;
+  margin: 0.8em 0;
+  border-bottom: solid 2px white;
+  border-right: solid 2px white;
+  width: 90%;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 110%;
+  font-weight: bold;
+  margin: 0.8em 0;
+}
+
+
+ul {
+  padding: 0 3em;
+}
+
+li {
+  list-style-type: disc;
 }
 
 .header {
   background: url(../images/top_border.png) repeat-x bottom left;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 .header .knot,
 .middle .knot {
   width: 64em;
   margin: 0 auto;
+  text-align: left;
 }
 
 .header .knot img {
@@ -33,15 +73,16 @@ body {
 }
 
 .header .logo {
-  margin: 0 auto;
   width: 66em;
+  margin: 0 auto;
+  text-align: left;
 }
 
 .header .menu {
-  padding-top: 0.5em;
-  margin: 0 auto;
   width: 60em;
+  margin: 0 auto;
   text-align: right;
+  padding-top: 0.5em;
 }
 
 .header .menu a,
@@ -65,16 +106,22 @@ body {
 .middle {
   background-color: #5e6e65;
   padding: 0.5em;
+  text-align: center;
 }
 
 .middle .content {
-  margin: 0 auto;
   width: 54em;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.middle .content,
+.middle .content td {
   color: white;
 }
 
 img.heading {
-  margin: 0 -3em 1em;
+  margin: 0 -3em 0em;
 }
 
 img.signature {
@@ -102,20 +149,6 @@ img.signature {
   border-left-color: #f8f6ee;
 }
 
-h1 {
-  font-family: serif;
-  font-weight: normal;
-  font-size: 36pt;
-  margin: 10px 0 0 0;
-}
-
-h2 {
-  border-bottom: solid 2px white;
-  border-right: solid 2px white;
-  width: 80%;
-  font-weight: normal;
-}
-
 /* bios */
 
 .bio {
@@ -133,6 +166,17 @@ h2 {
 
 .bio.full_text .full_text {
   display:block;
+}
+
+/* classes */
+
+h3 a {
+  font-size: 80%;
+  font-style: italic;
+}
+
+.collapsed .full_text {
+  display: none;
 }
 
 /* photos */
@@ -155,4 +199,12 @@ a img {
 
 .photos img {
   padding: 10px;
+}
+
+.hint {
+  font-style: italic;
+}
+
+embed {
+  margin: 1em 5em 0.5em;
 }

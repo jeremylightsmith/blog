@@ -1,0 +1,16 @@
+img.heading {
+}
+
+.middle .content {
+  padding-left: 3em;
+}
+
+.header .knot {
+  left: 100px;
+  position: absolute;
+}
+
+
+.middle .knot {
+  display: none; /* it doesn't work w/ ajax-y stuff */
+}

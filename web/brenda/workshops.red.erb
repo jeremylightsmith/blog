@@ -1,13 +1,19 @@
 <script src="javascripts/jquery.flickr-1.0.js" type="text/javascript"></script>
 % helper :bios
+% helper :classes
 
 <%= heading :book_a_workshop %>
 
-brenda: what is a workshop?
 
-brenda: how do I work with workshops?
+h2. What is a workshop?
 
-Once you're ready to book me for a workshop, go ahead an e-mail me by clicking this link :
+A workshop is a series of classes offered in a set block of time during a day, evening, or weekend. 
+
+h2. How do workshops work with Brenda?
+
+Start by setting a vision for the weekend.  Think about what you want to accomplish with your workshops, who you want the students to be, what you want to students to get out of their investment.  The number of students, the number of hours of classes, and an overall dance goal guides the direction of the workshop.  Share your vision with Brenda and she will work with you to create a workshop schedule and classes tailored to your community. 
+
+Once you're ready to book me for a workshop, go ahead and e-mail me by clicking this link :
 
 p(buttons). <%= button_to "Book a Workshop", "mailto:brenda@dancemode.com?subject=[BOOK+WORKSHOP]" %>
 
@@ -17,7 +23,12 @@ First, check my "calendar":calendar.html to see when I am available to do a work
 
 h2. Rates
 
-brenda: workshop rates?
+* Weekend Workshops
+** $1500 for a 10 hour weekend (rate may be discounted if teaching with a partner)
+* Single Day Workshops
+** $800 minumum at $150 per hour
+* Evening Workshops
+** $300 minimum at  $100 per hour
 
 h2. Promotion Material
 
@@ -28,12 +39,10 @@ h3. Bios
 h3. Photos
 
 <%= gallery ".photos", :type => "search", :tags => "brenda_events" %>
-
 <div class="some photos"></div>
 
 Or "see more photos":photos.html
 
 h2. Classes for Workshops
 
-brenda: all classes appropriate for workshops
-
+<%= all_classes %>

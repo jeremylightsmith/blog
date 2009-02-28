@@ -1,51 +1,17 @@
+todo - 2/2009
+  - about me page
+  - partner bios page
+    - bios
+      - topher
+      - barry
+    - pic
+      - topher
+      - barry
+      - brendan
+      
 reference sites
 - ryanandjenny.com
 - 2plyswing.com
-
-
-private classes
-  description (how it works, what is a private, etc)
-  availability
-  rates
-
-events
-  description (what is an event)
-  availability
-  rates
-  promotional material
-    bios
-    pictures
-    video
-  classes
-  
-workshops
-  description (what is a workshop)
-  availability
-  rates
-  promotional material
-    bios
-    pictures
-    video
-  classes
-
-menu
-- home
-  - links to schedule a private
-  - book me for an event
-  - book me for a workshop
-- bios
-  - several different ones
-- what I do
-  - ... 
-- rates
-  - privates
-  - events
-  - workshops
-- calendar
-  - events, workshops, and privates
-  - use google calendar
-- video / pics
-- contacts
 
 
 audience
@@ -59,10 +25,6 @@ audience
   - brenda's events
 
 stories:
-  - deploy what I have
-  - email brenda
-  - render text using special font for all titles / brenda on home
-  - put pictures on pictures.html
   - put best 5 / 6 pictures on events / workshops / about me
   - put video on youtube / site
   - home page

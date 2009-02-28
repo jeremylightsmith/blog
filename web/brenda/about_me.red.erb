@@ -1,19 +1,30 @@
+<script src="javascripts/jquery.flickr-1.0.js" type="text/javascript"></script>
 <%= heading :about_me %>
 
-brenda: quick summary of who you are, not quite a bio
 
 h2. Photos
 
-brenda: list of 5 or 6 of the best photos
+<%= gallery ".photos", :type => "search", :tags => "brenda_good" %>
+<div class="some photos"></div>
 
 Or "see more photos":photos.html
 
 h2. Video
 
-"Dance Videos":videos.html
+<object width="320" height="265"><param name="movie" value="http://www.youtube.com/v/eR8MuhN4UKU&hl=en&fs=1&rel=0&color1=0x234900&color2=0x4e9e00"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/eR8MuhN4UKU&hl=en&fs=1&rel=0&color1=0x234900&color2=0x4e9e00" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="320" height="265"></embed></object>
+
+Or "see more dance videos":videos.html
 
 h2. Past Events & Workshops
 
-brenda: a list & links
-
-brenda: what else?
+* Balboa Rendezvous
+* London Balboa Festival
+* Munich Balboa Weekend
+* SF Balfest
+* Down Home Blues Shout
+* Emerald City Blues Festival
+* Mile High Blues
+* Enter The Blues
+* Montral Bagels and Blues
+* Reno Dance Sensation
+* Philladelphia Lindy and Blues Anniversary
