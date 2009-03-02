@@ -1,6 +1,6 @@
 module BiosHelper
   def all_bios
-    [general_bio, blues_bio, wcs_bio, partner_bio_link].join("\n\n") + "\n\n"
+    [general_bio, blues_bio, salsa_bio, wcs_bio, partner_bio_link].join("\n\n") + "\n\n"
   end
   
   def partner_bios
@@ -30,6 +30,12 @@ Brenda started teaching WCS in 2004 and has been organizing the Wednesday West C
 Brenda continues to travel studying West Coast Swing along with many other Swing and Latin dances, always striving to bring the latest techniques and trends back to Portland."
   end
 
+  def salsa_bio
+    bio "Salsa Bio",
+"Brenda has always been drawn to Latin music from early childhood, listening to Julio Eglasias, Los Lobos, Gloria Estefan...anything remotely latin stood out to her.  When she began seriously partner dancing in 2000 Salsa and other Latin club dances became part of her regular routine.  The freedom of movement, inherent rhythms, and call response between partners has made Salsa one Brenda's favorite dance forms.  She studied with Duplessey-Monic Walker, Barry Douglas, and many other renowned instructors from the West and East coasts.  Brenda also privately studied Latin drumming and music with Derek Reith to better understand the music and rhythms and how the dance was connected to them.  Brenda studied every type of African based dance she could find.  After many years of studying movement, music, and partnering Brenda applies her collective knowlege of African based dance to her break down of Salsa, Cha Cha Cha, Mambo, Cumbia, Bachata, and more.
+"
+  end
+  
   def brendans_bio
     bio "Brendan Woodrow's Bio",
 "Brendan Woodrow started dancing West Coast Swing in 2007 after hearing about it from a ballroom instructor. He immediately fell in love with the dance's smooth style and subtle movements and decided that this was a dance he should learn more about. Brendan started immersing himself in as much WCS training as he could find in Portland. He took classes from Chris Jones, Trina Siebert, and Jason Isbell as well as received private training from Brenda Collins, Glenna Cooke, and Jenica Krolicki. Currently, Brendan receives most of his training from dance coach Barry Douglas.
