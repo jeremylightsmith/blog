@@ -41,4 +41,5 @@
 	<li class="page_item current_page_item"><a href="/work">work</a></li>
 	<li class="page_item"><a href="/life">life</a></li>
 	<li class="page_item"><a href="http://flickr.com/photos/onemanswalk/collections">pictures</a></li>
+	<li class="page_item"><a href="http://facilitationpatterns.org/">facilitation patterns</a></li>
 </ul><div class="clear"></div>
