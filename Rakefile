@@ -47,7 +47,7 @@ task :start do
   raise "choose a site to serve w/ SITE=brenda, etc..." unless sites_to_generate.size == 1
   
   sites_to_generate.each do |name, target|
-    ActionSite::Site.new("web/#{name}", "#{target}").serve
+    ActionSite::Site.new("web/#{name}", "#{target}").serve(4444)
   end
 end
 

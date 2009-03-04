@@ -1,5 +1,4 @@
 todo - 2/2009
-  - about me page
   - partner bios page
     - bios
       - topher
@@ -9,27 +8,6 @@ todo - 2/2009
       - barry
       - brendan
       
-reference sites
-- ryanandjenny.com
-- 2plyswing.com
-
-
-audience
-- want book
-  - privates
-  - events
-  - workshop
-- learn about brenda
-- could be separate
-  - brenda's dances
-  - brenda's events
-
 stories:
-  - put best 5 / 6 pictures on events / workshops / about me
-  - put video on youtube / site
-  - home page
-  - privates page
-  - events page
-  - workshops page
-  - about me page
-  - contact me page
+  - put best 5 / 6 pictures on about me
+  - allow red(text) => html

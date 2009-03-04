@@ -4,6 +4,7 @@ module ApplicationHelper
   end
   
   def heading(name)
+    content_for(:title) { name.to_s.titleize }
     image_tag "text/#{name}.gif", :class => 'heading'
   end
   
