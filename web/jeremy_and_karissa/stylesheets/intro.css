@@ -1,5 +1,10 @@
-body {
+html {
   background-color: #ded8d0;
+}
+
+body {
+  margin: 0;
+  text-align: center;
 }
 
 a img {
@@ -12,13 +17,49 @@ a img {
   margin: 20px auto 0 auto;
   width: 600px;
   height: 500px;
+  position: relative;
+  text-align: left;
 }
 
-#wedding_button {
-  padding-top: 350px;
+.events {
+  font: 90% "Papyrus", "Oldtown", fantasy, cursive;
+  position: absolute;
+  top: 350px;
+  height: 160px;
+  width: 300px;
+  color: white;
 }
 
-#exchange_button {
-  margin-top: -150px;
-  margin-left: 300px;
+.events a {
+  color: white;
+}
+
+.wedding {
+  right: 0;
+  background-color: black;
+}
+
+.dance { 
+  left: 0;
+  background-color: #6C110B;
+}
+
+h3 {
+  padding: 1em 0 0.2em;
+  font-size: 120%;
+}
+
+h3, ul {
+  padding-left: 1.5em;
+}
+
+li span {
+  font: 80% "Trebuchet MS", Verdana, sans-serif;
+  color: #ccc;
+  display: block;
+  float: left;
+  width: 9em;
+  padding: 3px 5px 0 0;
+  text-align: right;
+  clear: both;
 }

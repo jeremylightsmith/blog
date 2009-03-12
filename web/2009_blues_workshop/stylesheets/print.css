@@ -1,0 +1,58 @@
+.paypal, .video {
+  display: none;
+}
+
+body {
+  text-align: left;
+}
+
+.content .inner_content {
+  padding-left: 3em;
+}
+
+.content {
+  width: 650px;
+  position: relative;
+  margin: 0 0;
+}
+
+.info {
+  padding-left: 10em;
+}
+
+.classes {
+  padding: 1em 0 2em 30em;
+}
+
+.classes img {
+  display: block;
+  float: left;
+  margin: 10px 0 0 -6.5em;
+}
+
+.website {
+  display: block;
+  font-style: italic;
+  text-align: center;
+  font-size: 80%;
+}
+
+h1 {
+  padding-top: 2em;
+  font-size: 200%;
+}
+
+h2 {
+  display: none;
+  border: none;
+}
+
+h3 {
+  font-size: 100%;
+}
+
+.images {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

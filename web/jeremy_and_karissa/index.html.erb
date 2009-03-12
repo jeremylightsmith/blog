@@ -1,15 +1,25 @@
 <html>
 <head>
   <title>Jeremy &amp; Karissa</title>
+  <link href="stylesheets/reset-min.css" media="all" rel="stylesheet" type="text/css">
   <link href="stylesheets/intro.css" media="all" rel="stylesheet" type="text/css">
 </head>
 <body>
   <div class="content">
-    <div id="wedding_button">
-      <%= link_to image_tag("wedding_button.png"), "wedding/" %>
+    <div class="dance events">
+      <h3>Dance Events</h3>
+      <ul>
+        <li><span>Mar 21, 2009</span><%= link_to "Blues Workshop", "2009/blues_workshop/" %></li>
+        <li><span>Jan 17-18, 2009</span><%= link_to "Challenge Workshop", "challenge/" %></li>
+        <li><span>May 10-11, 2008</span><%= link_to "Blues Hero", "http://blueshero.com/" %></li>
+      </ul>
     </div>
-    <div id="exchange_button">
-      <%= link_to image_tag("exchange_button.png"), "exchange/" %>
+    <div class="wedding events">
+      <h3>Getting Married</h3>
+      <ul>
+        <li><span>June 13, 2008</span><%= link_to "Wedding", "wedding/" %></li>
+        <li><span>June 13-15, 2008</span><%= link_to "JKLBX", "exchange/" %></li>
+      </ul>
     </div>
   </div>
 </body>

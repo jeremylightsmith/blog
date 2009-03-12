@@ -1,0 +1,79 @@
+html {
+  background: black url(../images/gradient.png) repeat-x;
+  color: white;
+}
+
+body {
+  text-align: center;
+  font: 90%  Verdana, sans-serif;
+}
+
+h1 {
+  font-size: 180%;
+  margin: 0.3em 0 1em;
+  font-weight: bold;
+}
+
+h1 span {
+  font-weight: normal;
+  display: block;
+  padding-left: 6em;
+  font-style: italic;
+  font-size: 90%;
+}
+
+h2 {
+  font-size: 150%;
+  margin-top: 2em;
+  border-bottom: solid 1px #999;
+}
+
+h3 {
+  font-size: 130%;
+  margin-top: 0.6em;
+}
+
+h3 span {
+  display: block;
+  float: left;
+  margin-left: -6.5em;
+  width: 6em;
+  font-size: 80%;
+  text-align: right;
+  padding-top: 0.2em;
+}
+
+.content { 
+  width: 60em;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.content .inner_content {
+  padding-left: 10em;
+}
+
+.images {
+  float: right;
+  text-align: right;
+}
+
+.paypal form {
+  padding-top: 0.5em;
+}
+
+.paypal input[type=image] {
+  display: inline;
+}
+
+.classes img {
+  display: none;
+}
+
+embed {
+  margin: 2em 0 0 5em;
+}
+
+.website {
+  display: none;
+}
