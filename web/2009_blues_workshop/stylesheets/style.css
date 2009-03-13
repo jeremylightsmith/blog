@@ -3,6 +3,10 @@ html {
   color: white;
 }
 
+a {
+  color: white;
+}
+
 body {
   text-align: center;
   font: 90%  Verdana, sans-serif;
