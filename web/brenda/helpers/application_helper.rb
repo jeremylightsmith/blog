@@ -20,4 +20,10 @@ module ApplicationHelper
     js = "$('#{selector}').flickr({#{options}});"
     "<script type='text/javascript' charset='utf-8'>$(function() {#{js}})</script>"
   end
+  
+  def image_tag(url, options = {})
+    options = options.map {|key, value| %{ #{key}="#{value}"}}.join
+    url = "/images/#{url}" unless url =~ /^https?\:\/\//
+    %{<img src="#{url}"#{options}/>}
+  end
 end

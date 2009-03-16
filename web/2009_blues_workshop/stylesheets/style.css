@@ -74,6 +74,11 @@ h3 span {
   display: none;
 }
 
+.classes p {
+  font-style: italic;
+  margin-top: 0.5em;
+}
+
 embed {
   margin: 2em 0 0 5em;
 }
