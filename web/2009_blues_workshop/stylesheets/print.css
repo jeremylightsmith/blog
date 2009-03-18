@@ -35,6 +35,10 @@ body {
   padding: 0 0 2em 6.5em;
 }
 
+.classes p {
+  display: none;
+}
+
 .classes h3 {
   font-weight: bold;
   font-size: 90%;
