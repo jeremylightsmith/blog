@@ -208,3 +208,12 @@ a img {
 embed {
   margin: 1em 5em 0.5em;
 }
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+  margin-right: 1em;
+}
