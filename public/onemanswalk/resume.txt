@@ -84,34 +84,36 @@ I organize dance events at a national level, often coordinating registration, ho
 
 == EXPERTISE ==
 
-    * Agile Methodologies
-    * Release Planning
-    * Extreme Programming
-    * Product Management
-    * Business Process Modeling
-    * Enterprise Architecture
-    * Testing Methodologies
-    * Systems Implementation
-    * Systems Integration
-    * Training
-    * Analysis and Design
-    * Open Source Software
-    * Ruby on Rails
-    * Web 2.0
-    * Paper-based Modeling
+* Agile Methodologies
+* Release Planning
+* Story Mapping
+* Extreme Programming
+* Getting Things Done (GTD)
+* Product Management
+* Business Process Modeling
+* Enterprise Architecture
+* Testing Methodologies
+* Systems Implementation
+* Systems Integration
+* Training
+* Analysis and Design
+* Open Source Software
+* Ruby on Rails
+* Web 2.0
+* Paper Prototyping
 
 == INDUSTRIES ==
 
-    * Web Based Applications
-    * Consumer Software
-    * Financial Services
-    * Construction
-    * Shipping
-    * Insurance
+* Web Based Applications
+* Consumer Software
+* Financial Services
+* Construction
+* Shipping
+* Insurance
 
 == COMPUTER LANGUAGES ==
 
-  Ruby, JavaScript, CSS, Java, .NET(C#), Python, C++/C, PHP, Perl, Pascal, Lisp
+Ruby, JavaScript, CSS, Java, .NET(C#), Python, C++/C, PHP, Perl, Pascal, Lisp
 
 == EDUCATION ==
 
