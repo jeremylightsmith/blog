@@ -85,11 +85,13 @@ I organize dance events at a national level, often coordinating registration, ho
 == EXPERTISE ==
 
 * Agile Methodologies
-* Release Planning
+* Project Management
+* Product Management
+* Full Lifecycle
+* Project Planning
 * Story Mapping
 * Extreme Programming
 * Getting Things Done (GTD)
-* Product Management
 * Business Process Modeling
 * Enterprise Architecture
 * Testing Methodologies
