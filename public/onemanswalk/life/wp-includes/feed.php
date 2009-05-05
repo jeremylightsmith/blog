@@ -223,9 +223,11 @@ function the_permalink_rss() {
  * @package WordPress
  * @subpackage Feed
  * @since unknown
+ *
+ * @param int|object $comment_id Optional comment object or id. Defaults to global comment object.
  */
-function comment_guid() {
-	echo get_comment_guid();
+function comment_guid($comment_id = null) {
+	echo get_comment_guid($comment_id);
 }
 
 /**
@@ -235,10 +237,11 @@ function comment_guid() {
  * @subpackage Feed
  * @since unknown
  *
+ * @param int|object $comment_id Optional comment object or id. Defaults to global comment object.
  * @return bool|string false on failure or guid for comment on success.
  */
-function get_comment_guid() {
-	global $comment;
+function get_comment_guid($comment_id = null) {
+	$comment = get_comment($comment_id);
 
 	if ( !is_object($comment) )
 		return false;
@@ -252,7 +255,7 @@ function get_comment_guid() {
  * @since 1.5.0
  */
 function comment_link() {
-	echo get_comment_link();
+	echo clean_url( get_comment_link() );
 }
 
 /**
@@ -306,7 +309,7 @@ function comment_text_rss() {
  * @package WordPress
  * @subpackage Feed
  * @since 2.1.0
- * @uses apply_filters() 
+ * @uses apply_filters()
  *
  * @param string $type Optional, default is 'rss'. Either 'rss', 'atom', or 'rdf'.
  * @return string All of the post categories for displaying in the feed.
@@ -337,7 +340,7 @@ function get_the_category_rss($type = 'rss') {
 		elseif ( 'atom' == $type )
 			$the_list .= sprintf( '<category scheme="%1$s" term="%2$s" />', attribute_escape( apply_filters( 'get_bloginfo_rss', get_bloginfo( 'url' ) ) ), attribute_escape( $cat_name ) );
 		else
-			$the_list .= "\n\t\t<category><![CDATA[$cat_name]]></category>\n";
+			$the_list .= "\n\t\t<category><![CDATA[" . html_entity_decode( $cat_name ) . "]]></category>\n";
 	}
 
 	return apply_filters('the_category_rss', $the_list, $type);
@@ -394,15 +397,19 @@ function html_type_rss() {
  * @uses get_post_custom() To get the current post enclosure metadata.
  */
 function rss_enclosure() {
-	global $post;
-	if ( !empty($post->post_password) && (!isset($_COOKIE['wp-postpass_'.COOKIEHASH]) || $_COOKIE['wp-postpass_'.COOKIEHASH] != $post->post_password) )
+	if ( post_password_required() )
 		return;
 
-	foreach (get_post_custom() as $key => $val) {
+	foreach ( (array) get_post_custom() as $key => $val) {
 		if ($key == 'enclosure') {
-			foreach ((array)$val as $enc) {
+			foreach ( (array) $val as $enc ) {
 				$enclosure = split("\n", $enc);
-				echo apply_filters('rss_enclosure', '<enclosure url="' . trim(htmlspecialchars($enclosure[0])) . '" length="' . trim($enclosure[1]) . '" type="' . trim($enclosure[2]) . '" />' . "\n");
+
+				//only get the the first element eg, audio/mpeg from 'audio/mpeg mpga mp2 mp3'
+				$t = split('[ \t]', trim($enclosure[2]) );
+				$type = $t[0];
+
+				echo apply_filters('rss_enclosure', '<enclosure url="' . trim(htmlspecialchars($enclosure[0])) . '" length="' . trim($enclosure[1]) . '" type="' . $type . '" />' . "\n");
 			}
 		}
 	}
@@ -426,13 +433,12 @@ function rss_enclosure() {
  * @uses get_post_custom() To get the current post enclosure metadata.
  */
 function atom_enclosure() {
-	global $post;
-	if ( !empty($post->post_password) && ($_COOKIE['wp-postpass_'.COOKIEHASH] != $post->post_password) )
+	if ( post_password_required() )
 		return;
 
-	foreach (get_post_custom() as $key => $val) {
+	foreach ( (array) get_post_custom() as $key => $val ) {
 		if ($key == 'enclosure') {
-			foreach ((array)$val as $enc) {
+			foreach ( (array) $val as $enc ) {
 				$enclosure = split("\n", $enc);
 				echo apply_filters('atom_enclosure', '<link href="' . trim(htmlspecialchars($enclosure[0])) . '" rel="enclosure" length="' . trim($enclosure[1]) . '" type="' . trim($enclosure[2]) . '" />' . "\n");
 			}
@@ -495,10 +501,14 @@ function prep_atom_text_construct($data) {
  * @since 2.5
  */
 function self_link() {
-	echo 'http'
-		. ( $_SERVER['https'] == 'on' ? 's' : '' ) . '://'
-		. $_SERVER['HTTP_HOST']
-		. wp_specialchars(stripslashes($_SERVER['REQUEST_URI']), 1);
+	$host = @parse_url(get_option('home'));
+	$host = $host['host'];
+	echo clean_url(
+		'http'
+		. ( (isset($_SERVER['https']) && $_SERVER['https'] == 'on') ? 's' : '' ) . '://'
+		. $host
+		. stripslashes($_SERVER['REQUEST_URI'])
+		);
 }
 
 ?>

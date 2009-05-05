@@ -1,19 +1,33 @@
 <?php
-// Here we keep the DB structure and option values
+/**
+ * WordPress Administration Scheme API
+ *
+ * Here we keep the DB structure and option values.
+ *
+ * @package WordPress
+ * @subpackage Administration
+ */
 
+/**
+ * The database character collate.
+ * @var string
+ * @global string
+ * @name $charset_collate
+ */
 $charset_collate = '';
 
 // Declare these as global in case schema.php is included from a function.
 global $wpdb, $wp_queries;
 
-if ( $wpdb->supports_collation() ) {
+if ( $wpdb->has_cap( 'collation' ) ) {
 	if ( ! empty($wpdb->charset) )
 		$charset_collate = "DEFAULT CHARACTER SET $wpdb->charset";
 	if ( ! empty($wpdb->collate) )
 		$charset_collate .= " COLLATE $wpdb->collate";
 }
 
-$wp_queries="CREATE TABLE $wpdb->terms (
+/** Create WordPress database tables SQL */
+$wp_queries = "CREATE TABLE $wpdb->terms (
  term_id bigint(20) NOT NULL auto_increment,
  name varchar(200) NOT NULL default '',
  slug varchar(200) NOT NULL default '',
@@ -125,7 +139,8 @@ CREATE TABLE $wpdb->posts (
   comment_count bigint(20) NOT NULL default '0',
   PRIMARY KEY  (ID),
   KEY post_name (post_name),
-  KEY type_status_date (post_type,post_status,post_date,ID)
+  KEY type_status_date (post_type,post_status,post_date,ID),
+  KEY post_parent (post_parent)
 ) $charset_collate;
 CREATE TABLE $wpdb->users (
   ID bigint(20) unsigned NOT NULL auto_increment,
@@ -152,13 +167,20 @@ CREATE TABLE $wpdb->usermeta (
   KEY meta_key (meta_key)
 ) $charset_collate;";
 
+/**
+ * Create WordPress options and set the default values.
+ *
+ * @since 1.5.0
+ * @uses $wpdb
+ * @uses $wp_db_version
+ */
 function populate_options() {
 	global $wpdb, $wp_db_version;
-	
+
 	$guessurl = wp_guess_url();
-	
+
 	do_action('populate_options');
-	
+
 	add_option('siteurl', $guessurl);
 	add_option('blogname', __('My Blog'));
 	add_option('blogdescription', __('Just another WordPress weblog'));
@@ -257,7 +279,29 @@ function populate_options() {
 	add_option('avatar_default', 'mystery');
 	add_option('enable_app', 0);
 	add_option('enable_xmlrpc', 0);
-	
+
+	// 2.7
+	add_option('large_size_w', 1024);
+	add_option('large_size_h', 1024);
+	add_option('image_default_link_type', 'file');
+	add_option('image_default_size', '');
+	add_option('image_default_align', '');
+	add_option('close_comments_for_old_posts', 0);
+	add_option('close_comments_days_old', 14);
+	add_option('thread_comments', 0);
+	add_option('thread_comments_depth', 5);
+	add_option('page_comments', 1);
+	add_option('comments_per_page', 50);
+	add_option('default_comments_page', 'newest');
+	add_option('comment_order', 'asc');
+	add_option('use_ssl', 0);
+	add_option('sticky_posts', array());
+	add_option('widget_categories', array());
+	add_option('widget_text', array());
+	add_option('widget_rss', array());
+	add_option('update_core', array());
+	add_option('dismissed_update_core', array());
+
 	// Delete unused options
 	$unusedoptions = array ('blodotgsping_url', 'bodyterminator', 'emailtestonly', 'phoneemail_separator', 'smilies_directory', 'subjectprefix', 'use_bbcode', 'use_blodotgsping', 'use_phoneemail', 'use_quicktags', 'use_weblogsping', 'weblogs_cache_file', 'use_preview', 'use_htmltrans', 'smilies_directory', 'fileupload_allowedusers', 'use_phoneemail', 'default_post_status', 'default_post_category', 'archive_mode', 'time_difference', 'links_minadminlevel', 'links_use_adminlevels', 'links_rating_type', 'links_rating_char', 'links_rating_ignore_zero', 'links_rating_single_image', 'links_rating_image0', 'links_rating_image1', 'links_rating_image2', 'links_rating_image3', 'links_rating_image4', 'links_rating_image5', 'links_rating_image6', 'links_rating_image7', 'links_rating_image8', 'links_rating_image9', 'weblogs_cacheminutes', 'comment_allowed_tags', 'search_engine_friendly_urls', 'default_geourl_lat', 'default_geourl_lon', 'use_default_geourl', 'weblogs_xml_url', 'new_users_can_blog', '_wpnonce', '_wp_http_referer', 'Update', 'action', 'rich_editing', 'autosave_interval', 'deactivated_plugins');
 	foreach ($unusedoptions as $option) :
@@ -271,14 +315,25 @@ function populate_options() {
 	endforeach;
 }
 
+/**
+ * Execute WordPress role creation for the various WordPress versions.
+ *
+ * @since 2.0.0
+ */
 function populate_roles() {
 	populate_roles_160();
 	populate_roles_210();
 	populate_roles_230();
 	populate_roles_250();
 	populate_roles_260();
+	populate_roles_270();
 }
 
+/**
+ * Create the roles for WordPress 2.0
+ *
+ * @since 2.0.0
+ */
 function populate_roles_160() {
 	// Add roles
 
@@ -296,7 +351,7 @@ function populate_roles_160() {
 	add_role('subscriber', 'Subscriber|User role');
 
 	// Add caps for Administrator role
-	$role = get_role('administrator');
+	$role =& get_role('administrator');
 	$role->add_cap('switch_themes');
 	$role->add_cap('edit_themes');
 	$role->add_cap('activate_plugins');
@@ -329,7 +384,7 @@ function populate_roles_160() {
 	$role->add_cap('level_0');
 
 	// Add caps for Editor role
-	$role = get_role('editor');
+	$role =& get_role('editor');
 	$role->add_cap('moderate_comments');
 	$role->add_cap('manage_categories');
 	$role->add_cap('manage_links');
@@ -351,7 +406,7 @@ function populate_roles_160() {
 	$role->add_cap('level_0');
 
 	// Add caps for Author role
-	$role = get_role('author');
+	$role =& get_role('author');
 	$role->add_cap('upload_files');
 	$role->add_cap('edit_posts');
 	$role->add_cap('edit_published_posts');
@@ -362,22 +417,27 @@ function populate_roles_160() {
 	$role->add_cap('level_0');
 
 	// Add caps for Contributor role
-	$role = get_role('contributor');
+	$role =& get_role('contributor');
 	$role->add_cap('edit_posts');
 	$role->add_cap('read');
 	$role->add_cap('level_1');
 	$role->add_cap('level_0');
 
 	// Add caps for Subscriber role
-	$role = get_role('subscriber');
+	$role =& get_role('subscriber');
 	$role->add_cap('read');
 	$role->add_cap('level_0');
 }
 
+/**
+ * Create and modify WordPress roles for WordPress 2.1.
+ *
+ * @since 2.1.0
+ */
 function populate_roles_210() {
 	$roles = array('administrator', 'editor');
 	foreach ($roles as $role) {
-		$role = get_role($role);
+		$role =& get_role($role);
 		if ( empty($role) )
 			continue;
 
@@ -398,46 +458,75 @@ function populate_roles_210() {
 		$role->add_cap('read_private_pages');
 	}
 
-	$role = get_role('administrator');
+	$role =& get_role('administrator');
 	if ( ! empty($role) ) {
 		$role->add_cap('delete_users');
 		$role->add_cap('create_users');
 	}
 
-	$role = get_role('author');
+	$role =& get_role('author');
 	if ( ! empty($role) ) {
 		$role->add_cap('delete_posts');
 		$role->add_cap('delete_published_posts');
 	}
 
-	$role = get_role('contributor');
+	$role =& get_role('contributor');
 	if ( ! empty($role) ) {
 		$role->add_cap('delete_posts');
 	}
 }
 
+/**
+ * Create and modify WordPress roles for WordPress 2.3.
+ *
+ * @since 2.3.0
+ */
 function populate_roles_230() {
-	$role = get_role( 'administrator' );
+	$role =& get_role( 'administrator' );
 
 	if ( !empty( $role ) ) {
 		$role->add_cap( 'unfiltered_upload' );
 	}
 }
 
+/**
+ * Create and modify WordPress roles for WordPress 2.5.
+ *
+ * @since 2.5.0
+ */
 function populate_roles_250() {
-	$role = get_role( 'administrator' );
+	$role =& get_role( 'administrator' );
 
 	if ( !empty( $role ) ) {
 		$role->add_cap( 'edit_dashboard' );
 	}
 }
 
+/**
+ * Create and modify WordPress roles for WordPress 2.6.
+ *
+ * @since 2.6.0
+ */
 function populate_roles_260() {
-	$role = get_role( 'administrator' );
+	$role =& get_role( 'administrator' );
 
 	if ( !empty( $role ) ) {
 		$role->add_cap( 'update_plugins' );
 		$role->add_cap( 'delete_plugins' );
+	}
+}
+
+/**
+ * Create and modify WordPress roles for WordPress 2.7.
+ *
+ * @since 2.7.0
+ */
+function populate_roles_270() {
+	$role =& get_role( 'administrator' );
+
+	if ( !empty( $role ) ) {
+		$role->add_cap( 'install_plugins' );
+		$role->add_cap( 'update_themes' );
 	}
 }
 
