@@ -1,0 +1,5 @@
+#search #s { margin-top: -1px; }
+#sidebar .block li, #content .post-list li { list-style-position: outside; }
+#content input { width: auto; overflow: visible; padding:0 .6em 0 .6em; }
+
+

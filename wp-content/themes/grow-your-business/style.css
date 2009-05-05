@@ -1,0 +1,548 @@
+/*  
+Theme Name: Grow Your Business
+Theme URI: http://www.junpak.net/free-wordpress-themes/grow-your-business
+Description: Designed by <a href="http://www.junpak.net/">SEO Company</a> and available FREE at <a href="http://www.junpak.net/free-wordpress-themes/">Free WordPress Themes</a>
+Author: Junpak.net
+Author URI: http://www.junpak.net/
+© 2008, Junpak. All rights reserved. 
+Tags: simple, clean, fixed width, right sidebar, two columns, adsense ready, valid XHTML, valid CSS
+Version: 1.2.2
+*/
+
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption-dd {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+
+
+body {
+	background: #241a12 url(images/bg.jpg) repeat-x top;
+	text-align: center;
+	margin: 0px auto;
+        padding: 0px;
+	}
+	
+
+/* -------------------
+Main Structure
+------------------- */
+	
+#frame {
+	width: 1024px;
+	text-align: left;
+	margin: 0px auto;
+        padding: 0px;
+	background: url(images/main.jpg) 0 0 no-repeat;
+	}
+	
+#middle {
+	background: url(images/main.jpg) 0 0 repeat-y;
+	overflow: auto;
+	width: 1024px;
+        margin: 0px auto;
+        padding: 0px;
+	}
+
+#content {
+	float: left;
+	width: 611px;
+        background: #0f0a04;
+        margin: 18px 8px 18px 18px;
+        padding: 0px 5px 15px 5px;
+	border: 1px solid #231709;
+        display: inline;
+	}
+	
+#sidebar {
+	float: left;
+	background: #100a04;
+	width: 315px;
+	padding: 10px;
+        margin-left: 5px;
+	border: 8px solid #231709;
+        display: inline;
+	}
+
+	
+/* -------------------
+Header
+------------------- */
+
+#header {
+        background: url(images/header.jpg);
+        width: 1024px;
+        height: 275px;
+        margin: 0px auto;
+        padding: 0px;
+	border-top: 1px solid #3f3b3b;
+	}
+	
+.header-title {
+	font-family: Tahoma, Verdana, Arial;
+	font-size:28px;
+	font-weight: bold;
+	color:#968c83;
+	padding:138px 0 0 68px;
+	text-align:left;
+	}
+.header-title a{
+	color:#968c83;
+	text-decoration:none;
+	border-bottom:none;
+	}
+.header-title a:hover{
+	color:#968c83;
+	text-decoration:none;
+	border-bottom:none;
+	}
+.header-description {
+        font-size: 11px;
+	font-family: Tahoma, Verdana, Arial;
+        font-weight: normal;
+	color:#847b73;
+	padding:0px 0 0 69px;
+	text-align:left;
+	}
+
+
+	
+/* -------------------
+Content
+------------------- */
+
+#content .post {
+	margin: 0 10px 20px 10px;
+
+	}
+	
+/* general #content definitions */
+	
+#content h2 {
+	color: #968c83;
+	font: 0.8em/1.7em Tahoma, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	margin: 0 0 8px 0;
+	border-bottom: 1px dotted #827060;
+
+	}
+
+#content h2 a {
+	color: #968c83;
+	text-decoration: none;
+	}
+
+#content h2 a:hover {
+	color: #968c83;
+	text-decoration: none;
+	}
+	
+#content h3 {
+	font: 0.7em/1.7em Tahoma, Arial, Helvetica, sans-serif;
+	color: #968c83;
+	margin: 1.1em 0 0.2em 10px;
+	font-weight: bold;
+	}
+	
+#content h4 {
+	font: 0.7em/1.7em Tahoma, Arial, Helvetica, sans-serif;
+	color: #827060;
+	border-left: 1em dotted #a5c1e5;
+	padding: 0 0 0 0.5em;
+	margin: 1em 0;
+	}
+	
+#content p, #content dl {
+	color: #827060;
+	font: 0.7em/1.5em Tahoma, Arial, Helvetica, sans-serif;
+	}
+	
+#content p, #content ul, #content ol, #content dl {
+	margin: 0 0 0.7em 0;
+	}
+
+#content img {
+	margin: 0 0 0 0;
+        padding: 5px;
+	}
+	
+#content li {
+	margin: 0 0 0 30px;
+	color: #827060;
+	font: 0.8em/1.5em Tahoma, Arial, Helvetica, sans-serif;
+	}
+	
+#content dl dt {
+	font-weight: bold;
+	}
+	
+#content dl dd {
+	margin: 0 0 0.4em 0.5em;
+	}
+	
+#content blockquote p {
+	margin: 0 0 0 2em;
+	border-left: 5px solid #968c83;
+	padding: 0 0 0 1em;
+	color: #968c83;
+}
+	
+#content a { color: #968c83; }
+#content a:hover { color: #827060; }
+	
+#content .post ul.post-data {
+	border-top: 1px dotted #827060;
+	list-style: none;
+	font: 0.8em/1.5em Tahoma, Arial, Helvetica, sans-serif;
+	padding: 0.1em 0 0.2em 0;
+	color: #827060;
+	margin: 1.3em 0 0 0;
+	}
+
+#content .post ul.post-data li {
+	color: #827060;
+	}
+	
+#content .post ul.post-data a {
+	text-decoration: none;
+	color: #968c83;
+	}
+	
+#content .post ul.post-data a:hover {
+	color: #968c83;
+text-decoration: underline;
+	}
+
+#content .post ul.post-data li.comments {
+	float: right;
+	margin: 0 0.7em 0 0;
+	display: inline; /* fixes double float bug in IE */
+	}
+	
+#content .post ul.post-data li.comments a {
+	padding: 0 0 0 15px;
+	}
+	
+#content .post ul.post-data li.posted {
+	margin: 0 0 0 0.7em;
+	}
+	
+#content .post ul.post-data li.posted a {
+	padding: 0 0 0 1px;
+	}
+	
+#content .post ul.post-data li.comments a:hover, #content .post ul.post-data li.posted a:hover {
+	background-position: 0 -38px;
+	}
+
+.spacer {   padding: 0px;
+            text-align: right;
+            clear: both;
+            text-transform: lowercase;
+            }
+
+	
+/* -------------------
+Comments
+------------------- */
+
+#content #comments {
+	margin: 0 20px 20px 25px;
+	}
+	
+#content #comments .comment {
+	margin: 0 0 2em 0;
+font: 11px Tahoma, Arial, Helvetica, sans-serif;
+	}
+	
+#content #comments .comment p, #content #comments .comment li, #content #comments .comment a { 
+font: 11px Tahoma, Arial, Helvetica, sans-serif;
+	color: #827060;	}
+#content #comments .comment a:hover { 
+font: 11px Tahoma, Arial, Helvetica, sans-serif;
+color: #827060; }
+	
+#content #comments .comment p {
+	margin: 0 0 0.8em 0;
+font: 11px Tahoma, Arial, Helvetica, sans-serif;
+	}
+	
+#content #comments .comment .comment-data p {
+font: 11px Tahoma, Arial, Helvetica, sans-serif;
+	color: #827060;
+	border-top: 1px dashed #827060;
+	border-left: 1px dashed #827060;
+	padding: 0 0 0 22px;
+	margin: 1.5em 0 0 0;
+	}
+	
+#content #comments .comment .comment-data p a { 
+font: 11px Tahoma, Arial, Helvetica, sans-serif;
+color: #827060; }
+#content #comments .comment .comment-data p a:hover { color: #827060; }
+
+#content #comments form {
+	color: #827060;
+	font: 0.75em/1.6em Arial, Helvetica, sans-serif;
+	}
+
+#content #comments form a { color: #827060; }
+#content #comments form a:hover { color: #827060; }
+
+	
+	
+/* -------------------
+Sidebar
+------------------- */
+
+#sidebar h3 {
+	color: #988371;
+	font: 0.8em/1.5em Tahoma, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	margin: 0 0 8px 0;
+        padding-bottom: 2px;
+        padding-top: 1px;
+        padding-left: 10px;
+        background: url(images/h3-bg.jpg);
+	}
+	
+#sidebar p, #sidebar li {
+	color: #827060;
+	font: 0.7em/1.5em Tahoma, Arial, Helvetica, sans-serif;
+	}
+	
+#sidebar p, #sidebar ul, #sidebar ol {
+	margin: 0 0 10px 0;
+	}
+	
+#sidebar ul { 	
+	padding: 0 0 0 3px;
+	list-style-image: url(images/icon.gif);
+	color: #827060;
+        margin-left: 20px;
+ }
+
+
+	
+
+#sidebar a {
+	color: #827060;
+	text-decoration: none;
+	}
+	
+#sidebar a:hover {
+	color: #827060;
+	text-decoration: underline;
+	}
+	
+#sidebarcontainer {
+	float: right;
+	padding: 0 15px 0 0;
+	width: 360px;
+	margin: 0px;
+}
+#sidebarcontainer form {
+	padding: 0;
+	margin: 0;
+}
+#subscriptionoptions{
+	width:300px;
+	padding: 0 30px;
+}
+
+#rssmain {
+	float:left;
+	padding: 4px 0 0px 0;
+}
+
+
+#wrap {
+	margin: 0;
+	float: right;
+	padding: 5px 0 5px;
+	width: 360px;
+	color: #827060;
+
+}
+
+.clear {
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+
+
+.ad250 {
+	text-align: center;
+}
+
+
+/* -------------------
+Footer
+------------------- */
+
+#footer {
+	clear: left;
+	background: url(images/footer.jpg) no-repeat;
+	height: 50px;
+	width: 1024px;
+        margin-top: -15px;
+	}
+	
+#footer p {
+
+	color: #827060;
+	font: 0.7em/1.6em Arial, Helvetica, sans-serif;
+	padding-top: 18px;
+	text-align: center;
+	}
+	
+#footer a {
+	color: #827060;
+	text-decoration: none;
+	}
+
+#footer a:hover {
+	color: #827060;
+	text-decoration: none;
+	}
+	
+
+
+.alt {
+font: 1.1em Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.commentlist li {
+margin-bottom: 1.5em;
+font: 1.1em Tahoma, Arial, Helvetica, sans-serif;
+width: 518px;
+        padding: 5px;
+}
+
+
+.commentmetadata
+{
+font: 11px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+.commentlist cite, .commentlist cite a {
+	font-weight:bold;
+	font-style:normal;
+	font-size:1.1em
+	}
+
+.commentlist p
+{
+font: 11px Tahoma, Arial, Helvetica, sans-serif;
+}
+
+#commentform {
+margin: 2em 0;
+margin-left:2em;
+width: 518px;
+color: #3c3127;
+}
+
+#commentform textarea {
+
+background: #0f0a03;
+border: 1px solid #3c3127;
+width: 545px;
+color: #827060;
+padding: 3px;
+}
+#commentform textarea:hover {
+background: #0f0a03;
+border: 1px solid #3c3127;
+}
+#commentform textarea:focus {
+background: #0f0a03;
+border: 1px solid #4d3f33;
+}
+
+#commentform #email, #commentform #author, #commentform #url {
+font-size: 1.1em;
+background: #0f0a03;
+border: 1px solid #3c3127;
+width: 150px;
+color: #827060;
+padding: 3px;
+}
+#commentform #email:hover, #commentform #author:hover, #commentform #url:hover {
+font-size: 1.1em;
+background: #0f0a03;
+border: 1px solid #3c3127;
+width: 150px;
+}
+#commentform #email:focus, #commentform #author:focus, #commentform #url:focus {
+font-size: 1.1em;
+background: #0f0a03;
+border: 1px solid #4d3f33;
+width: 150px;
+}
+#commentform input{
+margin-bottom: 3px;
+}
+
+#commentform #submit {
+	margin:0;
+	float:left;
+        background: #4d3f33;
+        color: #000000;
+	font: 11px Tahoma, Arial, Helvetica, sans-serif;
+	border:1px solid #4d3f33;
+        height: 22px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 3px;
+	}
+
+.post{margin:0 0 25px 0;}
+
+.post .info{
+padding:2px 3px 3px 8px;
+border:1px solid #e3e4e4;
+font-size:12px;
+color:#827060;
+}
+
+h3 {
+	color: #827060;
+	font: 0.8em/1.5em Tahoma, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+        padding-left: 8px;
+ 	}
