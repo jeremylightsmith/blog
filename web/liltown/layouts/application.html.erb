@@ -1,0 +1,70 @@
+<!--
+|    DESIGN + Pat Heard { http://fullahead.org }             |
+|      DATE + 2006.09.12                                     |
+| COPYRIGHT + Free use if this notice is kept in place.      |
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Introduction | Simple Life</title>
+
+  <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta name="author" content="fullahead.org" />
+  <meta name="keywords" content="XHTML, CSS, template, FullAhead" />
+  <meta name="description" content="A valid, XHTML 1.0 template" />
+  <meta name="robots" content="index, follow, noarchive" />
+  <meta name="googlebot" content="noarchive" />
+
+  <link rel="stylesheet" type="text/css" href="css/html.css" media="screen, projection, tv " />
+  <link rel="stylesheet" type="text/css" href="css/layout.css" media="screen, projection, tv" />
+  <link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+  <style type="text/css" media="screen">
+    #header h1 {
+      position: relative;
+    }
+    .burning_man {
+      font-size: 40%;
+      color: #999;
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      letter-spacing: 1px;
+    }
+  </style>
+  <!--[if gt IE 5]>
+  <link rel="stylesheet" type="text/css" href="css/ie.css" media="screen, projection, tv " />
+  <![endif]-->
+</head>
+<body>
+<div id="wrapper">
+  <div id="content">
+    <div id="header">
+      <h1>
+        <span class="big darkBrown">L</span>il' <span class="big darkBrown">T</span>own 
+        <span class="burning_man">burning man 2009</span>
+      </h1>
+      <h2><span class="highlight">Look for the rocking chairs...</span></h2>
+    </div>
+
+    <!-- #menu: topbar menu of the site.  Use the helper classes .two, .three, .four and .five to set
+                the widths for 2, 3, 4 and 5 item menus. -->
+    <ul id="menu" class="four">
+      <%= tab "Our Camp", "index.html" %>
+      <%= tab "Residents", "residents.html" %>
+      <%= tab "Town Layout", "town_layout.html" %>
+      <%= tab "LNT Plans", "leave_no_trace.html" %>
+
+      <!-- <li><a href="styles.html" title="See the tags in action"><span class="big">S</span>tyles</a></li> -->
+      <!-- <li><a href="http://fullahead.org/contact.html" title="Get in touch"><span class="big">C</span>ontact</a></li> -->
+    </ul>
+
+    <div id="page">
+      <%= content %>
+      <p class="footer">
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

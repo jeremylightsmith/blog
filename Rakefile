@@ -21,6 +21,7 @@ def sites_to_generate
     "jklbx" => "public/jeremy_and_karissa/exchange",
     "wedding" => "public/jeremy_and_karissa/wedding",
     "2009_blues_workshop" => "public/jeremy_and_karissa/2009/blues_workshop",
+    "liltown" => "public/jeremy_and_karissa/liltown",
     "bernardo_fresquez" => "public/onemanswalk/bernardo_fresquez",
   }
   sites = sites.find_all {|name, target| name == ENV["SITE"]} if ENV["SITE"]
