@@ -85,6 +85,18 @@ def wordpress(name, to)
     end
   end
   cp_r File.join(root, "config", "wp-config.#{name}.php"), File.join(root, to, "wp-config.php")
+  File.open(File.join(root, to, ".htaccess"), "w") do |f|
+    f << 
+"BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /life/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /life/index.php [L]
+</IfModule>
+# END WordPress"
+  end
 end
 
 desc "wordpress"
