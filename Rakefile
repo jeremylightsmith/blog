@@ -70,7 +70,7 @@ task "test:local_links" do
   end
 end
 
-def wordpress(name, to)
+def wordpress(name, uri, to)
   rm_rf to
   mkdir_p to
   root = File.expand_path(File.dirname(__FILE__))
@@ -87,13 +87,13 @@ def wordpress(name, to)
   cp_r File.join(root, "config", "wp-config.#{name}.php"), File.join(root, to, "wp-config.php")
   File.open(File.join(root, to, ".htaccess"), "w") do |f|
     f << 
-"BEGIN WordPress
+"# BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /life/
+RewriteBase #{uri}
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /life/index.php [L]
+RewriteRule . #{uri}index.php [L]
 </IfModule>
 # END WordPress"
   end
@@ -101,8 +101,8 @@ end
 
 desc "wordpress"
 task :wordpress do
-  wordpress "life",             "public/onemanswalk/life"
-  wordpress "work",             "public/onemanswalk/work"
-  wordpress "portland_dog_zen", "public/portland_dog_zen"
-  wordpress "montessori",       "public/jeremy_and_karissa/montessori"
+  wordpress "life",             "/life/",       "public/onemanswalk/life"
+  wordpress "work",             "/work/",       "public/onemanswalk/work"
+  wordpress "portland_dog_zen", "/",            "public/portland_dog_zen"
+  wordpress "montessori",       "/montessori/", "public/jeremy_and_karissa/montessori"
 end
