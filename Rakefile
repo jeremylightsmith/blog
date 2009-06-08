@@ -42,6 +42,7 @@ task :generate do
   sites_to_generate.each do |name, target|
     ActionSite::Site.new("web/#{name}", "#{target}").generate
   end
+  Rake::Task[:wordpress].invoke
 end
 
 desc "start generating"
@@ -75,7 +76,7 @@ def wordpress(name, to)
   root = File.expand_path(File.dirname(__FILE__))
   Dir.chdir("web/wordpress") do
     Dir["*"].each do |file|
-      cp_r File.join(root, "web/wordpress", file), File.join(root, to, file)
+      ln_s File.join(root, "web/wordpress", file), File.join(root, to, file)
     end
   end
   cp_r File.join(root, "config", "wp-config.#{name}.php"), File.join(root, to, "wp-config.php")
