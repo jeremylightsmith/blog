@@ -71,13 +71,14 @@ end
 
 def wordpress(name, to)
   rm_rf to
+  mkdir_p to
   root = File.expand_path(File.dirname(__FILE__))
   Dir.chdir("web/wordpress") do
     Dir["*"].each do |file|
-      ln_s File.join(root, "web/wordpress", file), File.join(root, to, file)
+      cp_r File.join(root, "web/wordpress", file), File.join(root, to, file)
     end
   end
-  ln_s File.join(root, "config", "wp-config.#{name}.php"), File.join(root, to, "wp-config.php")
+  cp_r File.join(root, "config", "wp-config.#{name}.php"), File.join(root, to, "wp-config.php")
 end
 
 desc "wordpress"
