@@ -68,3 +68,22 @@ task "test:local_links" do
     links.check(site)
   end
 end
+
+def wordpress(name, to)
+  rm_rf to
+  root = File.expand_path(File.dirname(__FILE__))
+  Dir.chdir("web/wordpress") do
+    Dir["*"].each do |file|
+      ln_s File.join(root, "web/wordpress", file), File.join(root, to, file)
+    end
+  end
+  ln_s File.join(root, "config", "wp-config.#{name}.php"), File.join(root, to, "wp-config.php")
+end
+
+desc "wordpress"
+task :wordpress do
+  wordpress "life",             "public/onemanswalk/life"
+  wordpress "work",             "public/onemanswalk/work"
+  wordpress "portland_dog_zen", "public/portland_dog_zen"
+  wordpress "montessori",       "public/jeremy_and_karissa/montessori"
+end
