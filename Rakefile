@@ -101,8 +101,9 @@ end
 
 desc "wordpress"
 task :wordpress do
-  wordpress "life",             "/life/",       "public/onemanswalk/life"
-  wordpress "work",             "/work/",       "public/onemanswalk/work"
-  wordpress "portland_dog_zen", "/",            "public/portland_dog_zen"
-  wordpress "montessori",       "/montessori/", "public/jeremy_and_karissa/montessori"
+  wordpress "life",               "/life/",             "public/onemanswalk/life"
+  wordpress "work",               "/work/",             "public/onemanswalk/work"
+  wordpress "portland_dog_zen",   "/",                  "public/portland_dog_zen"
+  wordpress "montessori",         "/montessori/",       "public/jeremy_and_karissa/montessori"
+  wordpress "abby",               "/",                  "public/abby"
 end
