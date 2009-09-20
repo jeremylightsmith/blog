@@ -14,6 +14,7 @@ task :default => [:generate, "test:links"]
 
 def sites_to_generate
   sites = {
+    "jeremy_lightsmith" => "public/jeremy_lightsmith",
     "blues_hero" => "public/blues_hero",
     "brenda" => "public/brenda",
     "challenge" => "public/jeremy_and_karissa/challenge",
@@ -27,6 +28,15 @@ def sites_to_generate
   sites = sites.find_all {|name, target| name == ENV["SITE"]} if ENV["SITE"]
   raise "don't know about site : #{ENV["SITE"]}" if sites.empty?
   sites
+end
+
+desc "wordpress"
+task :wordpress do
+  wordpress "life",               "/life/",             "public/onemanswalk/life"
+  wordpress "work",               "/work/",             "public/onemanswalk/work"
+  wordpress "portland_dog_zen",   "/",                  "public/portland_dog_zen"
+  wordpress "montessori",         "/montessori/",       "public/jeremy_and_karissa/montessori"
+  wordpress "abby",               "/",                  "public/abby"
 end
 
 def sites_to_check
@@ -97,13 +107,4 @@ RewriteRule . #{uri}index.php [L]
 </IfModule>
 # END WordPress"
   end
-end
-
-desc "wordpress"
-task :wordpress do
-  wordpress "life",               "/life/",             "public/onemanswalk/life"
-  wordpress "work",               "/work/",             "public/onemanswalk/work"
-  wordpress "portland_dog_zen",   "/",                  "public/portland_dog_zen"
-  wordpress "montessori",         "/montessori/",       "public/jeremy_and_karissa/montessori"
-  wordpress "abby",               "/",                  "public/abby"
 end
