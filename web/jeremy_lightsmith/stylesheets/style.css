@@ -177,6 +177,10 @@ bq {
   text-decoration: none;
 }
 
+.right-col .box a:hover {
+  text-decoration: underline;
+}
+
 .right-col .box .hint {
   color: #999;
 }
