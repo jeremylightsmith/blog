@@ -1,4 +1,13 @@
 module ApplicationHelper
+  def nav_links
+    links = []
+    links << link_to("home", "/")
+    links << link_to("services", "/services.html")
+    links << link_to("classes", "/classes.html")
+    links << link_to("blog", "http://onemanswalk.com/work")
+    links << link_to("facilitation patterns", "http://facilitationpatterns.org/")
+  end
+  
   def what_i_offer
     <<-HTML
       <div class="box">
