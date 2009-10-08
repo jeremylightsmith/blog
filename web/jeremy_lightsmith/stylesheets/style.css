@@ -71,7 +71,7 @@ bq {
 
 .nav-bar .links {
   float: right;
-  margin-right: -1em;
+  margin-right: -0.5em;
 }
 
 .nav-bar .links a {
@@ -213,4 +213,16 @@ bq {
 
 .denver-background {
   background: url(/images/denver.jpg) no-repeat top right;
+}
+
+/* convenience */
+
+.right {
+  float:right;
+  margin-left:1em;
+}
+
+.left {
+  float:left;
+  margin-right:1em;
 }
