@@ -1,73 +1,67 @@
-<div class="banner">
-  <div class="fixed orange-background">
-    <div class="stuff">
-      <h1>Classes</h1>
+% content_for(:title) { "Classes" }
 
-      <p>My classes favor interactive and group techniques that engage and challenge participants.</p>
-
-      <p>They often take esoteric ideas and concepts and repackage them in a simpler, newly connected ways.</p>
-    </div>
+<div class="right-col">
+  <div class="box">
+    <h2>Classes</h2>
+    <ul>
+      <li><%= link_to "How to start an Agile Project", "#how_to_start_an_agile_project" %></li>
+      <li><%= link_to "Hats, Cards &amp; Cups - Techniques that Help Teams Talk", "#hats_cards_and_cups" %></li>
+      <li><%= link_to "Saying YES! and other Lessons from Improv", "#saying_yes" %></li>
+      <li><%= link_to "Fear is the Mind Killer", "#fear_is_the_mind_killer" %></li>
+    </ul>
   </div>
 </div>
-<div class="content">
-  <div class="fixed">
-    <div class="sidebar">
-      <h2>Classes</h2>
-      <ul>
-        <li><%= link_to "How to start an Agile Project", "#how_to_start_an_agile_project" %></li>
-        <li><%= link_to "Hats, Cards &amp; Cups - Techniques that Help Teams Talk", "#hats_cards_and_cups" %></li>
-        <li><%= link_to "Saying YES! and other Lessons from Improv", "#saying_yes" %></li>
-        <li><%= link_to "Fear is the Mind Killer", "#fear_is_the_mind_killer" %></li>
-      </ul>
-    </div>
 
-    <div class="stuff">
-      <p>They include :</p>
+<div class="left-col">
+  <bq>
+    <p>My classes favor interactive and group techniques that engage and challenge participants.</p>
+    <p>They often take esoteric ideas and concepts and repackage them in a simpler, newly connected ways.</p>
+  </bq>
 
-      <div class="abstract">
-        <a name="#how_to_start_an_agile_project"></a>
-        <h2>HOW TO START AN AGILE PROJECT</h2>
+  <p>They include :</p>
 
-        <p>Imagine you've been given the go ahead to start a project from the ground up doing "Agile".  Your team and your company are sold on the vague concept, but no one in your organization really understands what they've signed on for.  How do you start it?</p>
+  <div class="abstract">
+    <a name="#how_to_start_an_agile_project"></a>
+    <h2>HOW TO START AN AGILE PROJECT <%= link_to "(slides)", "/files/How+to+Start+a+Project.pdf" %></h2>
 
-        <p>There's remarkably little that's said within the agile community about starting projects.  If your organization is new to agile, this is your first and best chance to introduce agile ideas up and down the organization, build trust, get alignment, and generally start off on the right foot.  Even if your organization and team are agile veterans and already gelled, you still need to generate a backlog, agree on the vision of the project, talk about risks, etc.</p>
+    <p>Imagine you've been given the go ahead to start a project from the ground up doing "Agile".  Your team and your company are sold on the vague concept, but no one in your organization really understands what they've signed on for.  How do you start it?</p>
 
-        <p>We'll look at practices and ideas that industry leaders are using to start projects off smoothly.  The processes we'll be talking about are very collaborative and iterative and this session will be too.</p>
+    <p>There's remarkably little that's said within the agile community about starting projects.  If your organization is new to agile, this is your first and best chance to introduce agile ideas up and down the organization, build trust, get alignment, and generally start off on the right foot.  Even if your organization and team are agile veterans and already gelled, you still need to generate a backlog, agree on the vision of the project, talk about risks, etc.</p>
 
-        <hr/>
-      </div>
+    <p>We'll look at practices and ideas that industry leaders are using to start projects off smoothly.  The processes we'll be talking about are very collaborative and iterative and this session will be too.</p>
+    
+    <hr/>
+  </div>
 
-      <div class="abstract">
-        <a name="#hats_cards_and_cups"></a>
-        <h2>HATS, CARDS, AND CUPS - TECHNIQUES TO HELP TEAMS TALK</h2>
+  <div class="abstract">
+    <a name="#hats_cards_and_cups"></a>
+    <h2>HATS, CARDS, AND CUPS - TECHNIQUES TO HELP TEAMS TALK</h2>
 
-        <p>Agile teams generally prefer self organization and group decision making to command & control hierarchies.  They rely heavily on close communication and collaboration, which are skills that can be honed and learned, like anything else.</p>
+    <p>Agile teams generally prefer self organization and group decision making to command & control hierarchies.  They rely heavily on close communication and collaboration, which are skills that can be honed and learned, like anything else.</p>
 
-        <p>We'll be looking at techniques and tricks that a team can learn to become more effective at talking.  As teams begin to learn these tools, they'll find themselves using them in retrospectives, planning meetings, whiteboard sessions, and even while pairing. </p>
+    <p>We'll be looking at techniques and tricks that a team can learn to become more effective at talking.  As teams begin to learn these tools, they'll find themselves using them in retrospectives, planning meetings, whiteboard sessions, and even while pairing. </p>
 
-        <p>We'll talk about :</p>
+    <p>We'll talk about :</p>
 
-        <p><b>Six Thinking Hats</b> - these introduce vocabulary for recognizing and switching easily between different types of thinking (or hats).</p>
+    <p><b>Six Thinking Hats</b> - these introduce vocabulary for recognizing and switching easily between different types of thinking (or hats).</p>
 
-        <p><b>Index Cards</b> - all the cool kids are using cards these days. We'll be looking at fast, fun ways for lots of people to brainstorm, prioritize, group, etc using cards.</p>
+    <p><b>Index Cards</b> - all the cool kids are using cards these days. We'll be looking at fast, fun ways for lots of people to brainstorm, prioritize, group, etc using cards.</p>
 
-        <p><b>Discussion Cups and other Ground Rules</b> - it's amazing how much more effective a group discussion can be when you lay out a few labelled cups...</p>
+    <p><b>Discussion Cups and other Ground Rules</b> - it's amazing how much more effective a group discussion can be when you lay out a few labelled cups...</p>
 
-        <p>This is not a lecture session.  We'll split into groups and actually try all of these techniques so that you can bring them home to the teams you work on.</p>
-        
-        <hr/>
-      </div>
+    <p>This is not a lecture session.  We'll split into groups and actually try all of these techniques so that you can bring them home to the teams you work on.</p>
+    
+    <hr/>
+  </div>
 
-      <div class="abstract">
-        <a name="#saying_yes"></a>
-        <h2>SAYING YES AND OTHER LESSONS FROM IMPROV</h2>        
-        <hr/>
-      </div>
+  <div class="abstract">
+    <a name="#saying_yes"></a>
+    <h2>SAYING YES AND OTHER LESSONS FROM IMPROV</h2>        
+    <hr/>
+  </div>
 
-      <div class="abstract">
-        <a name="#fear_is_the_mind_killer"></a>
-        <h2>FEAR IS THE MIND KILLER</h2>
-      </div>
-    </div>
+  <div class="abstract">
+    <a name="#fear_is_the_mind_killer"></a>
+    <h2>FEAR IS THE MIND KILLER</h2>
   </div>
 </div>

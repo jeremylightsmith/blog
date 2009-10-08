@@ -1,7 +1,18 @@
 <html>
 <head>
-  <title>Jeremy Lightsmith<%= " - #{@content_for_title}" if @content_for_title %></title>
+  <title>Jeremy Lightsmith</title>
   <link href="stylesheets/style.css" media="all" rel="stylesheet" type="text/css">
+  <style type="text/css" media="screen">
+    .nav-bar {
+      background-color: #2c3075;
+    }
+    .nav-bar a {
+      color: white;
+    }
+    .content {
+      padding-top: 1em;
+    }
+  </style>
 </head>
 <body>
   <div class="nav-bar">
@@ -15,24 +26,12 @@
         <%= link_to "facilitation patterns", "http://facilitationpatterns.org/" %>
       </div>
 
-      <%= link_to image_tag("logo.png"), "/" %>
+      <%= link_to image_tag("white_logo.png"), "/" %>
     </div>
   </div>
-
-  <div class="page-title">
-    <div class="fixed">
-      <h1><%= @content_for_title %></h1>
-    </div>
-  </div>
-
-  <div class="content">
-    <div class="fixed">
-      <%= content %>
-      
-      <div class="clear"></div>
-    </div>
-  </div>
-
+  
+  <%= content %>
+  
   <div class="footer">
     <div class="fixed">
       <span class="copy">&copy; Jeremy Lightsmith 2009</span>
