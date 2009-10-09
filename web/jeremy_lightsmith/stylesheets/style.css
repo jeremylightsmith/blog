@@ -99,12 +99,14 @@ bq {
 .banner .summary {
 }
 
-.summary ul {
-  margin-left: 1em;
-  font-size: 0.9em;
+.one-col ul,
+.left-col ul {
+  margin-left: 2em;
+  margin-bottom: 1em;
 }
 
-.summary ul li {
+.one-col ul li,
+.left-col ul li {
   list-style: circle inside;
 }
 
@@ -187,8 +189,9 @@ bq {
 
 .hint {
   font-size: 11pt;
-  color: #666;
+  color: #999;
   font-weight: normal;
+  font-style: italic;
 }
 
 .clear { clear: both;}
