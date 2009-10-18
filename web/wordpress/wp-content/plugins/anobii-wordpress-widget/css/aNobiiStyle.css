@@ -1,0 +1,75 @@
+#anobiiContent {
+	margin-bottom: 30px;
+}
+
+#anobiiContent #anobiiHeader {
+    margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+
+#anobiiContent #anobiiHeader #anobiiProfile {
+	display:inline;
+}
+
+#anobiiContent #anobiiHeader #anobiiProfile a:link,  #anobiiHeader #anobiiProfile a:visited {
+  	margin: 0px;
+	padding: 2px;
+
+	border-top: 1px solid #add8ef;
+	border-bottom: 1px solid black;
+	border-left: 1px solid #cccccc;
+	border-right: 1px solid black;
+	background: #add8ef;
+	text-align: center;
+	text-decoration: none;
+	font: normal 10px Verdana;
+}
+
+#anobiiContent #anobiiHeader #anobiiProfile a:hover {
+	background: #eeeeee;
+}
+
+#anobiiContent #anobiiHeader #anobiiProfile a:active {
+	border-bottom: 1px solid #eeeeee;
+	border-top: 1px solid black;
+	border-right: 1px solid #eeeeee;
+	border-left: 1px solid black;
+}
+
+
+
+#anobiiContent #anobiiHeader #anobiiReload {
+	float:right;
+	position: relative;
+	top: -17px;
+	right: 0px;
+}
+
+#anobiiContent #anobiiBooks {
+	text-align:center;
+	border: 1px dotted blue;
+	padding-left:2px;
+	padding-bottom: 5px;
+}
+
+#anobiiContent #anobiiBooks img {
+	border:1px solid #add8ef;
+	margin-left:1px;
+	margin-top: 10px;
+	padding:1px;
+}
+
+
+#anobiiContent #anobiiBooks img:hover {
+	background-color:#0000FF;
+}
+
+#anobiiContent #anobiiCredits {
+	text-align: center; 
+	font-size: 7pt; 
+} 
+
+#anobiiContent .hide {
+	display: none;
+}
