@@ -26,7 +26,7 @@ module ApplicationHelper
             <div class="hint">adopt a culture of innovation</div>
           </li>
           <li>
-            #{ link_to "Developer Best Practice Workshops", "/services.html#best_practices" }
+            #{ link_to "Developer Training / Coaching", "/services.html#best_practices" }
             <div class="hint">make it all fun</div>
           </li>
         </ul>
