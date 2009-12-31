@@ -35,7 +35,7 @@ task :wordpress do
   wordpress "life",                   "/life/",             "public/onemanswalk/life"
   wordpress "work",                   "/work/",             "public/onemanswalk/work"
   wordpress "portland_dog_zen",       "/",                  "public/portland_dog_zen"
-  wordpress "lighthouse_montessori",  "/",                  "public/lighthouse_montessori"
+  wordpress "lighthouse_montessori",  "/montessori/",       "public/jeremy_and_karissa/montessori"
   wordpress "abby",                   "/",                  "public/abby"
 end
 
