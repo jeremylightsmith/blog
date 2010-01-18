@@ -86,15 +86,14 @@ def wordpress(name, uri, to)
   root = File.expand_path(File.dirname(__FILE__))
   Dir.chdir("web/wordpress") do
     Dir["*"].each do |file|
-      files = [File.join(root, "web/wordpress", file), File.join(root, to, file)]
       if file == "wp-content"
-        ln_s *files
+        ln_s File.join(root, "web/wordpress-content"), File.join(root, to, file)
       else
-        cp_r *files
+        cp_r File.join(root, "web/wordpress", file), File.join(root, to, file)
       end
     end
   end
-  cp_r File.join(root, "config", "wp-config.#{name}.php"), File.join(root, to, "wp-config.php")
+  ln_s File.join(root, "config", "wp-config.#{name}.php"), File.join(root, to, "wp-config.php")
   File.open(File.join(root, to, ".htaccess"), "w") do |f|
     f << 
 "# BEGIN WordPress
