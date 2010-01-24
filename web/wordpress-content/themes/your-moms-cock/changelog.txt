@@ -1,0 +1,13 @@
+1.2.4
+	-	Added image padding for images without caption
+
+1.2.3
+	- Added Form styles
+	- Added Padding to table elements
+	- Updated Screenshot
+
+1.2.2
+	- Change to comments loop
+	- Improved Comments styles
+	- Added Blockquote styles
+	- Added Padding below tagline

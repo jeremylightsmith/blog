@@ -1,0 +1,315 @@
+/*
+Theme Name:Outside The Box
+Theme URI:http://megodbike.flashmedia.biz/wpthemes.php
+Description:Dark design with widgetised footer area
+Version:1.2.4
+Author:Nathan Edwards
+Author URI:http://megodbike.flashmedia.biz
+Tags:black, orange, one-column, fixed-width
+*/
+
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body{
+	background: #000;
+	font-family: 'lucida grande', verdana, arial, sans-serif;
+	color: #FFF;
+}
+
+a{
+	color: #E36D00;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #AA682B;
+	text-decoration: underline;
+}
+
+#wrapper{
+	width: 1000px;
+	margin: 20px auto;
+}
+
+#wrappertitle{
+	margin-top: 100px;
+	width: 280px;
+	background: #000 url(images/bg.png) repeat;
+	float: left;
+}
+
+#title{
+	width: 240px;
+	padding: 20px;
+	float: left;
+	background:url(images/bgright.png) top right repeat-y;
+}
+
+#title h1{
+	font-size: 40px;
+	font-weight: 700;
+}
+
+#title h1 a{
+	color: #FFF;
+	text-decoration: none;
+}
+
+#title h1 a:hover{
+	color: #AA682B;
+}
+
+#title h5{
+	font-size: 12px;
+	padding-bottom: 10px;
+}
+
+#title #nav{
+	list-style-type: none;
+	width: 196px;
+}
+
+#title #nav li{
+	padding: 4px 0px;
+}
+
+#title #nav li a{
+	font-size: 18px;
+	font-weight: 700;
+	padding: 9px;
+	padding-left: 50px;
+	background: url(images/link.png) top left no-repeat;
+}
+
+#title #nav li a:hover{
+	background: url(images/link.png) bottom left no-repeat;
+	text-decoration: none;
+}
+
+#title #search{
+	padding-top: 20px;
+}
+
+#title #search input{
+	border: none;
+	padding: 2px;
+	margin-top: 4px;
+}
+
+#mainwrapper{
+	width:  720px;
+	float: left;
+}
+
+#content{
+	float: left;
+	width: 680px;
+	padding: 20px;
+	background: #000 url(images/bg.png) repeat;
+}
+
+#content h2{
+	font-size: 30px;
+}
+
+#content .info ul{
+	list-style-type: none;
+	font-size: 10px;
+	padding-bottom: 10px;
+}
+
+#content .info ul li{
+	display: inline;
+}
+
+#content .text .more{
+	font-size: 10px;
+}
+
+#content .text p{
+	padding: 10px 0px;
+}
+
+#content .text ol{
+	margin: 0px 30px 0px 50px;
+	padding: 5px;
+}
+
+#content .text ul{
+	margin: 0px 30px 0px 50px;
+	padding: 5px;
+}
+
+#content .text li{
+	margin: 4px 0px;
+}
+
+#content .text fieldset{
+	padding: 10px;
+}
+
+#content .text input, textarea{
+	border: none;
+	background: #FFF;
+	padding: 5px;
+	font-size: 14px;
+}
+
+#content .text td, #content .text th{
+	padding: 2px 4px;
+}
+
+#content .text img{
+	padding: 5px;
+}
+
+#content .divider{
+	height: 20px;
+}
+
+#footer #comments-header{
+	font-size: 20px;
+}
+
+#footer ol.commentlist{
+	list-style-type: none;
+	float: left;
+}
+
+#footer ol.commentlist li{
+	margin: 20px;
+}
+
+#footer img.avatar{
+	float: left;
+	width:20px;
+	height:20px;
+	margin-right: 5px;
+}
+
+#footer a.comment-edit-link{
+	display:none;
+}
+
+#footer .comment-text{
+	margin: 5px;
+}
+
+#footer .comment-meta{
+	font-size: 10px;
+	padding-bottom: 10px;
+}
+
+#footer #respond{
+	float: left;
+	padding-top: 10px;
+}
+
+#respond textarea{
+	padding: 10px;
+	background: none;
+	color: #FFF;
+	font-size: 14px;
+	border: 2px solid #FFF;
+}
+
+#footer{
+	width: 720px;
+	font-size: 12px;
+	background: #000 url(images/bg.png) repeat;
+	float: left;
+}
+
+#footerinner{
+	float: left;
+	width: 680px;
+	padding: 20px;
+	padding-top: 30px;
+	background:url(images/bgtop.png) repeat-x;
+}
+
+#footerinner li{
+	list-style-type: none;
+}
+
+#footerinner li.widget{
+	float: left;
+	padding-right: 5px;
+	width: 130px;
+}
+
+#footerinner h2.widgettitle{
+	padding-bottom: 5px;
+}
+
+#footerinner h2.widgettitle a{
+	color: #FFF;
+	text-decoration: none;
+}
+
+#footerinner h2.widgettitle a:hover{
+	color: #AA682B;
+}
+
+#footerinner .twitter .twitter-item{
+	padding-bottom: 8px;
+}
+
+#footerinner .twitter .twitter-item span{
+	font-size: 10px;
+}
+
+#footer #footnotes{
+	float: left;
+	padding: 20px;
+	font-size: 10px;
+}
+
+.aligncenter {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+.alignleft {
+   float: left;
+}
+
+.alignright {
+   float: right;
+}
+
+blockquote{
+	padding: 10px;
+	border-left: 2px solid #E36D00;
+	margin-left: 5px;
+}
+
+.wp-caption {
+   border: 1px solid #ddd;
+   text-align: center;
+   background-color: none;
+   padding-top: 4px;
+   margin: 10px;
+   /* optional rounded corners for browsers that support it */
+   -moz-border-radius: 3px;
+   -khtml-border-radius: 3px;
+   -webkit-border-radius: 3px;
+   border-radius: 3px;
+}
+
+.wp-caption img {
+   margin: 0;
+   padding: 0;
+   border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+   font-size: 11px;
+   line-height: 17px;
+   padding: 0 4px 5px;
+   margin: 0;
+}
