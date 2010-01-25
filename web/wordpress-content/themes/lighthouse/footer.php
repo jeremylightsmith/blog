@@ -4,6 +4,7 @@
  * @subpackage Lighthouse_Theme
  */
 ?>
+    <div style="clear:both"></div>
   </div>
 
   <div class="footer">
