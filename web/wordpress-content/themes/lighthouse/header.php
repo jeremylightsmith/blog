@@ -50,6 +50,6 @@ if ( empty($withcomments) && !is_single() ) {
   <div class="content">
     <div class="banner">
       <!-- <h1>Blog</h1> -->
-      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/stock/stock<?php echo rand(1, 6) ?>.jpg"></img>
-      <div class="overlay"></div>
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/images/stock/stock<?php echo rand(1, 8) ?>.jpg"></img>
+      <div class="overlay"><div class="focus">we nurture the love of learning &amp; compassion in every child</div></div>
     </div>
