@@ -1,0 +1,94 @@
+/*  
+Theme Name:ZenLite
+Version: 1.3
+Theme URI: http://quirm.net
+Description: A minimalist single column design with a widget-ready horizontal navigation menu. Suitable for those who are looking for a theme to customise but want something more flexible than the Default theme. Includes additional templates for archives, categories, author lists, pages without comments, images and search results. Header customisation via the WordPress Admin interface. Compatible with WordPress 2.7 and above.
+Author: Mel Pedley
+Author URI: http://www.blackwidows.co.uk
+Tags: one-column, custom-header, light, flexible-width
+
+Distributed under the terms of the GNU General Public License
+
+*/
+
+/*Layout & positioning */
+@import url(layout.css);
+
+/*Colours */
+@import url(color.css);
+
+/* ignore these classes - they're just here to satisfy the wordpress.org upload
+They are appropriately specified in layout.css - but the wordpress.org uploader doesn't appear to be able to deal with imported css sheets.
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	float: left;
+}
+
+.alignright {
+	float: right;
+}
+*/
+
+.header {
+  width: 100%;
+}
+
+.header td a {
+  color: white;
+  text-decoration: none;
+}
+
+.header td a:hover {
+  text-decoration: underline;
+}
+
+.header td {
+  background-color: #3d3522;
+  color: white;
+  border-right: solid 5px white;
+  border-bottom: solid 5px white;
+}
+
+.header .title {
+  background-color: #c40000;
+  padding: 8px 10px 3px;
+  text-align: right;
+}
+
+.header .nav td {
+  padding: 5px 15px;
+  font-size: 0.9em;
+}
+
+.header .motto {
+  width: 100%;
+  text-align: right;
+}
+
+.header .header-image {
+  height:120px;
+  background-image:url(images/banners/banner1.jpg);
+}
+
+.right-side {
+  float: right;
+  width: 55%;
+  border-left: solid 1px silver;
+  padding-left: 1em;
+  margin-left: 1em;
+}
+
+#footer {
+  margin-top: 2em;
+  padding-top: 2em;
+  border-top: solid 1px silver;
+}
+
+#footer, #footer a {
+  color: #999;
+}

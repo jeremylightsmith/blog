@@ -1,0 +1,221 @@
+/*ZenLite 
+Author:Mel P.
+http://quirm.net/
+*/
+
+body {
+	background:#fff;
+	color:#606060;
+}
+h1,h2,h3,h4,h5,h6 {
+}
+blockquote {
+	border-left:2px solid #DEE2E9;;
+}
+acronym, abbr {
+	border-bottom:1px dashed #ddd;
+}
+pre {
+	background:#F3F3FB;
+	color:#606060;
+	border:1px solid #D5CDD5;
+}
+fieldset {
+	background:#DEE2E9;
+}
+fieldset fieldset {
+	background:#F3F3FB;
+}
+legend {
+	background:#B1B4BE;
+	color:#000;
+}
+input, textarea {
+	background:#F0F3F5;
+	color:#404040;
+	border:1px solid #ddd;
+}
+input:focus,input.focus,textarea:focus,textarea.focus {
+	background:#fff;
+	color:#606060;
+	border-color:#407096;
+}
+input.submit,input.button,input[type=submit] {
+	background:#505050;
+	color:#fff;
+}
+ins {
+	text-decoration:none;
+}
+table,th,td {
+	border:1px solid #C6CCD4;
+}
+th {
+	background:#DEE2E9;
+}
+tr {
+	background:#fff;
+	color:#606060;
+}
+tr.alt {
+	background:#F3F3FB;
+}
+a {
+	 color:#407096;
+}
+a:visited {
+	 color:#666;
+}
+a:hover {
+	 color:#407096;
+}
+a:active,a:focus {
+	background-color:#f93;
+	color:#000;
+}
+a img {
+	border:1px solid #fff;
+}
+a:hover img,a:active img,a:focus img {
+	border-color:#407096;
+}
+
+/* wrapper */
+#wrapper {
+	background:#fff;
+	color:#606060;
+}
+.jumplinks a:active,.jumplinks a:focus {
+	background:#f93;
+	color:#000;
+}
+
+/* header */
+#header h1 {
+	border-bottom:3px double #aaa;
+}
+#header h1,#header h1 a {
+	color:#606060;
+}
+#header h1 a:hover {
+	 color:#407096;
+}
+#header h1 a:focus,#header h1 a:active {
+	background-color:#f93;
+	color:#000;
+}
+#header h1 small {
+	color:#707070;
+}
+
+/* Menu */
+.sidebar {
+	border-top:3px double #aaa;
+	border-bottom:3px double #aaa;
+}
+.sidebar a {
+	background:#fff;
+	color:#606060;
+}
+.sidebar .current_page_item a,.sidebar .current-cat a {
+	background:#505050;
+	color:#fff;
+}
+.sidebar .current_page_item li a,.sidebar .current-cat li a {
+	background:#fff;
+	color:#606060;
+}
+.sidebar a:hover {
+	background:#DEE2E9;
+	color:#404040;
+}
+.sidebar a:active,.sidebar a:focus {
+	background:#f93;
+	color:#404040;
+}
+
+#header-image {
+ 	background-image:url(images/header-image.jpg);
+ 	background-repeat:no-repeat;
+ 	background-position:center top;
+}
+
+
+/* content */
+#content {
+	 background:#fff;
+	 color:#606060;
+}
+.postfoot {
+	border-bottom:3px double #aaa;
+}
+.author .postfoot {
+	border-bottom:none;
+}
+.author .posts-by {
+	border-top:3px double #aaa;
+}
+.single {
+	border:none;
+}
+#content ul li {
+	list-style-image:url(images/bullet.jpg);
+}
+#content ul li ul li {
+	list-style-image:url(images/bullet2.jpg);
+}
+#content ul li ul li ul li {
+	list-style-image:none;
+}
+#content .prevnext li,#content .meta li {
+	list-style-image:none;
+	list-style:none;
+}
+
+/* no bullets */
+#content #commentlist li,#content .comment_links li,#content .search_results li,
+#content .breadcrumb li {
+	list-style-image:none;
+	list-style:none;
+}
+
+/* pagination */
+.navigation {
+	 color:#737373;
+}
+
+/* footer */
+
+/* comments */
+#commentlist .even {
+	background-color:#F3F3FB;
+}
+#commentlist .odd {
+	background:#fff;
+}
+#commentlist .even,#commentlist .odd {
+	border:1px solid #DEE2E9;
+	-moz-border-radius:3px;
+	-khtml-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+#commentlist li .meta li {
+	background:transparent;
+	border:none;
+}
+
+/* captions */
+.wp-caption {
+	background-color:#F3F3FB;
+	border:1px solid #DEE2E9;
+	-moz-border-radius:3px;
+	-khtml-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+}
+
+/* other */
+.req small {
+	color:#c00;
+}

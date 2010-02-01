@@ -1,0 +1,18 @@
+/*ZenLite 
+Author: Mel P.
+http://quirm.net/
+*/
+
+/* fixes HasLayout issue in IE */
+#content,#left_sidebar,#right_sidebar,#footer {
+	height:50%;
+}
+/* positions the legend in the top corner of the fieldset */
+legend {
+	position:relative;
+	top:-10px;
+}
+/* gets rid of colored borders */
+input.checkbox {
+	border:none;
+}

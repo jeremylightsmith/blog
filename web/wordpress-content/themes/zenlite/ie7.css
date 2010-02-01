@@ -1,0 +1,16 @@
+/*ZenLite 
+Author: Mel P.
+http://quirm.net/
+*/
+
+/* positions the legend in the left corner of the fieldset */
+legend {
+	left:-7px;
+}
+.jumplinks a:active,.jumplinks a:focus {
+	top:9010px;
+	left:9000px;
+}
+#header h1 small {
+	text-indent:1em;
+}

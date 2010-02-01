@@ -1,0 +1,48 @@
+/*ZenLite 
+Author: Mel P.
+http://quirm.net/
+*/
+
+.wrap form {
+	width:90%;
+	margin:10px auto;
+	text-align:center;
+}
+
+#headimg {
+	height:139px;
+	padding:0;
+	margin:70px 0 0;
+ 	background-image:url(images/banner.jpg);
+ 	background-repeat:no-repeat;
+ 	background-position:top left;
+	border-top:3px double #aaa;
+	border-bottom:3px double #aaa;
+}
+#headimg h1,#headimg #desc {
+	text-align:center;
+	font-weight:normal;
+	letter-spacing:.02em;
+	position:relative;
+	top:-70px;
+}
+#headimg h1 {
+	margin:0;
+	padding:0 15px;
+	font-size:30px;
+	line-height:1.2em;
+	color:#606060;
+}
+#headimg #desc {
+	display:block;
+	margin:0;
+	padding:0;
+	font-size:20px;
+	color:#707070;
+}
+#headimg a {
+	text-decoration:none;
+}
+#headimg a:hover {
+	text-decoration:underline;
+}
