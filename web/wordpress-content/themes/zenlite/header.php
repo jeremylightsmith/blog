@@ -47,12 +47,12 @@ else {bloginfo('name');}?>
   <table class="header" cellspacing="20px">
     <tr><td colspan="6" class="title"><img src="<?php bloginfo('template_directory'); ?>/images/title_logo.png"></td></tr>
     <tr class="nav">
-      <td class="nav-link"><a href="/">Home</a></td>
-      <td class="nav-link"><a href="/services">Services</a></td>
-      <td class="nav-link"><a href="/get-a-bid">Get&nbsp;a&nbsp;Bid</a></td>
-      <td class="nav-link"><a href="/referrals">Referrals</a></td>
-      <td class="nav-link"><a href="/contact-us">Contact&nbsp;Us</a></td>
-      <td class="motto">quality building &amp; remodeling</td>
+      <td class="nav-link"><a href="/">home</a></td>
+      <td class="nav-link"><a href="/services">services</a></td>
+      <td class="nav-link"><a href="/people-who-trust-me">people&nbsp;who&nbsp;trust&nbsp;me</a></td>
+      <td class="nav-link"><a href="/how-i-work">how&nbsp;i&nbsp;work</a></td>
+      <td class="nav-link"><a href="/get-a-bid">get&nbsp;a&nbsp;bid</a></td>
+      <td class="motto">Quality Building &amp; Remodeling</td>
     </tr>
     <tr><td colspan="6" class="header-image"></td></tr>
   </table>
