@@ -92,3 +92,56 @@ They are appropriately specified in layout.css - but the wordpress.org uploader 
 #footer, #footer a {
   color: #999;
 }
+
+/* brian's classes */
+
+table.simple {
+  border: none;
+}
+
+table.simple td {
+  border: none;
+  vertical-align: top;
+  width: 50%;
+}
+
+.signature {
+  display: block;
+  text-align: right;
+}
+
+.left-sidebar {
+  float: left; 
+  margin-left: -200px;
+  margin-top: -35px;
+}
+
+.post-7 {
+  margin-left: 200px !important;
+}
+
+.left-sidebar .button-container {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.big-button {
+  font-size: 1.3em;
+  background-color: #B60005;
+  padding: 5px 10px;
+  color: white !important;
+  text-decoration: none !important;
+  display: block;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+}
+
+.recommendation {
+  padding-left: 200px;
+  border-top: silver 1px solid;
+}
+
+.recommendation h3 {
+  float:left;
+  margin-left: -200px;
+}
