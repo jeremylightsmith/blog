@@ -20,6 +20,7 @@
 body,html {
 	margin: 0;
 	padding: 0;
+	font-size: 16px;
 }
 
 .logo {
@@ -28,7 +29,7 @@ body,html {
 }
 
 .info {
-	font-size: 1.3em;
+	font-size: 20px;
 	width: 417px;
 	padding-top: 150px;
 	padding-bottom: 15px;
@@ -46,6 +47,21 @@ body,html {
 .pictures img {
   width: 80px;
   height: 80px;
+}
+
+.pictures a img.black_and_white { display: block; }
+.pictures a img.color { display: none; }
+.pictures a:hover img.black_and_white { display: none; }
+.pictures a:hover img.color { display: block; }
+
+.pictures a {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+
+.pictures a:hover {
+/*  background-color: blue;*/
 }
 
 .teachers {
@@ -69,6 +85,17 @@ body,html {
 .schedule td.time {
   text-align: right;
   padding-right: 0;
+  font-size: 15px;
+}
+
+.schedule td {
+  font-size: 17px;
+}
+
+.schedule td span {
+  font-size: 15px;
+  display: block;
+  color: #666;
 }
 	
 .even {
@@ -77,15 +104,17 @@ body,html {
 	
 a img {
 	border: none;
-	}
+}
 
 .schedule th {
 	font-size: 1.2em;
 	border-top: 1px solid #000000;
-	}
+}
 
 .pictures td {
 	font-size: 22px;
 	font: Arial, Helvetica, sans-serif;
-	}
+	background-color: black;
+	color: white;
+}
 	

@@ -5,7 +5,19 @@
 <title>Blues brothers</title>
 
 <link media="all" rel="stylesheet" type="text/css" href="stylesheet.css" />
+<script type="text/javascript" src="jquery.js"></script>
 
+<script type="text/javascript" charset="utf-8">
+  $(function() {
+    $('#role').change(function() {
+      var className = $("#role").val();
+      
+      if (className.indexOf('masters') != -1) {
+        alert("To take the " + className + " you must be approved by a local teacher, please tell us which teacher you were approved by in the description when you buy your paypal ticket")
+      }
+    })
+  })
+</script>
 </head>
 
 <body>
@@ -17,7 +29,8 @@
       <input type="hidden" name="cmd" value="_s-xclick">
       <input type="hidden" name="hosted_button_id" value="3MCNDHMZASAVL">
       <table>
-      <tr><td><input type="hidden" name="on0" value="Role">Role</td></tr><tr><td><select name="os0">
+      <tr><td><input type="hidden" name="on0" value="Role">Role</td></tr>
+      <tr><td><select name="os0" id="role">
       	<option value="Lead">Lead $75.00</option>
       	<option value="Follow">Follow $25.00</option>
       	<option value="Lead + masters class">Lead + masters class $85.00</option>
@@ -45,7 +58,10 @@ Leads, your day has come at last! Blues Brothers is a workshop that focuses on m
 <div class="teachers">		
 	<table class="pictures">
 		<tr>
-			<td><a href="http://www.burnblue.org/teachers#calico_goodrich" title="Calico Goodrich"> <img src="Teachers/calico.jpg" /></a></td> 
+			<td><a href="http://www.burnblue.org/teachers#calico_goodrich" title="Calico Goodrich"> 
+			  <img src="Teachers/calico.jpg" class="black_and_white"/>
+			  <img src="Teachers/calico.jpg" class="color"/>
+			</a></td> 
 			<td>Teachers</td>
 		</tr>
 		<tr>
@@ -72,48 +88,58 @@ Leads, your day has come at last! Blues Brothers is a workshop that focuses on m
     <th colspan="2">Sunday</th>
   </tr>
 	<tr class="odd">
-		<td class="time">10:00a</td>
-		<td>
-		  swing and improv fundamentals<br/>
-		   - Karissa
-		</td>
+		<td class="time">10:30a</td>
+		<td>Registration</td>
 	</tr>
 	<tr class="even">
-		<td class="time">12:30a</td>
-		<td>class 2</td>
+		<td class="time">10:45a</td>
+		<td>Following for Leads <span>(Dan Newsome)</span></td>
 	</tr>
-	<tr class="odd">
-		<td class="time">2:00a</td>
-		<td>class 3</td>
-	</tr>
-	<tr class="even">
-		<td class="time">3:30a</td>
-		<td>class 4</td>
-	</tr>
+  <tr class="odd">
+    <td class="time">12:10a</td>
+    <td>Solo Man Movement <span>(Topher)</span></td>
+  </tr>
+  <tr class="even">
+    <td class="time">1:25p</td>
+    <td>Lunch</td>
+  </tr>
+  <tr class="odd">
+    <td class="time">2:30p</td>
+    <td>Productive Blues Patterns <span>(Chris Chapman)</span></td>
+  </tr>
+  <tr class="even">
+    <td class="time">3:55p</td>
+    <td>Karissa's Fascinating Rhythms <span>(Karissa)</span></td>
+  </tr>
 </table>
 <table class="schedule">
   <tr class="even">
     <th colspan="2">Saturday</th>
   </tr>
 	<tr class="odd">
-		<td class="time">10:00a</td>
-		<td>
-		  usin' your tush for emphAsis<br/>
-		   - -topher
-		</td>
+		<td class="time">10:30a</td>
+		<td>Registration</td>
 	</tr>
 	<tr class="even">
-		<td class="time">12:30a</td>
-		<td>class 2</td>
+		<td class="time">10:45a</td>
+		<td>Blues Your Walk <span>(Solomon)</span></td>
 	</tr>
-	<tr class="odd">
-		<td class="time">2:00a</td>
-		<td>class 3</td>
-	</tr>
-	<tr class="even">
-		<td class="time">3:30a</td>
-		<td>class 4</td>
-	</tr>
+  <tr class="odd">
+    <td class="time">12:10a</td>
+    <td>How Not to Surprise Your Follow <span>(Calico)</span></td>
+  </tr>
+  <tr class="even">
+    <td class="time">1:25p</td>
+    <td>Lunch</td>
+  </tr>
+  <tr class="odd">
+    <td class="time">2:30p</td>
+    <td>How To Be a Convincing Blues Dancer <span>(Brenda)</span></td>
+  </tr>
+  <tr class="even">
+    <td class="time">3:55p</td>
+    <td>Master Class <span>(Brenda)</span></td>
+  </tr>
 </table>
 
 </div>
