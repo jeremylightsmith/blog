@@ -49,8 +49,8 @@ else {bloginfo('name');}?>
     <tr class="nav">
       <td class="nav-link"><a href="/">home</a></td>
       <td class="nav-link"><a href="/services">services</a></td>
-      <td class="nav-link"><a href="/people-who-trust-me">people&nbsp;who&nbsp;trust&nbsp;me</a></td>
-      <td class="nav-link"><a href="/how-i-work">how&nbsp;i&nbsp;work</a></td>
+      <td class="nav-link"><a href="/testimonials">testimonials</a></td>
+      <td class="nav-link"><a href="/past-projects">past&nbsp;projects</a></td>
       <td class="nav-link"><a href="/get-a-bid">get&nbsp;a&nbsp;bid</a></td>
       <td class="motto">Quality Building &amp; Remodeling</td>
     </tr>
