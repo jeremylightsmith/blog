@@ -49,11 +49,12 @@ end
 ActionSite::RESOURCE_EXTENSIONS << "pdf"
 
 desc "generate the site"
-task :generate do
+task :generate => [:sites, :wordpress]
+
+task :sites do
   sites_to_generate.each do |name, target|
     ActionSite::Site.new("web/#{name}", "#{target}").generate
   end
-  Rake::Task[:wordpress].invoke
 end
 
 desc "start generating"

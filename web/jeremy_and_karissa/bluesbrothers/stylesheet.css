@@ -1,20 +1,85 @@
 /* CSS Document */
 
-.content { 
-	background:url(background.png) bottom no-repeat;
-	height: 1050px;
+h1, h2, h3, p {
+  margin: 10px 0;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+a {
+  color: black;
+}
+
+.even {
+	background-color:#c9c9c9;
+}
+	
+a img {
+	border: none;
 }
 
 .content, .header-content {
 	width: 880px;
 	margin: 0 auto;
 	padding: 0 100px;
+	position: relative;
+}
+
+.content { 
+	background:url(background.png) bottom no-repeat;
+	padding-bottom: 500px;
+}
+
+.clearfix {
+  clear:both;
 }
 
 .header {
 	background-color:#c9c9c9;
-	position:absolute;
 	width: 100%;
+}
+
+.header .register {
+	float:right;
+  margin-top: 26px;
+	text-align: right;
+	position: absolute;
+	right: 100px;
+}
+
+/*.header .hint {
+  font-size: 0.9em;
+}
+*/
+.header .tabs {
+  position: absolute;
+  right: 95px;
+  bottom: 0;
+}
+
+.header .tabs a {
+  float: right;
+  background-color: black;
+  color: white;
+  padding: 5px 15px;
+  margin: 0 5px;
+  text-decoration: none;
+  -moz-border-radius:15px 15px 0 0;
+  -webkit-border-radius:15px 15px 0 0;
+}
+
+.header .tabs a:hover {
+  background-color: #990900;
 }
 
 body,html {
@@ -28,93 +93,112 @@ body,html {
 	padding-bottom: 12px;
 }
 
-.info {
+.home .info {
 	font-size: 20px;
 	width: 417px;
-	padding-top: 150px;
-	padding-bottom: 15px;
+	padding: 15px 0;
 }
 
-.register {
-	float:right;
-	margin-top: 26px;
-	text-align: right;
+.home .pictures td {
 }
 
-.pictures td {
-}
-
-.pictures img {
+.home .pictures img {
   width: 80px;
   height: 80px;
 }
 
-.pictures a img.black_and_white { display: block; }
-.pictures a img.color { display: none; }
-.pictures a:hover img.black_and_white { display: none; }
-.pictures a:hover img.color { display: block; }
+.home .pictures a img.black_and_white { display: block; }
+.home .pictures a img.color { display: none; }
+.home .pictures a:hover img.black_and_white { display: none; }
+.home .pictures a:hover img.color { display: block; }
 
-.pictures a {
+.home .pictures a {
   width: 80px;
   height: 80px;
   display: block;
 }
 
-.pictures a:hover {
+.home .pictures a:hover {
 /*  background-color: blue;*/
 }
 
-.teachers {
+.home .teachers-table {
 	float:left;
 }
 
-.schedule { 
-	border: 1px solid #000000;
-	margin-top: 20px;
-	border-collapse:collapse;
-	float: right;
-	margin-left: 10px;
+.home .schedule { 
+  margin-top: 20px;
+  float: right;
+  text-align: right;
 } 
 
-.schedule td, .schedule th {
+.home .schedule table { 
+  border: 1px solid #000000;
+  float: right;
+  border-collapse:collapse;
+  margin-left: 30px;
+  text-align: left;
+} 
+
+.home .schedule td, .home .schedule th {
 	border-bottom: 1px solid #000000;
 	padding: 2px 10px;
 	vertical-align: top;
 }
 
-.schedule td.time {
+.home .schedule td.time {
   text-align: right;
   padding-right: 0;
   font-size: 15px;
 }
 
-.schedule td {
+.home .schedule td {
   font-size: 17px;
 }
 
-.schedule td span {
+.home .schedule td span {
   font-size: 15px;
   display: block;
   color: #666;
 }
 	
-.even {
-	background-color:#c9c9c9;
-}
-	
-a img {
-	border: none;
-}
-
-.schedule th {
+.home .schedule th {
 	font-size: 1.2em;
 	border-top: 1px solid #000000;
 }
 
-.pictures td {
+.home .schedule .hint {
+  clear: right;
+  padding-top: 15px;
+  font-size: 0.95em;
+}
+
+.home .pictures td {
 	font-size: 22px;
 	font: Arial, Helvetica, sans-serif;
 	background-color: black;
 	color: white;
 }
-	
+
+.teachers {
+  margin-left: 140px;
+}
+
+.teachers h1 {
+  margin-left: -140px;
+}
+
+.teachers img {
+  margin-left: -140px;
+  float: left;
+}
+
+.teachers hr {
+  clear: both;
+  margin: 20px 80px 20px 40px;
+  border-color: #eee;
+}
+
+.teachers h2 {
+  margin-top: 0;
+}
