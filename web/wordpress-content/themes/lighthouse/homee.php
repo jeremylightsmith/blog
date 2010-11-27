@@ -41,7 +41,7 @@ Template Name: Home
         <?php edit_post_link('Edit this entry.', '<p>', '</p>'); ?>
       </div>
       <div class="footer">
-        <a href="mailto:lighthouse.montessori@gmail.com">lighthouse.montessori@gmail.com</a> <span class="sep">|</span>
+        <a href="mailto:info@lighthousemontessorischool.com">info@lighthousemontessorischool.com</a> <span class="sep">|</span>
         <span class="phone">206-201-1730</span> <span class="sep">|</span>
         <span class="address">Shoreline, WA</span>
       </div>
