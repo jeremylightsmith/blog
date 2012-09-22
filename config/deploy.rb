@@ -21,5 +21,10 @@ end
 desc "pull code from github"
 task :pull do
   run "cd #{deploy_to}/../actionsite && git pull"
-  run "cd #{deploy_to} && git pull && rake generate && ln -s -f #{home}/public/files #{deploy_to}/public/jeremy_lightsmith/files"
+  run "cd #{deploy_to} && " +
+      "git pull && " +
+      "rake generate && " + 
+      "ln -s -f #{home}/public/files #{deploy_to}/public/jeremy_lightsmith/files && " +
+      "ln -s -f /usr/local/awstats/icon #{deploy_to}/public/onemanswalk/awstats-icon && " +
+      "ln -s -f /usr/local/awstats/icon #{deploy_to}/public/onemanswalk/icon"
 end 
