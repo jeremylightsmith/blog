@@ -3,7 +3,7 @@
  * Classes, which help reading streams of data from files.
  * Based on the classes from Danilo Segan <danilo@kvota.net>
  *
- * @version $Id: streams.php 293 2009-11-12 15:43:50Z nbachiyski $
+ * @version $Id: streams.php 597 2011-01-16 20:14:36Z nbachiyski $
  * @package pomo
  * @subpackage streams
  */
@@ -106,7 +106,7 @@ if ( !class_exists( 'POMO_FileReader' ) ):
 class POMO_FileReader extends POMO_Reader {
 	function POMO_FileReader($filename) {
 		parent::POMO_Reader();
-		$this->_f = fopen($filename, 'r');
+		$this->_f = fopen($filename, 'rb');
 	}
 	
 	function read($bytes) {

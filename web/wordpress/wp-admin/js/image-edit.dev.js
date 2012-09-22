@@ -16,7 +16,7 @@ imageEdit = {
 			$('input', el).removeAttr('disabled');
 		} else {
 			el.addClass('disabled');
-			$('input', el).attr('disabled', 'disabled');
+			$('input', el).prop('disabled', true);
 		}
 	},
 
@@ -64,7 +64,7 @@ imageEdit = {
 	},
 
 	getTarget : function(postid) {
-		return $('input[name=imgedit-target-' + postid + ']:checked', '#imgedit-save-target-' + postid).val() || 'full';
+		return $('input[name="imgedit-target-' + postid + '"]:checked', '#imgedit-save-target-' + postid).val() || 'full';
 	},
 
 	scaleChanged : function(postid, x) {
@@ -178,8 +178,11 @@ imageEdit = {
 			if ( $('#imgedit-history-' + postid).val() && $('#imgedit-undone-' + postid).val() == 0 )
 				$('input.imgedit-submit-btn', '#imgedit-panel-' + postid).removeAttr('disabled');
 			else
-				$('input.imgedit-submit-btn', '#imgedit-panel-' + postid).attr('disabled', 'disabled');
+				$('input.imgedit-submit-btn', '#imgedit-panel-' + postid).prop('disabled', true);
 
+			t.toggleEditor(postid, 0);
+		}).error(function(){
+			$('#imgedit-crop-' + postid).empty().append('<div class="error"><p>' + imageEditL10n.error + '</p></div>');
 			t.toggleEditor(postid, 0);
 		}).attr('src', ajaxurl + '?' + $.param(data));
 	},
@@ -204,10 +207,10 @@ imageEdit = {
 
 			if ( fw < 1 ) {
 				w.focus();
-				return false;;
+				return false;
 			} else if ( fh < 1 ) {
 				h.focus();
-				return false;;
+				return false;
 			}
 
 			if ( fw == t.hold.ow || fh == t.hold.oh )
@@ -271,7 +274,7 @@ imageEdit = {
 		var data, elem = $('#image-editor-' + postid), head = $('#media-head-' + postid),
 			btn = $('#imgedit-open-btn-' + postid), spin = btn.siblings('img');
 
-		btn.attr('disabled', 'disabled');
+		btn.prop('disabled', true);
 		spin.css('visibility', 'visible');
 
 		data = {

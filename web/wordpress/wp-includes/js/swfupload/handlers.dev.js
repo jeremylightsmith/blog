@@ -1,3 +1,4 @@
+var topWin = window.dialogArguments || opener || parent || top;
 
 function fileDialogStart() {
 	jQuery("#media-upload-error").empty();
@@ -19,11 +20,16 @@ function fileQueued(fileObj) {
 	jQuery('.progress', '#media-item-' + fileObj.id).show();
 
 	// Disable submit and enable cancel
-	jQuery('#insert-gallery').attr('disabled', 'disabled');
-	jQuery('#cancel-upload').attr('disabled', '');
+	jQuery('#insert-gallery').prop('disabled', true);
+	jQuery('#cancel-upload').prop('disabled', false);
 }
 
 function uploadStart(fileObj) {
+	try {
+		if ( typeof topWin.tb_remove != 'undefined' )
+			topWin.jQuery('#TB_overlay').unbind('click', topWin.tb_remove); 
+	} catch(e){}
+
 	return true;
 }
 
@@ -43,6 +49,11 @@ function prepareMediaItem(fileObj, serverData) {
 	jQuery('.bar', item).remove();
 	jQuery('.progress', item).hide();
 
+	try {
+		if ( typeof topWin.tb_remove != 'undefined' )
+			topWin.jQuery('#TB_overlay').click(topWin.tb_remove);
+	} catch(e){}
+
 	// Old style: Append the HTML returned by the server -- thumbnail and form inputs
 	if ( isNaN(serverData) || !serverData ) {
 		item.append(serverData);
@@ -57,7 +68,7 @@ function prepareMediaItem(fileObj, serverData) {
 function prepareMediaItemInit(fileObj) {
 	var item = jQuery('#media-item-' + fileObj.id);
 	// Clone the thumbnail as a "pinkynail" -- a tiny image to the left of the filename
-	jQuery('.thumbnail', item).clone().attr('className', 'pinkynail toggle').prependTo(item);
+	jQuery('.thumbnail', item).clone().attr('class', 'pinkynail toggle').prependTo(item);
 
 	// Replace the original filename with the new (unique) one assigned during upload
 	jQuery('.filename.original', item).replaceWith( jQuery('.filename.new', item) );
@@ -85,7 +96,7 @@ function prepareMediaItemInit(fileObj) {
 	jQuery('a.delete', item).click(function(){
 		// Tell the server to delete it. TODO: handle exceptions
 		jQuery.ajax({
-			url: 'admin-ajax.php',
+			url: ajaxurl,
 			type: 'post',
 			success: deleteSuccess,
 			error: deleteError,
@@ -103,7 +114,7 @@ function prepareMediaItemInit(fileObj) {
 	jQuery('a.undo', item).click(function(){
 		// Tell the server to untrash it. TODO: handle exceptions
 		jQuery.ajax({
-			url: 'admin-ajax.php',
+			url: ajaxurl,
 			type: 'post',
 			id: fileObj.id,
 			data: {
@@ -134,10 +145,15 @@ function prepareMediaItemInit(fileObj) {
 }
 
 function itemAjaxError(id, html) {
-	var error = jQuery('#media-item-error' + id);
+	var item = jQuery('#media-item-' + id);
+	var filename = jQuery('.filename', item).text();
 
-	error.html('<div class="file-error"><button type="button" id="dismiss-'+id+'" class="button dismiss">'+swfuploadL10n.dismiss+'</button>'+html+'</div>');
-	jQuery('#dismiss-'+id).click(function(){jQuery(this).parents('.file-error').slideUp(200, function(){jQuery(this).empty();})});
+	item.html('<div class="error-div">'
+				+ '<a class="dismiss" href="#">' + swfuploadL10n.dismiss + '</a>'
+				+ '<strong>' + swfuploadL10n.error_uploading.replace('%s', filename) + '</strong><br />'
+				+ html
+				+ '</div>');
+	item.find('a.dismiss').click(function(){jQuery(this).parents('.media-item').slideUp(200, function(){jQuery(this).remove();})});
 }
 
 function deleteSuccess(data, textStatus) {
@@ -216,8 +232,8 @@ function uploadSuccess(fileObj, serverData) {
 function uploadComplete(fileObj) {
 	// If no more uploads queued, enable the submit button
 	if ( swfu.getStats().files_queued == 0 ) {
-		jQuery('#cancel-upload').attr('disabled', 'disabled');
-		jQuery('#insert-gallery').attr('disabled', '');
+		jQuery('#cancel-upload').prop('disabled', true);
+		jQuery('#insert-gallery').prop('disabled', false);
 	}
 }
 
@@ -231,8 +247,15 @@ function wpQueueError(message) {
 
 // file-specific message
 function wpFileError(fileObj, message) {
-	jQuery('#media-item-' + fileObj.id + ' .filename').after('<div class="file-error"><button type="button" id="dismiss-' + fileObj.id + '" class="button dismiss">'+swfuploadL10n.dismiss+'</button>'+message+'</div>').siblings('.toggle').remove();
-	jQuery('#dismiss-' + fileObj.id).click(function(){jQuery(this).parents('.media-item').slideUp(200, function(){jQuery(this).remove();})});
+	var item = jQuery('#media-item-' + fileObj.id);
+	var filename = jQuery('.filename', item).text();
+
+	item.html('<div class="error-div">'
+				+ '<a class="dismiss" href="#">' + swfuploadL10n.dismiss + '</a>'
+				+ '<strong>' + swfuploadL10n.error_uploading.replace('%s', filename) + '</strong><br />'
+				+ message
+				+ '</div>');
+	item.find('a.dismiss').click(function(){jQuery(this).parents('.media-item').slideUp(200, function(){jQuery(this).remove();})});
 }
 
 function fileQueueError(fileObj, error_code, message)  {

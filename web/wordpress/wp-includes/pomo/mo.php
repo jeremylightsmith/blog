@@ -2,7 +2,7 @@
 /**
  * Class for working with MO files
  *
- * @version $Id: mo.php 293 2009-11-12 15:43:50Z nbachiyski $
+ * @version $Id: mo.php 602 2011-01-30 12:43:29Z nbachiyski $
  * @package pomo
  * @subpackage mo
  */
@@ -26,10 +26,24 @@ class MO extends Gettext_Translations {
 			return false;
 		return $this->import_from_reader($reader);
 	}
-	
+
 	function export_to_file($filename) {
 		$fh = fopen($filename, 'wb');
 		if ( !$fh ) return false;
+		$res = $this->export_to_file_handle( $fh );
+		fclose($fh);
+		return $res;
+	}
+	
+	function export() {
+		$tmp_fh = fopen("php://temp", 'r+');
+		if ( !$tmp_fh ) return false;
+		$this->export_to_file_handle( $tmp_fh );
+		rewind( $tmp_fh );
+		return stream_get_contents( $tmp_fh );
+	}
+	
+	function export_to_file_handle($fh) {
 		$entries = array_filter($this->entries, create_function('$e', 'return !empty($e->translations);'));
 		ksort($entries);
 		$magic = 0x950412de;
@@ -70,7 +84,7 @@ class MO extends Gettext_Translations {
 		
 		fwrite($fh, $originals_table);
 		fwrite($fh, $translations_table);
-		fclose($fh);
+		return true;
 	}
 	
 	function export_original($entry) {
@@ -181,7 +195,8 @@ class MO extends Gettext_Translations {
 			$translation = $reader->substr( $strings, $t['pos'], $t['length'] );
 
 			if ('' === $original) {
-				$this->set_headers($this->make_headers($translation));
+				$headers = $this->make_headers($translation);
+				$this->set_headers($headers);
 			} else {
 				$entry = &$this->make_entry($original, $translation);
 				$this->entries[$entry->key()] = &$entry;
@@ -201,7 +216,7 @@ class MO extends Gettext_Translations {
 	 * 	0x00 as a plural translations separator
 	 */
 	function &make_entry($original, $translation) {
-		$entry = & new Translation_Entry();
+		$entry = new Translation_Entry();
 		// look for context
 		$parts = explode(chr(4), $original);
 		if (isset($parts[1])) {

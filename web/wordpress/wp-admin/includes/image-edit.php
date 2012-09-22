@@ -39,7 +39,7 @@ function wp_image_editor($post_id, $msg = false) {
 	<div class="imgedit-menu">
 		<div onclick="imageEdit.crop(<?php echo "$post_id, '$nonce'"; ?>, this)" class="imgedit-crop disabled" title="<?php esc_attr_e( 'Crop' ); ?>"></div><?php
 
-	// On some setups GD library does not provide imagerotate() - Ticket #11536   
+	// On some setups GD library does not provide imagerotate() - Ticket #11536
 	if ( function_exists('imagerotate') ) { ?>
 		<div class="imgedit-rleft"  onclick="imageEdit.rotate( 90, <?php echo "$post_id, '$nonce'"; ?>, this)" title="<?php esc_attr_e( 'Rotate counter-clockwise' ); ?>"></div>
 		<div class="imgedit-rright" onclick="imageEdit.rotate(-90, <?php echo "$post_id, '$nonce'"; ?>, this)" title="<?php esc_attr_e( 'Rotate clockwise' ); ?>"></div>
@@ -67,7 +67,7 @@ function wp_image_editor($post_id, $msg = false) {
 	<input type="hidden" id="imgedit-y-<?php echo $post_id; ?>" value="<?php echo $meta['height']; ?>" />
 
 	<div id="imgedit-crop-<?php echo $post_id; ?>" class="imgedit-crop-wrap">
-	<img id="image-preview-<?php echo $post_id; ?>" onload="imageEdit.imgLoaded('<?php echo $post_id; ?>')" src="<?php echo admin_url('admin-ajax.php'); ?>?action=imgedit-preview&amp;_ajax_nonce=<?php echo $nonce; ?>&amp;postid=<?php echo $post_id; ?>&amp;rand=<?php echo rand(1, 99999); ?>" />
+	<img id="image-preview-<?php echo $post_id; ?>" onload="imageEdit.imgLoaded('<?php echo $post_id; ?>')" src="<?php echo admin_url( 'admin-ajax.php', 'relative' ); ?>?action=imgedit-preview&amp;_ajax_nonce=<?php echo $nonce; ?>&amp;postid=<?php echo $post_id; ?>&amp;rand=<?php echo rand(1, 99999); ?>" />
 	</div>
 
 	<div class="imgedit-submit">
@@ -96,10 +96,10 @@ function wp_image_editor($post_id, $msg = false) {
 	<div class="imgedit-group-top">
 		<a class="imgedit-help-toggle" onclick="imageEdit.toggleHelp(this);return false;" href="#"><strong><?php _e('Restore Original Image'); ?></strong></a>
 		<div class="imgedit-help">
-		<p><?php _e('Discard any changes and restore the original image.'); 
+		<p><?php _e('Discard any changes and restore the original image.');
 
 		if ( !defined('IMAGE_EDIT_OVERWRITE') || !IMAGE_EDIT_OVERWRITE )
-			_e(' Previously edited copies of the image will not be deleted.');
+			echo ' '.__('Previously edited copies of the image will not be deleted.');
 
 		?></p>
 		<div class="imgedit-submit">
@@ -118,7 +118,7 @@ function wp_image_editor($post_id, $msg = false) {
 		<a class="imgedit-help-toggle" onclick="imageEdit.toggleHelp(this);return false;" href="#"><?php _e('(help)'); ?></a>
 		<div class="imgedit-help">
 		<p><?php _e('The image can be cropped by clicking on it and dragging to select the desired part. While dragging the dimensions of the selection are displayed below.'); ?></p>
-		<strong><?php _e('Keyboard shortcuts'); ?></strong>
+		<strong><?php _e('Keyboard Shortcuts'); ?></strong>
 		<ul>
 		<li><?php _e('Arrow: move by 10px'); ?></li>
 		<li><?php _e('Shift + arrow: move by 1px'); ?></li>
@@ -192,47 +192,9 @@ function wp_image_editor($post_id, $msg = false) {
 	</tbody></table>
 	<div class="imgedit-wait" id="imgedit-wait-<?php echo $post_id; ?>"></div>
 	<script type="text/javascript">imageEdit.init(<?php echo $post_id; ?>);</script>
-	<div class="hidden" id="imgedit-leaving-<?php echo $post_id; ?>"><?php _e("There are unsaved changes that will be lost.  'OK' to continue, 'Cancel' to return to the Image Editor."); ?></div>
+	<div class="hidden" id="imgedit-leaving-<?php echo $post_id; ?>"><?php _e("There are unsaved changes that will be lost. 'OK' to continue, 'Cancel' to return to the Image Editor."); ?></div>
 	</div>
 <?php
-}
-
-function load_image_to_edit($post_id, $mime_type, $size = 'full') {
-	$filepath = get_attached_file($post_id);
-
-	if ( $filepath && file_exists($filepath) ) {
-		if ( 'full' != $size && ( $data = image_get_intermediate_size($post_id, $size) ) )
-			$filepath = path_join( dirname($filepath), $data['file'] );
-	} elseif ( WP_Http_Fopen::test() ) {
-		$filepath = wp_get_attachment_url($post_id);
-	}
-
-	$filepath = apply_filters('load_image_to_edit_path', $filepath, $post_id, $size);
-	if ( empty($filepath) )
-		return false;
-
-	switch ( $mime_type ) {
-		case 'image/jpeg':
-			$image = imagecreatefromjpeg($filepath);
-			break;
-		case 'image/png':
-			$image = imagecreatefrompng($filepath);
-			break;
-		case 'image/gif':
-			$image = imagecreatefromgif($filepath);
-			break;
-		default:
-			$image = false;
-			break;
-	}
-	if ( is_resource($image) ) {
-		$image = apply_filters('load_image_to_edit', $image, $post_id, $size);
-		if ( function_exists('imagealphablending') && function_exists('imagesavealpha') ) {
-			imagealphablending($image, false);
-			imagesavealpha($image, true);
-		}
-	}
-	return $image;
 }
 
 function wp_stream_image($image, $mime_type, $post_id) {
@@ -286,7 +248,6 @@ function _rotate_image_resource($img, $angle) {
 	}
 	return $img;
 }
-
 
 function _flip_image_resource($img, $horz, $vert) {
 	$w = imagesx($img);
@@ -390,7 +351,7 @@ function image_edit_apply_changes($img, $changes) {
 
 function stream_preview_image($post_id) {
 	$post = get_post($post_id);
-	@ini_set('memory_limit', '256M');
+	@ini_set( 'memory_limit', apply_filters( 'admin_memory_limit', WP_MAX_MEMORY_LIMIT ) );
 	$img = load_image_to_edit( $post_id, $post->post_mime_type, array(400, 400) );
 
 	if ( !is_resource($img) )
@@ -421,7 +382,7 @@ function wp_restore_image($post_id) {
 	$file = get_attached_file($post_id);
 	$backup_sizes = get_post_meta( $post_id, '_wp_attachment_backup_sizes', true );
 	$restored = false;
-	$msg = '';
+	$msg = new stdClass;
 
 	if ( !is_array($backup_sizes) ) {
 		$msg->error = __('Cannot load image metadata.');
@@ -430,7 +391,7 @@ function wp_restore_image($post_id) {
 
 	$parts = pathinfo($file);
 	$suffix = time() . rand(100, 999);
-	$default_sizes = apply_filters( 'intermediate_image_sizes', array('large', 'medium', 'thumbnail') );
+	$default_sizes = get_intermediate_image_sizes();
 
 	if ( isset($backup_sizes['full-orig']) && is_array($backup_sizes['full-orig']) ) {
 		$data = $backup_sizes['full-orig'];
@@ -453,7 +414,7 @@ function wp_restore_image($post_id) {
 		$meta['file'] = _wp_relative_upload_path( $restored_file );
 		$meta['width'] = $data['width'];
 		$meta['height'] = $data['height'];
-		list ( $uwidth, $uheight ) = wp_shrink_dimensions($meta['width'], $meta['height']);
+		list ( $uwidth, $uheight ) = wp_constrain_dimensions($meta['width'], $meta['height'], 128, 96);
 		$meta['hwstring_small'] = "height='$uheight' width='$uwidth'";
 	}
 
@@ -492,10 +453,10 @@ function wp_restore_image($post_id) {
 }
 
 function wp_save_image($post_id) {
-	$return = '';
+	$return = new stdClass;
 	$success = $delete = $scaled = $nocrop = false;
 	$post = get_post($post_id);
-	@ini_set('memory_limit', '256M');
+	@ini_set( 'memory_limit', apply_filters( 'admin_memory_limit', WP_MAX_MEMORY_LIMIT ) );
 	$img = load_image_to_edit($post_id, $post->post_mime_type);
 
 	if ( !is_resource($img) ) {
@@ -550,7 +511,7 @@ function wp_save_image($post_id) {
 
 	// generate new filename
 	$path = get_attached_file($post_id);
-	$path_parts = pathinfo52( $path );
+	$path_parts = pathinfo( $path );
 	$filename = $path_parts['filename'];
 	$suffix = time() . rand(100, 999);
 
@@ -598,11 +559,11 @@ function wp_save_image($post_id) {
 		$meta['width'] = imagesx($img);
 		$meta['height'] = imagesy($img);
 
-		list ( $uwidth, $uheight ) = wp_shrink_dimensions($meta['width'], $meta['height']);
+		list ( $uwidth, $uheight ) = wp_constrain_dimensions($meta['width'], $meta['height'], 128, 96);
 		$meta['hwstring_small'] = "height='$uheight' width='$uwidth'";
 
 		if ( $success && ('nothumb' == $target || 'all' == $target) ) {
-			$sizes = apply_filters( 'intermediate_image_sizes', array('large', 'medium', 'thumbnail') );
+			$sizes = get_intermediate_image_sizes();
 			if ( 'nothumb' == $target )
 				$sizes = array_diff( $sizes, array('thumbnail') );
 		}
@@ -664,4 +625,3 @@ function wp_save_image($post_id) {
 	$return->msg = esc_js( __('Image saved') );
 	return $return;
 }
-

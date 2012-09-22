@@ -2,7 +2,7 @@
 /**
  * Class for a set of entries for translation and their associated headers
  *
- * @version $Id: translations.php 291 2009-10-21 05:46:08Z nbachiyski $
+ * @version $Id: translations.php 590 2010-12-20 19:58:37Z nbachiyski $
  * @package pomo
  * @subpackage translations
  */
@@ -27,6 +27,19 @@ class Translations {
 		$key = $entry->key();
 		if (false === $key) return false;
 		$this->entries[$key] = &$entry;
+		return true;
+	}
+	
+	function add_entry_or_merge($entry) {
+		if (is_array($entry)) {
+			$entry = new Translation_Entry($entry);
+		}
+		$key = $entry->key();
+		if (false === $key) return false;
+		if (isset($this->entries[$key]))
+			$this->entries[$key]->merge_with($entry);
+		else
+			$this->entries[$key] = &$entry;
 		return true;
 	}
 
@@ -68,7 +81,7 @@ class Translations {
 	/**
 	 * Given the number of items, returns the 0-based index of the plural form to use
 	 *
-	 * Here, in the base Translations class, the commong logic for English is implmented:
+	 * Here, in the base Translations class, the common logic for English is implemented:
 	 * 	0 if there is one element, 1 otherwise
 	 *
 	 * This function should be overrided by the sub-classes. For example MO/PO can derive the logic
@@ -104,7 +117,18 @@ class Translations {
 	 * @return void
 	 **/
 	function merge_with(&$other) {
-		$this->entries = array_merge($this->entries, $other->entries);
+		foreach( $other->entries as $entry ) {
+			$this->entries[$entry->key()] = $entry;
+		}
+	}
+	
+	function merge_originals_with(&$other) {
+		foreach( $other->entries as $entry ) {
+			if ( !isset( $this->entries[$entry->key()] ) )
+				$this->entries[$entry->key()] = $entry;
+			else
+				$this->entries[$entry->key()]->merge_with($entry);
+		}
 	}
 }
 
