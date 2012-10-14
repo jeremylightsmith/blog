@@ -24,7 +24,5 @@ task :pull do
   run "cd #{deploy_to} && " +
       "git pull && " +
       "rake generate && " + 
-      "ln -s -f #{home}/public/files #{deploy_to}/public/jeremy_lightsmith/files && " +
-      "ln -s -f /usr/local/awstats/icon #{deploy_to}/public/onemanswalk/awstats-icon && " +
-      "ln -s -f /usr/local/awstats/icon #{deploy_to}/public/onemanswalk/icon"
+      "ln -s -f #{home}/public/files #{deploy_to}/public/jeremy_lightsmith/files"
 end 
