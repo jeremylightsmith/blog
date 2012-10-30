@@ -16,7 +16,6 @@ def sites_to_generate
   sites = {
     "jeremy_lightsmith" => "public/jeremy_lightsmith",
     "blues_hero" => "public/blues_hero",
-    "brenda" => "public/brenda",
     "challenge" => "public/jeremy_and_karissa/challenge",
     "jeremy_and_karissa" => "public/jeremy_and_karissa/",
     "jklbx" => "public/jeremy_and_karissa/exchange",
@@ -34,7 +33,7 @@ desc "wordpress"
 task :wordpress do
   wordpress "life",                   "/life/", "public/onemanswalk/life"
   wordpress "work",                   "/work/", "public/onemanswalk/work"
-  wordpress "portland_dog_zen",       "/",      "public/portland_dog_zen"
+  wordpress "brendadances",           "/",      "public/brendadances"
   wordpress "your_moms_cock",         "/",      "public/your_moms_cock"
   wordpress "brian_light",            "/",      "public/brian_light"
 end
