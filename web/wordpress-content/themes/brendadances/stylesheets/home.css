@@ -1,0 +1,23 @@
+<style type="text/css" media="screen">
+  a.button {
+    display: block;
+    width: 12em;
+    text-align: center;
+    margin: 1em auto;
+  }
+  
+  img.brenda {
+     float: left; 
+     height: 30em; 
+     margin-left: -16em;
+  }
+  
+  .middle .content {
+    padding-left: 16em;
+    width: 35em;
+  }
+  
+  img.heading {
+    margin-left: -5em;
+  }
+</style>

@@ -1,5 +1,5 @@
+require 'rubygems'
 begin
-  require 'rubygems'
   gem 'jeremylightsmith-actionsite', '>= 0.6'
 rescue Exception
   $: << File.dirname(__FILE__) + "/../actionsite/lib"

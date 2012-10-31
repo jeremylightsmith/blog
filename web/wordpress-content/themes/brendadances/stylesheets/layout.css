@@ -1,0 +1,135 @@
+.header {
+  background: url(../images/top_border.png) repeat-x bottom left;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.header .content {
+  margin: 0 auto;
+  width: 64em;
+  height: 6em;
+  position: relative;
+  text-align: left;
+}
+
+.header .knot,
+.middle .knot {
+  width: 64em;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.header .knot img {
+  float: left;
+}
+
+.middle .knot img {
+  float: right;
+}
+
+.footer {
+  background: url(../images/bottom_border.png) repeat-x top left;
+  padding-top: 11px;
+}
+
+.header .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 66em;
+}
+
+.header .menu {
+  position: absolute;
+  bottom: 0;
+  right: 3em;
+}
+
+.footer .links a {
+  color: #7c6c64;
+  text-decoration: none;
+  margin-left: 1.5em;
+  font-weight: bold;
+  font-size: 90%;
+}
+
+.footer .links {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.middle {
+  background-color: #5e6e65;
+  padding: 0.5em;
+  text-align: center;
+}
+
+.middle .center {
+  width: 54em;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.middle .content,
+.middle .content td {
+  color: white;
+}
+
+img.heading {
+  margin: 0 -3em 0em;
+}
+
+img.signature {
+  float: right;
+}
+
+.middle .content a {
+  color: white;
+}
+
+.middle .content .buttons {
+  padding: 1em;
+  text-align: center;
+}
+
+a.button {
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border: solid 3px;
+  color: #5a4a42 !important;
+  background-color: #f8e19b;
+  border-top-color: #f8f6ee;
+  border-right-color: #f8cb45;
+  border-bottom-color: #f8cb45;
+  border-left-color: #f8f6ee;
+}
+
+/* two column layout */
+
+.two-column {
+/*  position: relative;*/
+}
+.two-column .sidebar {
+  float: left;
+/*  position: absolute;*/
+  width: 16em;
+}
+.two-column .main-content {
+  padding-left: 16em;
+  width: 35em;
+}
+.two-column .sidebar a.button {
+  display: block;
+  width: 10em;
+  text-align: center;
+  margin: 0.8em auto;
+  padding: 0.35em 0.8em;
+}
+.two-column .sidebar img.brenda {
+   height: 30em;
+   margin-top: -1.5em;
+   margin-bottom: -1.5em;
+}
+img.heading {
+/*  margin-left: -5em;*/
+}

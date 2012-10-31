@@ -1,0 +1,178 @@
+html, body {
+  background-color: #5a4a42;
+}
+
+body {
+  margin: 0;
+}
+
+body, td {
+  font-family: verdana, arial;
+  font-size: 85%;
+}
+
+p {
+  margin: 1em 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
+h1 {
+  /*font-family: serif;*/
+  font-weight: normal;
+  font-size: 36pt;
+  margin: 10px 0 0 0;
+  font-family: 'Great Vibes', cursive;
+  /*font-family: 'Ruthie', cursive;*/
+  /*font-family: 'Arizonia', cursive;*/
+  color: #a0b1aa;
+}
+h1 a {
+  color: #a0b1aa !important;
+  text-decoration: none;
+}
+h1 span {
+  font-family: verdana, arial;
+  padding-left: 5px;
+  font-size: 14px;
+}
+h2 {
+  font-size: 150%;
+  margin: 0.8em 0;
+  border-bottom: solid 2px white;
+  border-right: solid 2px white;
+/*  width: 90%;*/
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 110%;
+  font-weight: bold;
+  margin: 0.8em 0;
+}
+
+
+ul {
+  padding: 0 3em;
+}
+
+li {
+  list-style-type: disc;
+}
+
+/* bios */
+
+.bio {
+  font-style: italic;
+  padding: 0 3em;
+}
+
+.bio .full_text {
+  display:none;
+}
+
+.bio.full_text .excerpt {
+  display:none;
+}
+
+.bio.full_text .full_text {
+  display:block;
+}
+
+/* classes */
+
+h3 a {
+  font-size: 80%;
+  font-style: italic;
+}
+
+.collapsed .full_text {
+  display: none;
+}
+
+/* photos */
+
+a img {
+  border: 0;
+}
+
+.read_more {
+  padding-left: 0.5em;
+  font-weight: normal;
+}
+.photos.some {
+  padding: 0 3em;
+}
+
+.photos ul {
+  padding: 0;
+}
+
+.photos li {
+  display: inline;
+}
+
+.photos img {
+  padding: 10px;
+}
+
+.hint {
+  font-style: italic;
+}
+
+embed {
+  margin: 1em 5em 0.5em;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+  margin-right: 1em;
+}
+
+/* superfish menu overrides */
+
+.sf-menu {
+  font-size: 90%;
+  float: right;
+  margin-bottom: -0.5em;
+}
+
+.sf-menu a, .sf-menu a:visited {
+  color: #C0A69B;
+  border: none;
+  font-weight: bold;
+}
+
+.sf-menu li:hover, 
+.sf-menu li.sfHover, 
+.sf-menu a:focus, 
+.sf-menu a:hover, 
+.sf-menu a:active {
+  background-color: #8F7569;
+}
+
+.sf-menu li {
+  background-color: #5A4A42;
+}
+
+.sf-menu li li {
+  background-color: #6B584F;
+}
+
+/* blog */
+
+.post h2 {
+  margin-bottom: 0;
+}
+
+.post .post-meta {
+  font-style: italic;
+  text-align: right;
+  color: #C7C7C7;
+}
