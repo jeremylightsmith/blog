@@ -7,7 +7,7 @@
 <ul>
 <li>© Brian Light 2010</li>
 <li>|</li>
-<li>(206) 999-5064</li>
+<li>(206) 707-1091</li>
 <li>|</li>
 <li><?php wp_loginout(); ?></li>
 </ul>

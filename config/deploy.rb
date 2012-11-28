@@ -23,6 +23,7 @@ task :pull do
   run "cd #{deploy_to}/../actionsite && git pull"
   run "cd #{deploy_to} && " +
       "git pull && " +
+      "rvm system && " +
       "rake generate && " + 
       "ln -s -f #{home}/public/files #{deploy_to}/public/jeremy_lightsmith/files"
 end 
