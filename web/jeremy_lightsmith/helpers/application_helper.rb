@@ -6,6 +6,7 @@ module ApplicationHelper
     links << link_to("classes", "/classes.html")
     links << link_to("blog", "http://onemanswalk.com/work")
     links << link_to("facilitation patterns", "http://facilitationpatterns.org/")
+    links.join("\n")
   end
   
   def what_i_offer
