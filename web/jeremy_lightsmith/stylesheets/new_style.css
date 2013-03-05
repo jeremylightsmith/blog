@@ -1,0 +1,59 @@
+
+h1 span {
+  font-size: 16px;
+  font-weight: normal;
+  text-shadow: none;
+}
+
+.home h1 span.case-study {
+  display: block;
+  margin-bottom: -10px;
+}
+
+.home h1 {
+  margin-top: 15px;
+}
+
+h1 {
+  text-shadow: 1px 1px 0 #101010;
+  font-family: dejarip,arial,"helvetica neue",sans-serif;
+}
+
+.home .odd-container {
+
+}
+
+.home .even-container {
+  background-color: #eee;
+}
+
+.contact-container {
+  background-color: #414141;
+  color: white;
+}
+
+.home .container {
+
+}
+
+.navbar .container {
+}
+
+footer {
+  background-color: #414141;
+  padding: 10px 0 10px;
+  margin-top: 20px;
+  color: #ddd;
+  text-align: center;
+}
+
+footer .social-links {
+}
+
+footer .links {
+  padding-top: 20px;
+}
+
+footer a {
+  color: #ddd;
+}

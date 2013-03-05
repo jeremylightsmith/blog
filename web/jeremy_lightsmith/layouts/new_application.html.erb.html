@@ -1,0 +1,65 @@
+<html>
+<head>
+  <title>Jeremy Lightsmith<%= " - #{@content_for_title}" if @content_for_title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="stylesheets/bootstrap.min.css" media="all" rel="stylesheet" type="text/css">
+  <link href="stylesheets/bootstrap-responsive.min.css" media="all" rel="stylesheet" type="text/css">
+  <link href="stylesheets/new_style.css" media="all" rel="stylesheet" type="text/css">
+</head>
+<body class="<%= @content_for_css %>">
+  <div class="navbar-wrapper">
+    <!-- <div class="container"> -->
+
+      <div class="navbar navbar-inverse navbar-static-top">
+        <div class="navbar-inner">
+          <div class="container">
+          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="/index2.html">Jeremy Lightsmith</a>
+          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right">
+              <li class="active"><a href="/index2.html">Home</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Introducing Agile to Your Company</a></li>
+                  <li><a href="#">Small Hi-Performing Teams</a></li>
+                  <li><a href="#">Agility in the Enterprise</a></li>
+                </ul>
+              </li>
+              <li><a href="/events.html">Events</a></li>
+              <li><a href="http://onemanswalk.com/work">Articles</a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+  </div>
+
+  <%= content %>
+
+  <script src="/js/jquery-1.9.1.min.js"></script>
+  <script src="/js/bootstrap.js"></script>
+
+% unless @content_for_css == "home"
+  <footer>
+    <div class="container">
+      <div class="social-links pull-right">
+        <a href="https://twitter.com/lightsmith"><img src="/images/social-icons/twitter_64.png"/></a>
+        <a href="http://www.linkedin.com/in/jeremylightsmith/"><img src="/images/social-icons/linkedin_64.png"/></a>
+        <a href="http://www.facebook.com/jeremy.lightsmith"><img src="/images/social-icons/facebook_64.png"/></a>
+      </div>
+      <div class="links"><a href="mailto:jeremy.lightsmith@gmail.com">jeremy.lightsmith@gmail.com</a> | 312-953-1193</div>
+    </div>
+  </footer>
+% end
+
+  <%= tracking_code %>
+</body>
+</html>
