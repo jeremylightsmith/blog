@@ -1,0 +1,628 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Pinboard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-09 21:04+0200\n"
+"PO-Revision-Date: 2012-07-09 21:04+0200\n"
+"Last-Translator: Daniel <contact@onedesigns.com>\n"
+"Language-Team: One Designs <contact@onedesigns.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: attachment.php:14
+msgid "Download"
+msgstr ""
+
+#: attachment.php:26
+#: image.php:26
+msgid "Pages:"
+msgstr ""
+
+#: comments.php:4
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+
+#: comments.php:7
+msgid "No Responses to"
+msgstr ""
+
+#: comments.php:7
+msgid "One Response to"
+msgstr ""
+
+#: comments.php:7
+msgid "% Responses to"
+msgstr ""
+
+#: comments.php:29
+msgid "Comments are closed."
+msgstr ""
+
+#: footer.php:10
+msgid "Pinboard Theme"
+msgstr ""
+
+#: footer.php:11
+msgid "One Designs"
+msgstr ""
+
+#: footer.php:12
+msgid "WordPress"
+msgstr ""
+
+#: footer.php:14
+#, php-format
+msgid "Powered by %1$s by %2$s and %3$s"
+msgstr ""
+
+#: footer.php:16
+#, php-format
+msgid "Powered by %1$s by %2$s"
+msgstr ""
+
+#: footer.php:18
+#: footer.php:20
+#, php-format
+msgid "Powered by %1$s and %2$s"
+msgstr ""
+
+#: footer.php:22
+#: footer.php:24
+#: footer.php:26
+#, php-format
+msgid "Powered by %1$s"
+msgstr ""
+
+#: functions.php:1156
+#: functions.php:1162
+msgid "Page"
+msgstr ""
+
+#: functions.php:1189
+msgid "Currently browsing"
+msgstr ""
+
+#: functions.php:1194
+msgid "Search results for"
+msgstr ""
+
+#: functions.php:1211
+#, php-format
+msgid "Page %d"
+msgstr ""
+
+#: functions.php:1428
+msgid "Link to full-size image"
+msgstr ""
+
+#: functions.php:1428
+msgid "pixels"
+msgstr ""
+
+#: functions.php:1430
+msgid "Edit"
+msgstr ""
+
+#: functions.php:2008
+msgid "Did you like this article? Share it with your friends!"
+msgstr ""
+
+#: functions.php:2076
+msgid "Written by"
+msgstr ""
+
+#: functions.php:2095
+#: functions.php:2113
+msgid "Previous Page"
+msgstr ""
+
+#: functions.php:2096
+#: functions.php:2114
+msgid "Next Page"
+msgstr ""
+
+#: functions.php:2099
+msgid "Newer Posts"
+msgstr ""
+
+#: functions.php:2100
+msgid "Older Posts"
+msgstr ""
+
+#: functions.php:2103
+msgid "Later Posts"
+msgstr ""
+
+#: functions.php:2104
+msgid "Earlier Posts"
+msgstr ""
+
+#: functions.php:2130
+msgid "Read all Articles"
+msgstr ""
+
+#: functions.php:2149
+msgid "Content not found"
+msgstr ""
+
+#: functions.php:2151
+msgid "The content you are looking for could not be found."
+msgstr ""
+
+#: functions.php:2153
+msgid "Use the information below or try to seach to find what you're looking for:"
+msgstr ""
+
+#: includes/theme-options.php:4
+msgid "Pinboard Theme Options"
+msgstr ""
+
+#: includes/theme-options.php:4
+msgid "Theme Options"
+msgstr ""
+
+#: includes/theme-options.php:35
+msgid "Theme settings updated successfully."
+msgstr ""
+
+#: includes/theme-options.php:42
+msgid "Save Settings"
+msgstr ""
+
+#: includes/theme-options.php:43
+msgid "Reset Defaults"
+msgstr ""
+
+#: includes/theme-options.php:52
+msgid "General"
+msgstr ""
+
+#: includes/theme-options.php:53
+msgid "Layout"
+msgstr ""
+
+#: includes/theme-options.php:54
+msgid "Typography"
+msgstr ""
+
+#: includes/theme-options.php:55
+msgid "SEO"
+msgstr ""
+
+#: includes/theme-options.php:91
+msgid "Global Options"
+msgstr ""
+
+#: includes/theme-options.php:92
+msgid "Social Media Links"
+msgstr ""
+
+#: includes/theme-options.php:93
+#: includes/theme-options.php:1002
+msgid "Home Page"
+msgstr ""
+
+#: includes/theme-options.php:94
+msgid "Portfolio Page"
+msgstr ""
+
+#: includes/theme-options.php:95
+msgid "Blog Pages"
+msgstr ""
+
+#: includes/theme-options.php:96
+msgid "Single Posts"
+msgstr ""
+
+#: includes/theme-options.php:97
+msgid "Footer"
+msgstr ""
+
+#: includes/theme-options.php:101
+msgid "Fancy Drop-down Menus"
+msgstr ""
+
+#: includes/theme-options.php:102
+#: includes/theme-options.php:103
+msgid "Lightbox"
+msgstr ""
+
+#: includes/theme-options.php:104
+msgid "Posts Navigation"
+msgstr ""
+
+#: includes/theme-options.php:105
+msgid "Posts Navigation Labels"
+msgstr ""
+
+#: includes/theme-options.php:111
+msgid "Enable transition effects for drop-down menus"
+msgstr ""
+
+#: includes/theme-options.php:119
+msgid "Hard crop post thumbnails"
+msgstr ""
+
+#: includes/theme-options.php:121
+msgid "After changing this option, it is recommended to recreate your thumbnails using a plugin like"
+msgstr ""
+
+#: includes/theme-options.php:128
+msgid "Open image links in a lightbox"
+msgstr ""
+
+#: includes/theme-options.php:135
+msgid "Static Links"
+msgstr ""
+
+#: includes/theme-options.php:136
+msgid "AJAX Links"
+msgstr ""
+
+#: includes/theme-options.php:137
+msgid "Infinite Scroll"
+msgstr ""
+
+#: includes/theme-options.php:147
+msgid "Numbered Pagination"
+msgstr ""
+
+#: includes/theme-options.php:153
+msgid "Facebook Page"
+msgstr ""
+
+#: includes/theme-options.php:154
+msgid "Twitter Account"
+msgstr ""
+
+#: includes/theme-options.php:155
+msgid "Flickr Account"
+msgstr ""
+
+#: includes/theme-options.php:156
+msgid "Vimeo Account"
+msgstr ""
+
+#: includes/theme-options.php:157
+msgid "Google Plus Account"
+msgstr ""
+
+#: includes/theme-options.php:158
+msgid "Dribble Account"
+msgstr ""
+
+#: includes/theme-options.php:159
+msgid "LinkedIn Account"
+msgstr ""
+
+#: includes/theme-options.php:198
+msgid "Full posts to display"
+msgstr ""
+
+#: includes/theme-options.php:199
+msgid "Sticky Posts Slider"
+msgstr ""
+
+#: includes/theme-options.php:200
+msgid "Exclude Portfolio"
+msgstr ""
+
+#: includes/theme-options.php:206
+#: includes/theme-options.php:235
+#: includes/theme-options.php:243
+#: includes/theme-options.php:264
+msgid "Full posts to display before grid"
+msgstr ""
+
+#: includes/theme-options.php:214
+msgid "Exclude Portfolio Category from main loop"
+msgstr ""
+
+#: includes/theme-options.php:222
+msgid "Display a slider of sticky posts on the front page"
+msgstr ""
+
+#: includes/theme-options.php:228
+msgid "Full posts to display on first page"
+msgstr ""
+
+#: includes/theme-options.php:229
+msgid "Full posts to display on secondary pages"
+msgstr ""
+
+#: includes/theme-options.php:256
+msgid "Show current location in archive pages"
+msgstr ""
+
+#: includes/theme-options.php:270
+msgid "Social Bookmarks"
+msgstr ""
+
+#: includes/theme-options.php:271
+msgid "Author Box"
+msgstr ""
+
+#: includes/theme-options.php:277
+msgid "Facebook Like"
+msgstr ""
+
+#: includes/theme-options.php:281
+msgid "Twitter Button"
+msgstr ""
+
+#: includes/theme-options.php:285
+msgid "Google +1"
+msgstr ""
+
+#: includes/theme-options.php:289
+msgid "Pinterest"
+msgstr ""
+
+#: includes/theme-options.php:297
+msgid "Display a hcard microformatted box featuring author name, avatar and bio"
+msgstr ""
+
+#: includes/theme-options.php:303
+msgid "Copyright Notice"
+msgstr ""
+
+#: includes/theme-options.php:304
+msgid "Credit Links"
+msgstr ""
+
+#: includes/theme-options.php:310
+msgid "Text to display in the footer copyright section (%year% = current year, %blogname% = website name)"
+msgstr ""
+
+#: includes/theme-options.php:318
+msgid "Show theme credit link"
+msgstr ""
+
+#: includes/theme-options.php:322
+msgid "Show author credit link"
+msgstr ""
+
+#: includes/theme-options.php:326
+msgid "Show WordPress credit link"
+msgstr ""
+
+#: includes/theme-options.php:332
+msgid "Default Layout Template"
+msgstr ""
+
+#: includes/theme-options.php:333
+msgid "Grid Layout Dimensions"
+msgstr ""
+
+#: includes/theme-options.php:334
+msgid "Responsive Layout"
+msgstr ""
+
+#: includes/theme-options.php:335
+msgid "Custom CSS"
+msgstr ""
+
+#: includes/theme-options.php:339
+msgid "Choose your preferred Layout"
+msgstr ""
+
+#: includes/theme-options.php:343
+msgid "Content Columns"
+msgstr ""
+
+#: includes/theme-options.php:344
+msgid "Boxes Sidebar Columns"
+msgstr ""
+
+#: includes/theme-options.php:345
+msgid "Footer Sidebar Columns"
+msgstr ""
+
+#: includes/theme-options.php:349
+msgid "Hide Sidebar"
+msgstr ""
+
+#: includes/theme-options.php:350
+msgid "Hide Footer Widgets Area"
+msgstr ""
+
+#: includes/theme-options.php:354
+msgid "Enter your custom CSS"
+msgstr ""
+
+#: includes/theme-options.php:413
+msgid "Note"
+msgstr ""
+
+#: includes/theme-options.php:413
+msgid "If your layout contains a sidebar, the sidebar accounts for 1 column from the grid."
+msgstr ""
+
+#: includes/theme-options.php:414
+msgid "Not all combinations of layouts and number of columns may be practical."
+msgstr ""
+
+#: includes/theme-options.php:440
+msgid "Hide Sidebar on Mobile Devices"
+msgstr ""
+
+#: includes/theme-options.php:448
+msgid "Hide Footer Widget Area on Mobile Devices"
+msgstr ""
+
+#: includes/theme-options.php:459
+msgid "Font Families"
+msgstr ""
+
+#: includes/theme-options.php:460
+msgid "Font Sizes"
+msgstr ""
+
+#: includes/theme-options.php:461
+msgid "Colors"
+msgstr ""
+
+#: includes/theme-options.php:465
+msgid "Default Font Family"
+msgstr ""
+
+#: includes/theme-options.php:466
+msgid "Headings Font Family"
+msgstr ""
+
+#: includes/theme-options.php:467
+msgid "Body Copy Font Family"
+msgstr ""
+
+#: includes/theme-options.php:501
+msgid "Default Font Size"
+msgstr ""
+
+#: includes/theme-options.php:502
+msgid "Default Line Height"
+msgstr ""
+
+#: includes/theme-options.php:503
+msgid "H1 Font Size"
+msgstr ""
+
+#: includes/theme-options.php:504
+msgid "H2 Font Size"
+msgstr ""
+
+#: includes/theme-options.php:505
+msgid "H3 Font Size"
+msgstr ""
+
+#: includes/theme-options.php:506
+msgid "H4 Font Size"
+msgstr ""
+
+#: includes/theme-options.php:507
+msgid "Headings Line Height"
+msgstr ""
+
+#: includes/theme-options.php:508
+msgid "Body Copy Font Size"
+msgstr ""
+
+#: includes/theme-options.php:509
+msgid "Body Copy Line Height"
+msgstr ""
+
+#: includes/theme-options.php:510
+msgid "Body Copy Font Size on Mobile Devices"
+msgstr ""
+
+#: includes/theme-options.php:511
+msgid "Body Copy Line Height on Mobile Devices"
+msgstr ""
+
+#: includes/theme-options.php:636
+msgid "Default Font Color"
+msgstr ""
+
+#: includes/theme-options.php:637
+msgid "Headings Font Color"
+msgstr ""
+
+#: includes/theme-options.php:638
+msgid "Body Copy Font Color"
+msgstr ""
+
+#: includes/theme-options.php:639
+msgid "Links Color"
+msgstr ""
+
+#: includes/theme-options.php:640
+msgid "Links Hover Color"
+msgstr ""
+
+#: includes/theme-options.php:641
+msgid "Navigation Links Color"
+msgstr ""
+
+#: includes/theme-options.php:642
+msgid "Navigation Links Hover Color"
+msgstr ""
+
+#: includes/theme-options.php:643
+msgid "Sidebar Widgets Color"
+msgstr ""
+
+#: includes/theme-options.php:644
+msgid "Sidebar Widgets Title Color"
+msgstr ""
+
+#: includes/theme-options.php:645
+msgid "Widgets Links Color"
+msgstr ""
+
+#: includes/theme-options.php:646
+msgid "Footer Widgets Color"
+msgstr ""
+
+#: includes/theme-options.php:647
+msgid "Footer Widgets Title Color"
+msgstr ""
+
+#: includes/theme-options.php:648
+msgid "Footer Color"
+msgstr ""
+
+#: includes/theme-options.php:649
+msgid "Footer Links Color"
+msgstr ""
+
+#: includes/theme-options.php:1003
+msgid "Archive Pages"
+msgstr ""
+
+#: includes/theme-options.php:1004
+msgid "Single Posts &amp; Pages"
+msgstr ""
+
+#: includes/theme-options.php:1005
+msgid "Other"
+msgstr ""
+
+#: includes/theme-options.php:1009
+#: includes/theme-options.php:1045
+#: includes/theme-options.php:1092
+msgid "Site Title Tag"
+msgstr ""
+
+#: includes/theme-options.php:1010
+#: includes/theme-options.php:1046
+#: includes/theme-options.php:1093
+msgid "Site Description Tag"
+msgstr ""
+
+#: includes/theme-options.php:1011
+#: includes/theme-options.php:1048
+#: includes/theme-options.php:1094
+msgid "Post Title Tag"
+msgstr ""
+
+#: includes/theme-options.php:1047
+msgid "Site Location Title Tag"
+msgstr ""
+
+#: includes/theme-options.php:1095
+msgid "Comments Title Tag"
+msgstr ""
+
+#: includes/theme-options.php:1096
+msgid "Reply Form Title Tag"
+msgstr ""
+
+#: includes/theme-options.php:1150
+msgid "Widget Title Tag"
+msgstr ""
+
