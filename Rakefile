@@ -6,7 +6,8 @@ rescue Exception
 end
 require 'action_site'
 
-require 'spec/rake/spectask'
+require 'spec/rake/spectask' rescue
+
 load 'tasks/db.rake'
 
 task :default => [:generate, "test:links"]
