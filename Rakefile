@@ -36,6 +36,7 @@ task :wordpress do
   wordpress "brendadances",           "/",      "public/brendadances"
   wordpress "your_moms_cock",         "/",      "public/your_moms_cock"
   wordpress "brian_light",            "/",      "public/brian_light"
+  wordpress "chautauquaretreat",      "/",      "public/chautauquaretreat"
 end
 
 def sites_to_check
