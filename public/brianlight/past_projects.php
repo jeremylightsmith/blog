@@ -1,4 +1,4 @@
-<?php $title = "Past Projects"; ?>
+<?php $title = "Projects"; ?>
 <?php include ( "_header.php" ); ?>
 
 

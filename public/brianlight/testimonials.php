@@ -1,7 +1,9 @@
 <?php $title = "Testimonials"; ?>
 <?php include ( "_header.php" ); ?>
 
-<div class="span12">
+<div class="container">
+  <div class="row">
+    <div class="col-12">
 
 <style type="text/css" media="screen">h3 span {display: block;font-size: 14px;}</style>
 <p>Over many years of&nbsp;building projects, I have built several strong relationships. These relationships are as important to me as the projects they come from.  </p>
@@ -43,7 +45,7 @@
 </p></div>
 <div class="recommendation">
 <h3>David L. Morgan<span>Attorney at Law</span></h3>
-<p>My working relationship with Brian Light has been wonderful. &nbsp;I have received services that include work on my parents’ home and a complete makeover of a fifty year old home in which I now reside.</p>
+<p>My working relationship with Brian Light has been wonderful. &nbsp;I have received services that include work on my parents' home and a complete makeover of a fifty year old home in which I now reside.</p>
 <p>The scope of activities were handled in the utmost professional manner. &nbsp;I found Brian to possess a wide range of knowledge and talents needed to repair and beautify my home. &nbsp;Brian is reliable and honest. &nbsp;He was a pleasure to have as a resource to draw upon in a project of this size.</p>
 <p>I would highly recommend his talents to anyone and am planning to further use his services in the future.
 </p></div>
@@ -53,7 +55,11 @@
 <p>My experience in working with Brian Light has been such that I would give 100% recommendation to anyone seeking his services. &nbsp;First and foremost, I trust his integrity and loyalty. &nbsp;Secondly, he is very highly skilled and proficient and he has been able to handle all kinds of renovations and remodeling. &nbsp;He has years and years of experience and good judgement as to solving problems that arise in construction of all types.</p>
 <p>Brian has been very patient and accommodating in accomplishing the projects we have given him and I, and my family, consider him a trusted friend.&nbsp;</p>
 <p>&nbsp;&nbsp;In conclusion, I would highly recommend his services to anyone needing a top quality contractor.
-</p></div>
+</p>
+
+    </div>
+  </div>
+</div>
 
 
 <?php include ( "_footer.php" ); ?>

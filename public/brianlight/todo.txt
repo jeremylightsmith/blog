@@ -1,0 +1,47 @@
+
+deploy so brian can see
+
+projects page should point to old work
+
+spreadsheet entry should email brian
+
+move over old project pages
+fix service links -> what should they point to?
+
+
+b + j - picture of brian for home page banner
+b + j - picture of brian for about page
+
+brian - carousel copy
+
+hide about page
+
+video with Karissa in it
+upload Karissa video to youtube + put on front page
+
+<---------- MVP ----------->
+
+format testimonials page
+
+projects page should point to dan's work
+
+projects page should point to michael's work
+
+b + j - what else should be in the spreadsheet?
+
+brian - about page copy
+brian - dan work copy
+brian - michael work copy
+brian - school work copy
+
+header shouldn't eat itself between 767px and 990px
+
+add dan to testimonial's page w/ video + transcript
+
+add michael to testimonial's page w/ video + transcript
+
+projects page should point to the school
+
+fix michael's face :)
+
+pictures should be wider, or we should set the max width to 940px
