@@ -1,16 +1,13 @@
 
 deploy so brian can see
 
+move over old project pages
 projects page should point to old work
+fix service links -> what should they point to?
 
 spreadsheet entry should email brian
 
-move over old project pages
-fix service links -> what should they point to?
-
-
 b + j - picture of brian for home page banner
-b + j - picture of brian for about page
 
 brian - carousel copy
 
@@ -20,6 +17,9 @@ video with Karissa in it
 upload Karissa video to youtube + put on front page
 
 <---------- MVP ----------->
+
+b + j - picture of brian for about page
+what should services page look like?
 
 format testimonials page
 
