@@ -1,0 +1,104 @@
+/* red : #b50005 */
+
+/* navbar */
+
+.navbar-static-top .navbar-inner {
+  background: none;
+}
+
+.navbar .nav > li > a {
+  font-size: 0.9em;
+}
+
+.navbar .nav > li > a > span {
+  color: black;
+  display: block;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+.navbar .nav > li {
+  border-top: 4px solid white;
+}
+
+.navbar .nav > li:hover {
+  border-top-color: #999;
+}
+
+.navbar .nav > li.active {
+  border-top-color: black;
+}
+
+.navbar .brand {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar .brand img {
+  height: 64px;
+}
+
+/* hero */
+
+.hero {
+  background-color: #b50005;
+}
+
+h1 span {
+  font-size: 16px;
+  font-weight: normal;
+  text-shadow: none;
+}
+
+.home h1 span.case-study {
+  display: block;
+  margin-bottom: -10px;
+}
+
+.home h1 {
+  margin-top: 15px;
+}
+
+h1 {
+  text-shadow: 1px 1px 0 #101010;
+  font-family: dejarip,arial,"helvetica neue",sans-serif;
+}
+
+.home .odd-container {
+
+}
+
+.home .even-container {
+  background-color: #eee;
+}
+
+.contact-container {
+  background-color: #414141;
+  color: white;
+}
+
+.home .container {
+
+}
+
+.navbar .container {
+}
+
+footer {
+  background-color: #414141;
+  padding: 10px 0 10px;
+  margin-top: 20px;
+  color: #ddd;
+  text-align: center;
+}
+
+footer .social-links {
+}
+
+footer .links {
+  padding-top: 20px;
+}
+
+footer a {
+  color: #ddd;
+}
